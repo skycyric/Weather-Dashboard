@@ -186,6 +186,7 @@
     "find-up": "^4.1.0",
     "flat-cache": "^3.0.4",
     "flatted": "^3.2.7",
+    "flickity": "^3.0.0",
     "form-data": "^4.0.0",
     "fs-constants": "^1.0.0",
     "fs-extra": "^10.1.0",
@@ -620,6 +621,8 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "favicons": "^7.0.2",
+    "favicons-webpack-plugin": "^6.0.0-alpha.2",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack-dev-server": "^4.11.1"

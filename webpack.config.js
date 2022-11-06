@@ -2,13 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'none',
   entry: './src/index.js',
   devServer: {
     static: './dist',
   },
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Weather Dashboard',
+      template: './src/index.html',
     }),
   ],
   output: {
@@ -23,12 +25,9 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.png$/i,
         type: 'asset/resource',
       },
     ],
-  },
-  optimization: {
-    runtimeChunk: 'single',
   },
 };
