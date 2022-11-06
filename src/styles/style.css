@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  height: auto;
+}
+
 label {
   width: 80px;
   height: 45px;
@@ -33,7 +37,7 @@ label:after {
   transition: 0.3s;
 }
 
-input {
+input[type=checkbox] {
   width: 0;
   height: 0;
   visibility: hidden;
@@ -49,5 +53,17 @@ input:checked + label:after {
           transform: translateX(-100%);
   background-image: url("../assets/sun.png");
   background-size: cover;
+}
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 28%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */

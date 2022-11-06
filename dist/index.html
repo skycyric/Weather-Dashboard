@@ -9,6 +9,10 @@
       rel="icon"
       href="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   <script defer src="main.js"></script></head>
   <body>
     <header>
@@ -21,5 +25,21 @@
         </div>
       </nav>
     </header>
+    <main>
+      <section id="today-section"></section>
+      <section id="today-extra-info-section"></section>
+      <section id="7-day-forecast">
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>

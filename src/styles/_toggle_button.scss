@@ -23,7 +23,7 @@ label:after {
 	transition: 0.3s;
 }
 
-input {
+input[type=checkbox] {
 	width: 0;
 	height: 0;
 	visibility: hidden;

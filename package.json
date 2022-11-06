@@ -186,6 +186,7 @@
     "find-up": "^4.1.0",
     "flat-cache": "^3.0.4",
     "flatted": "^3.2.7",
+    "flickity": "^3.0.0",
     "form-data": "^4.0.0",
     "fs-constants": "^1.0.0",
     "fs-extra": "^10.1.0",

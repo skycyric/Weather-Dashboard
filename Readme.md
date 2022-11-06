@@ -49,3 +49,4 @@ Give a ⭐️ if you like this project!
 - <a href="https://www.flaticon.com/free-icons/weather" title="weather icons">Weather icons created by iconixar - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/moon" title="moon icons">Moon icons created by Good Ware - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
+- Carousel used in mobile version: [Flickity](https://flickity.metafizzy.co/)
