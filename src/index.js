@@ -1,29 +1,30 @@
 import './styles/style.css';
 import { getStartDate, getEndDate, formatDate } from './modules/dateRange';
+import {
+  key,
+  cityURL,
+  weatherURL,
+  airPollutionURL,
+  forecastURL,
+} from './modules/apiURL';
 
-const city = 'new york';
-const key = process.env.API_KEY;
-const cityURL = 'http://api.openweathermap.org/geo/1.0/direct?';
-const weatherURL = 'https://api.openweathermap.org/data/2.5/weather?';
-const airPollutionURL = 'http://api.openweathermap.org/data/2.5/air_pollution?';
+const city = 'giurgiu';
 
 const fetchCityData = async () => {
   const response = await fetch(`${cityURL}q=${city}&appid=${key}`)
     .then((res) => res.json())
     .then((data) => {
-      const { country } = data[0];
-      const { lat } = data[0];
-      const { lon } = data[0];
+      const { country, lat, lon } = data[0];
       return { country, lat, lon };
     });
   return response;
 };
 
 const fetchWeatherData = async () => {
-  const { lat, lon } = await fetchCityData();
-  // console.log(country, lat, lon);
+  const { country, lat, lon } = await fetchCityData();
+  console.log(country, lat, lon);
   const response = await fetch(
-    `${weatherURL}lat=${lat}&lon=${lon}&appid=${key}`,
+    `${weatherURL}lat=${lat}&lon=${lon}&appid=${key}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -42,7 +43,7 @@ const fetchWeatherData = async () => {
         minTemp,
       };
     });
-  // console.log(response);
+  console.log(response);
   return response;
 };
 
@@ -76,7 +77,7 @@ const getAirQuality = (data) => {
 const fetchAirPollutionData = async () => {
   const { lat, lon } = await fetchCityData();
   const response = await fetch(
-    `${airPollutionURL}lat=${lat}&lon=${lon}&appid=${key}`,
+    `${airPollutionURL}lat=${lat}&lon=${lon}&appid=${key}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -91,7 +92,7 @@ const fetchAirPollutionData = async () => {
         nitrogenDioxide,
       };
     });
-  // console.log(response);
+  console.log(response);
   return response;
 };
 
@@ -103,10 +104,18 @@ const forecast = async () => {
   const endDate = formatDate(getEndDate());
 
   const response = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`,
+    `${forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`
   )
     .then((res) => res.json())
-    .then((data) => data);
+    .then((data) => {
+      console.log(data);
+      const maxTempArray = data.daily.temperature_2m_max.slice(1);
+      const minTempArray = data.daily.temperature_2m_min.slice(1);
+      const dateArray = data.daily.time.slice(1);
+      const weatherCode = data.daily.weathercode.slice(1);
+      return { maxTempArray, minTempArray, dateArray, weatherCode };
+    });
+  console.log(response);
   return response;
 };
 
