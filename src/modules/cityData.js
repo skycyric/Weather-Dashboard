@@ -4,7 +4,6 @@ const fetchCityData = async () => {
   const response = await fetch(cityURL)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       const { country, lat, lon } = data[0];
       return { country, lat, lon };
     });

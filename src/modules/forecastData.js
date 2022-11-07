@@ -8,11 +8,10 @@ const fetchForecast = async () => {
   const endDate = formatDate(getEndDate());
 
   const response = await fetch(
-    `${forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`,
+    `${forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       const maxTempArray = data.daily.temperature_2m_max.slice(1);
       const minTempArray = data.daily.temperature_2m_min.slice(1);
       const dateArray = data.daily.time.slice(1);
@@ -24,7 +23,7 @@ const fetchForecast = async () => {
         weatherCode,
       };
     });
-  console.log(response);
+  //console.log(response);
   return response;
 };
 
