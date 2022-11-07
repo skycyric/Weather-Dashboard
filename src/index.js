@@ -1,4 +1,5 @@
 import './styles/style.css';
+import { getStartDate, getEndDate, formatDate } from './modules/dateRange';
 
 const city = 'new york';
 const key = process.env.API_KEY;
@@ -83,3 +84,18 @@ const getAirQuality = (data) => {
   }
   return qualityOfAir;
 };
+
+const forecast = async () => {
+  const { lat, lon } = await fetchCityData();
+  const startDate = formatDate(getStartDate());
+  const endDate = formatDate(getEndDate());
+
+  const response = await fetch(
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`
+  )
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+  return response;
+};
+
+forecast();
