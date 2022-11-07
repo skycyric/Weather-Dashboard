@@ -29,7 +29,7 @@ const getAirQuality = (data) => {
 const fetchAirPollutionData = async () => {
   const { lat, lon } = await fetchCityData();
   const response = await fetch(
-    `${airPollutionURL}lat=${lat}&lon=${lon}${appID}`
+    `${airPollutionURL}lat=${lat}&lon=${lon}${appID}`,
   )
     .then((res) => res.json())
     .then((data) => {
@@ -44,7 +44,7 @@ const fetchAirPollutionData = async () => {
         nitrogenDioxide,
       };
     });
-  //console.log(response);
+  // console.log(response);
   return response;
 };
 
