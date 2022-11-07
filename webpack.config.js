@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'none',
@@ -7,8 +8,11 @@ module.exports = {
   devServer: {
     static: './dist',
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   plugins: [
+    new Dotenv({
+      systemvars: true,
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
@@ -28,6 +32,11 @@ module.exports = {
         test: /\.png$/i,
         type: 'asset/resource',
       },
+      // {
+      //   test: /\.m?js$/,
+      //   exclude: /(node_modules|bower_components)/,
+      //   loader: 'babel-loader',
+      // },
     ],
   },
 };
