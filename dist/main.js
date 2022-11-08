@@ -364,7 +364,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nlabel {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: block;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\nlabel::after {\n  content: \"\";\n  width: 25px;\n  height: 25px;\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  border-radius: 180px;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\ninput[type=checkbox] {\n  width: 0;\n  height: 0;\n  visibility: hidden;\n}\n\ninput:checked + label {\n  background: #242424;\n}\n\ninput:checked + label::after {\n  left: 70px;\n  -webkit-transform: translateX(-100%);\n  transform: translateX(-100%);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n  background-size: cover;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAA8B;EAC9B,sBAAsB;AACxB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,cAAc;EACd,mBAAmB;EACnB,oBAAoB;EACpB,mGAAmG;EACnG,2FAA2F;EAC3F,eAAe;EACf,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,WAAW;EACX,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,SAAS;EACT,UAAU;EACV,yDAA2C;EAC3C,sBAAsB;EACtB,oBAAoB;EACpB,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;EACT,kBAAkB;AACpB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,oCAAoC;EACpC,4BAA4B;EAC5B,yDAA0C;EAC1C,sBAAsB;AACxB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,kBAAkB;EAClB,gBAAgB;EAChB,kBAAkB;AACpB","sourcesContent":["*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nlabel {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: block;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\nlabel::after {\n  content: \"\";\n  width: 25px;\n  height: 25px;\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  background-image: url(\"../assets/moon.png\");\n  background-size: cover;\n  border-radius: 180px;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\ninput[type=checkbox] {\n  width: 0;\n  height: 0;\n  visibility: hidden;\n}\n\ninput:checked + label {\n  background: #242424;\n}\n\ninput:checked + label::after {\n  left: 70px;\n  -webkit-transform: translateX(-100%);\n  transform: translateX(-100%);\n  background-image: url(\"../assets/sun.png\");\n  background-size: cover;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nlabel {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: block;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n          box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\nlabel::after {\n  content: \"\";\n  width: 25px;\n  height: 25px;\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  border-radius: 180px;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\ninput[type=checkbox] {\n  width: 0;\n  height: 0;\n  visibility: hidden;\n}\n\ninput:checked + label {\n  background: #242424;\n}\n\ninput:checked + label::after {\n  left: 70px;\n  -webkit-transform: translateX(-100%);\n          transform: translateX(-100%);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n  background-size: cover;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#chartContainer {\n  height: 300px;\n  width: 100%;\n  position: relative;\n}\n/*# sourceMappingURL=style.css.map */", "",{"version":3,"sources":["webpack://./src/styles/_base.scss","webpack://./src/styles/style.css","webpack://./src/styles/_toggle_button.scss","webpack://./src/styles/_carousel.scss","webpack://./src/styles/style.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAAsB;UACvB,sBAAA;ACCD;;AAEA;EDCC,YAAA;ACCD;;AAEA;ECXE,WAAQ;EACR,YAAU;EACV,kBAAc;EACd,cAAY;EACZ,mBAAe;EACf,oBAAoB;EACpB,mGAAe;UACf,2FAAgB;EACjB,eAAA;EDaC,wBAAwB;ECX1B,gBAAa;ADab;;AAEA;ECXE,WAAU;EACV,WAAS;EACT,YAAU;EACV,kBAAkB;EAClB,SAAA;EACA,UAAA;EACA,yDAAgB;EACjB,sBAAA;EDaC,oBAAoB;ECXtB,wBAAqB;EACnB,gBAAQ;ADaV;;AAEA;EACE,QAAQ;ECXV,SAAK;EACH,kBAAY;ADad;;ACVA;EACE,mBAAU;ADaZ;;AAEA;ECXC,UAAA;EDaC,oCAAoC;UErD5B,4BAAA;EACR,yDAAgB;EACjB,sBAAA;AFuDD;;AAEA;EErDE,gBAAa;AFuDf;;AAEA;EErDC,UAAA;EFuDC,aAAa;EG7Df,kBAAgB;EACd,gBAAa;EACb,kBAAW;AH+Db;;AAEA;EACE,aAAa;EACb,WAAW;EACX,kBAAkB;AACpB;AACA,oCAAoC","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -545,14 +545,14 @@ module.exports = function (url, options) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "e5585e508bad58301c6c.png";
+module.exports = __webpack_require__.p + "f14adc02a7b2b3db8da8.png";
 
 /***/ }),
 /* 13 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "6d48da504f4816188c8d.png";
+module.exports = __webpack_require__.p + "f6c473a8c3491c5e7c53.png";
 
 /***/ }),
 /* 14 */
@@ -596,7 +596,7 @@ const getAirQuality = (data) => {
 const fetchAirPollutionData = async () => {
   const { lat, lon } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const response = await fetch(
-    `${_apiURL__WEBPACK_IMPORTED_MODULE_1__.airPollutionURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`
+    `${_apiURL__WEBPACK_IMPORTED_MODULE_1__.airPollutionURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`,
   )
     .then((res) => res.json())
     .then((data) => {
@@ -611,7 +611,7 @@ const fetchAirPollutionData = async () => {
         nitrogenDioxide,
       };
     });
-  //console.log(response);
+  // console.log(response);
   return response;
 };
 
@@ -656,7 +656,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "forecastURL": () => (/* binding */ forecastURL),
 /* harmony export */   "weatherURL": () => (/* binding */ weatherURL)
 /* harmony export */ });
-const city = 'budapest';
+const city = 'giurgiu';
 const appID = `&appid=${"31d683314d5ebc4e9834eae1972044a2"}`;
 const cityURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city}${appID}`;
 const weatherURL = 'https://api.openweathermap.org/data/2.5/weather?';
@@ -703,7 +703,7 @@ const fetchForecast = async () => {
         weatherCode,
       };
     });
-  //console.log(response);
+  console.log(response);
   return response;
 };
 
@@ -21809,7 +21809,7 @@ const createCurrentWeather = async () => {
   currentMinTemp.textContent = minTemp;
 
   const currentIcon = document.getElementById('current-weather-icon');
-  currentIcon.src = `./src/assets/${icon}.png`;
+  currentIcon.src = `./icons/${icon}.png`;
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createCurrentWeather);
@@ -21841,7 +21841,7 @@ const fetchWeatherData = async () => {
       const temperature = data.main.temp;
       const maxTemp = data.main.temp_max;
       const minTemp = data.main.temp_min;
-      const icon = data.weather[0].icon;
+      const { icon } = data.weather[0];
       return {
         description,
         wind,
@@ -22013,8 +22013,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _modules_airQualityData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
-/* harmony import */ var _modules_forecastData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(17);
-/* harmony import */ var _modules_createCurrentWeather__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(156);
+/* harmony import */ var _modules_forecast_forecastData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(17);
+/* harmony import */ var _modules_currentWeather_createCurrentWeather__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(156);
 
 
 
@@ -22022,8 +22022,8 @@ __webpack_require__.r(__webpack_exports__);
 
 window.onload = () => {
   (0,_modules_airQualityData__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modules_forecastData__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_modules_createCurrentWeather__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_modules_forecast_forecastData__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_currentWeather_createCurrentWeather__WEBPACK_IMPORTED_MODULE_3__["default"])();
 };
 
 })();

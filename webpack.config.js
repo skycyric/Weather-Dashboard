@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'none',
@@ -10,6 +11,9 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
+    new CopyPlugin({
+      patterns: [{ from: 'icons', to: 'icons' }],
+    }),
     new Dotenv({
       systemvars: true,
     }),
@@ -32,11 +36,14 @@ module.exports = {
         test: /\.png$/i,
         type: 'asset/resource',
       },
-      // {
-      //   test: /\.m?js$/,
-      //   exclude: /(node_modules|bower_components)/,
-      //   loader: 'babel-loader',
-      // },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
 };
