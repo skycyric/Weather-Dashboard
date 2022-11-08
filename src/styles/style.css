@@ -69,9 +69,11 @@ input:checked + label::after {
   border-radius: 5px;
 }
 
-#chartContainer {
-  height: 300px;
-  width: 100%;
+#chart {
   position: relative;
+}
+
+#myChart {
+  width: auto;
 }
 /*# sourceMappingURL=style.css.map */

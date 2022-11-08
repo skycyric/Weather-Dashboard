@@ -21,7 +21,6 @@ const fetchForecast = async () => {
         dateArray,
       };
     });
-  console.log(response);
   return response;
 };
 

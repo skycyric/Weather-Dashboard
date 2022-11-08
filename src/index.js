@@ -8,3 +8,7 @@ window.onload = () => {
   createCurrentWeather();
   getDates();
 };
+
+window.onresize = () => {
+  window.location.reload();
+};

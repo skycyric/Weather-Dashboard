@@ -6,7 +6,6 @@ const fetchWeatherData = async () => {
   const response = await fetch(`${weatherURL}lat=${lat}&lon=${lon}${appID}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       const { description } = data.weather[0];
       const wind = data.wind.speed;
       const { humidity } = data.main;
@@ -25,7 +24,6 @@ const fetchWeatherData = async () => {
         icon,
       };
     });
-  console.log(response);
   return response;
 };
 
