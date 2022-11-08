@@ -13,7 +13,7 @@ const fetchWeatherData = async () => {
       const temperature = data.main.temp;
       const maxTemp = data.main.temp_max;
       const minTemp = data.main.temp_min;
-      let { icon } = data.weather[0];
+      const { icon } = data.weather[0];
 
       return {
         description,

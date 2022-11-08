@@ -21809,7 +21809,7 @@ const createCurrentWeather = async () => {
   currentMinTemp.textContent = minTemp;
 
   const currentIcon = document.getElementById('current-weather-icon');
-  currentIcon.src = `./icons/${icon}.png`;
+  currentIcon.src = `icons/${icon}.png`;
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createCurrentWeather);
@@ -21841,7 +21841,8 @@ const fetchWeatherData = async () => {
       const temperature = data.main.temp;
       const maxTemp = data.main.temp_max;
       const minTemp = data.main.temp_min;
-      const { icon } = data.weather[0];
+      let { icon } = data.weather[0];
+
       return {
         description,
         wind,
@@ -21857,6 +21858,45 @@ const fetchWeatherData = async () => {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchWeatherData);
+
+
+/***/ }),
+/* 158 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _forecastData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
+
+
+let xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+new Chart('myChart', {
+  type: 'line',
+  data: {
+    labels: xValues,
+    datasets: [
+      {
+        data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+        borderColor: 'red',
+        fill: false,
+      },
+      {
+        data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+        borderColor: 'green',
+        fill: false,
+      },
+      {
+        data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+        borderColor: 'blue',
+        fill: false,
+      },
+    ],
+  },
+  options: {
+    legend: { display: false },
+  },
+});
 
 
 /***/ })
@@ -22015,6 +22055,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_airQualityData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _modules_forecast_forecastData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(17);
 /* harmony import */ var _modules_currentWeather_createCurrentWeather__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(156);
+/* harmony import */ var _modules_forecast_chart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(158);
+
 
 
 
