@@ -1,3 +1,11 @@
 @import 'base';
 @import 'toggle_button';
-@import 'carousel'
+@import 'carousel';
+
+#chart {
+  position: relative;
+}
+
+#myChart {
+  width: auto;
+}

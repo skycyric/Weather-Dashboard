@@ -1,6 +1,6 @@
 import { getStartDate, getEndDate, formatDate } from './dateRange';
-import fetchCityData from './cityData';
-import { forecastURL } from './apiURL';
+import fetchCityData from '../cityData';
+import { forecastURL } from '../apiURL';
 
 const fetchForecast = async () => {
   const { lat, lon } = await fetchCityData();
@@ -15,15 +15,12 @@ const fetchForecast = async () => {
       const maxTempArray = data.daily.temperature_2m_max.slice(1);
       const minTempArray = data.daily.temperature_2m_min.slice(1);
       const dateArray = data.daily.time.slice(1);
-      const weatherCode = data.daily.weathercode.slice(1);
       return {
         maxTempArray,
         minTempArray,
         dateArray,
-        weatherCode,
       };
     });
-  // console.log(response);
   return response;
 };
 

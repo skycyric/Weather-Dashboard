@@ -1,10 +1,14 @@
 import './styles/style.css';
 import fetchAirPollutionData from './modules/airQualityData';
-import fetchForecast from './modules/forecastData';
 import createCurrentWeather from './modules/currentWeather/createCurrentWeather';
+import getDates from './modules/forecast/chart';
 
 window.onload = () => {
   fetchAirPollutionData();
-  fetchForecast();
   createCurrentWeather();
+  getDates();
+};
+
+window.onresize = () => {
+  window.location.reload();
 };
