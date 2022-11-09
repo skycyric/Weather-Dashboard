@@ -14,7 +14,7 @@
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
   <script defer src="main.js"></script></head>
-  <body>
+  <body class="">
     <div id="loader"></div>
     <header>
       <nav>
@@ -23,10 +23,9 @@
         <span id="lon"></span>
         <input type="search" placeholder="Search city..." id="search" />
         <p id="error"></p>
-        <div id="toggle">
-          <input type="checkbox" id="darkmode-toggle" />
-          <label for="darkmode-toggle" />
-        </div>
+        <button>
+          <img id="toggle-icon" alt="toggle icon" src="../icons/moon.png" />
+        </button>
       </nav>
     </header>
     <main>
