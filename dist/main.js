@@ -364,7 +364,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nlabel {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: block;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n          box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\nlabel::after {\n  content: \"\";\n  width: 25px;\n  height: 25px;\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  border-radius: 180px;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\ninput[type=checkbox] {\n  width: 0;\n  height: 0;\n  visibility: hidden;\n}\n\ninput:checked + label {\n  background: #242424;\n}\n\ninput:checked + label::after {\n  left: 70px;\n  -webkit-transform: translateX(-100%);\n          transform: translateX(-100%);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n  background-size: cover;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0px;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section {\n  display: none;\n  text-align: center;\n}\n\n#chart {\n  position: relative;\n}\n\n#myChart {\n  width: auto;\n}\n/*# sourceMappingURL=style.css.map */", "",{"version":3,"sources":["webpack://./src/styles/_base.scss","webpack://./src/styles/style.css","webpack://./src/styles/_toggle_button.scss","webpack://./src/styles/_carousel.scss","webpack://./src/styles/_loader.scss","webpack://./src/styles/style.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAAsB;UACvB,sBAAA;ACCD;;AAEA;EDCC,YAAA;ACCD;;AAEA;ECXE,WAAQ;EACR,YAAU;EACV,kBAAc;EACd,cAAY;EACZ,mBAAe;EACf,oBAAoB;EACpB,mGAAe;UACf,2FAAgB;EACjB,eAAA;EDaC,wBAAwB;ECX1B,gBAAa;ADab;;AAEA;ECXE,WAAU;EACV,WAAS;EACT,YAAU;EACV,kBAAkB;EAClB,SAAA;EACA,UAAA;EACA,yDAAgB;EACjB,sBAAA;EDaC,oBAAoB;ECXtB,wBAAqB;EACnB,gBAAQ;ADaV;;AAEA;EACE,QAAQ;ECXV,SAAK;EACH,kBAAY;ADad;;ACVA;EACE,mBAAU;ADaZ;;AAEA;ECXC,UAAA;EDaC,oCAAoC;UErD5B,4BAAA;EACR,yDAAgB;EACjB,sBAAA;AFuDD;;AAEA;EErDE,gBAAa;AFuDf;;AAEA;EErDC,UAAA;EFuDC,aAAa;EGjEf,kBAAQ;EACN,gBAAU;EACV,kBAAS;AHmEX;;AAEA;EGjEE,kBAAa;EACb,SAAQ;EACR,QAAQ;EACR,UAAA;EACA,YAAY;EACZ,aAAA;EACA,uBAAW;EACZ,0BAAA;EHmEC,kBAAkB;EGjEpB,8BAAkB;EAChB,0CAAE;EHmEF,kCGnEoC;AHoEtC;;AAEA;EACE;IACE,+BAA+B;EACjC;EGrEF;IACI,iCAAA;EHuEF;AACF;;AAEA;EACE;IACE,+BAA+B;YACvB,uBAAuB;EGzEnC;EACE;IACA,iCAAwB;YACxB,yBAA8B;EAC9B;AH2EF;;AAEA;EGzEA,kBAAA;EACE,qCAAI;EH2EJ,8BG3EoB;EH4EpB,6BG5EgC;EH6EhC,sBAAsB;AACxB;;AAEA;EACE;IACE,cAAc;IACd,UAAU;EG/Ed;EACE;IAAM,WAAO;IAAQ,UAAU;EHmF/B;AACF;;AAEA;EACE;IACE,cAAc;IACd,UAAU;EI3Hd;EACE;IACA,SAAU;IACX,UAAA;EJ6HC;AI3HF;;AJ8HA;EACE,aAAa;EI3Hf,kBAAS;AJ6HT;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;AACA,oCAAoC","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nlabel {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: block;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n          box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\nlabel::after {\n  content: \"\";\n  width: 25px;\n  height: 25px;\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  border-radius: 180px;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\ninput[type=checkbox] {\n  width: 0;\n  height: 0;\n  visibility: hidden;\n}\n\ninput:checked + label {\n  background: #242424;\n}\n\ninput:checked + label::after {\n  left: 70px;\n  -webkit-transform: translateX(-100%);\n          transform: translateX(-100%);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n  background-size: cover;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0px;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n.mapControls {\n  margin-top: 10px;\n  border: 1px solid transparent;\n  border-radius: 2px 0 0 2px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  height: 32px;\n  outline: none;\n  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);\n          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);\n}\n\n#searchMapInput {\n  background-color: #fff;\n  font-family: Roboto;\n  font-size: 15px;\n  font-weight: 300;\n  margin-left: 12px;\n  padding: 0 11px 0 13px;\n  text-overflow: ellipsis;\n  width: 50%;\n}\n\n#searchMapInput:focus {\n  border-color: #4d90fe;\n}\n\n#main-section {\n  display: none;\n  text-align: center;\n}\n\n#chart {\n  position: relative;\n}\n\n#myChart {\n  width: auto;\n}\n/*# sourceMappingURL=style.css.map */", "",{"version":3,"sources":["webpack://./src/styles/_base.scss","webpack://./src/styles/style.css","webpack://./src/styles/_toggle_button.scss","webpack://./src/styles/_carousel.scss","webpack://./src/styles/_loader.scss","webpack://./src/styles/_search.scss","webpack://./src/styles/style.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAAsB;UACvB,sBAAA;ACCD;;AAEA;EDCC,YAAA;ACCD;;AAEA;ECXE,WAAQ;EACR,YAAU;EACV,kBAAc;EACd,cAAY;EACZ,mBAAe;EACf,oBAAoB;EACpB,mGAAe;UACf,2FAAgB;EACjB,eAAA;EDaC,wBAAwB;ECX1B,gBAAa;ADab;;AAEA;ECXE,WAAU;EACV,WAAS;EACT,YAAU;EACV,kBAAkB;EAClB,SAAA;EACA,UAAA;EACA,yDAAgB;EACjB,sBAAA;EDaC,oBAAoB;ECXtB,wBAAqB;EACnB,gBAAQ;ADaV;;AAEA;EACE,QAAQ;ECXV,SAAK;EACH,kBAAY;ADad;;ACVA;EACE,mBAAU;ADaZ;;AAEA;ECXC,UAAA;EDaC,oCAAoC;UErD5B,4BAAA;EACR,yDAAgB;EACjB,sBAAA;AFuDD;;AAEA;EErDE,gBAAa;AFuDf;;AAEA;EErDC,UAAA;EFuDC,aAAa;EGjEf,kBAAQ;EACN,gBAAU;EACV,kBAAS;AHmEX;;AAEA;EGjEE,kBAAa;EACb,SAAQ;EACR,QAAQ;EACR,UAAA;EACA,YAAY;EACZ,aAAA;EACA,uBAAW;EACZ,0BAAA;EHmEC,kBAAkB;EGjEpB,8BAAkB;EAChB,0CAAE;EHmEF,kCGnEoC;AHoEtC;;AAEA;EACE;IACE,+BAA+B;EACjC;EGrEF;IACI,iCAAA;EHuEF;AACF;;AAEA;EACE;IACE,+BAA+B;YACvB,uBAAuB;EGzEnC;EACE;IACA,iCAAwB;YACxB,yBAA8B;EAC9B;AH2EF;;AAEA;EGzEA,kBAAA;EACE,qCAAI;EH2EJ,8BG3EoB;EH4EpB,6BG5EgC;EH6EhC,sBAAsB;AACxB;;AAEA;EACE;IACE,cAAc;IACd,UAAU;EG/Ed;EACE;IAAM,WAAO;IAAQ,UAAU;EHmF/B;AACF;;AAEA;EACE;IACE,cAAc;IACd,UAAU;EIhId;EAEE;IAEA,SAAQ;IAER,UAAA;EAEA;AJ8HF;;AAEA;EIxHE,gBAAc;EAEf,6BAAA;EJyHC,0BAA0B;EIvH5B,8BAAgB;UAEd,sBAAsB;EAEtB,2BAAmB;EAEnB,YAAW;EAEX,aAAa;EAEb,gDAAiB;UAEV,wCAAe;AJmHxB;;AAEA;EACE,sBAAsB;EI9GxB,mBAAqB;EAEnB,eAAc;EAEf,gBAAA;EJ8GC,iBAAiB;EKpJnB,sBAAc;EACZ,uBAAa;EACb,UAAU;ALsJZ;;AKnJA;EACE,qBAAkB;ALsJpB;;AKnJA;EACE,aAAW;EACZ,kBAAA;ALsJD;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;AACA,oCAAoC","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -630,13 +630,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apiURL__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
 
 
+const search = document.getElementById('search');
+
+let city = JSON.parse(localStorage.getItem('city')) || 'London';
+
+search.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    if (search.value === '') {
+      return;
+    }
+    city = search.value.trim();
+    localStorage.setItem('city', JSON.stringify(city));
+    window.location.reload();
+  }
+});
+
 const fetchCityData = async () => {
-  const response = await fetch(_apiURL__WEBPACK_IMPORTED_MODULE_0__.cityURL)
+  const response = await fetch(`${_apiURL__WEBPACK_IMPORTED_MODULE_0__.cityURL}${city}${_apiURL__WEBPACK_IMPORTED_MODULE_0__.appID}`)
     .then((res) => res.json())
     .then((data) => {
-      const { country, lat, lon } = data[0];
-      return { country, lat, lon };
+      const { lat, lon, country, name } = data[0];
+      return { lat, lon, country, name };
+    })
+    .catch(() => {
+      const errorMsg = document.getElementById('error');
+      errorMsg.textContent =
+        'Please, enter a correct city or a starting letter...';
+      errorMsg.style.display = 'block';
     });
+  search.value = '';
   return response;
 };
 
@@ -656,9 +678,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "forecastURL": () => (/* binding */ forecastURL),
 /* harmony export */   "weatherURL": () => (/* binding */ weatherURL)
 /* harmony export */ });
-const city = 'giurgiu';
 const appID = `&appid=${"31d683314d5ebc4e9834eae1972044a2"}`;
-const cityURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city}${appID}`;
+const cityURL = 'http://api.openweathermap.org/geo/1.0/direct?q=';
 const weatherURL = 'https://api.openweathermap.org/data/2.5/weather?';
 const airPollutionURL = 'http://api.openweathermap.org/data/2.5/air_pollution?';
 const forecastURL = 'https://api.open-meteo.com/v1/forecast?';
@@ -681,21 +702,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const createCurrentWeather = async () => {
-  const {
-    description, temperature, maxTemp, minTemp, icon,
-  } = await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const { description, temperature, icon, name, country, lat, lon } =
+    await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+  const location = document.getElementById('location');
+  location.textContent = `Location: ${name}, ${country}`;
+
+  const latitude = document.getElementById('lat');
+  latitude.textContent = `Latitude: ${lat}`;
+
+  const longitude = document.getElementById('lon');
+  longitude.textContent = `Longitude: ${lon}`;
 
   const currentTemp = document.getElementById('current-temp');
   currentTemp.textContent = `${(0,_tempConversion__WEBPACK_IMPORTED_MODULE_1__.conversionToCelsius)(temperature)} °C`;
 
   const currentDescription = document.getElementById('description');
   currentDescription.textContent = description;
-
-  const currentMaxTemp = document.getElementById('current-max-temp');
-  currentMaxTemp.textContent = `${(0,_tempConversion__WEBPACK_IMPORTED_MODULE_1__.conversionToCelsius)(maxTemp)} °C`;
-
-  const currentMinTemp = document.getElementById('current-min-temp');
-  currentMinTemp.textContent = `${(0,_tempConversion__WEBPACK_IMPORTED_MODULE_1__.conversionToCelsius)(minTemp)} °C`;
 
   const currentIcon = document.getElementById('current-weather-icon');
   currentIcon.src = `icons/${icon}.png`;
@@ -719,16 +742,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const fetchWeatherData = async () => {
-  const { lat, lon } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const { lat, lon, country, name } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const response = await fetch(`${_apiURL__WEBPACK_IMPORTED_MODULE_1__.weatherURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       const { description } = data.weather[0];
       const wind = data.wind.speed;
       const { humidity } = data.main;
       const temperature = data.main.temp;
-      const maxTemp = data.main.temp_max;
-      const minTemp = data.main.temp_min;
       const { icon } = data.weather[0];
 
       return {
@@ -736,11 +758,14 @@ const fetchWeatherData = async () => {
         wind,
         humidity,
         temperature,
-        maxTemp,
-        minTemp,
         icon,
+        name,
+        country,
+        lat,
+        lon,
       };
     });
+  console.log(response);
   return response;
 };
 
@@ -861,7 +886,7 @@ const fetchForecast = async () => {
   const endDate = (0,_dateRange__WEBPACK_IMPORTED_MODULE_0__.formatDate)((0,_dateRange__WEBPACK_IMPORTED_MODULE_0__.getEndDate)());
 
   const response = await fetch(
-    `${_apiURL__WEBPACK_IMPORTED_MODULE_2__.forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`
+    `${_apiURL__WEBPACK_IMPORTED_MODULE_2__.forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`,
   )
     .then((res) => res.json())
     .then((data) => {
@@ -22154,21 +22179,14 @@ window.onload = () => {
   (0,_modules_airQualityData__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_currentWeather_createCurrentWeather__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_forecast_chart__WEBPACK_IMPORTED_MODULE_3__["default"])();
-
   const displayContents = () => {
     document.getElementById('loader').style.display = 'none';
     document.getElementById('main-section').style.display = 'block';
   };
-
   const loadContents = () => {
     setTimeout(displayContents, 5000);
   };
-
   loadContents();
-};
-
-window.onresize = () => {
-  window.location.reload();
 };
 
 })();

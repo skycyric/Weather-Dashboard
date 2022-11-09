@@ -2,7 +2,9 @@ import fetchCityData from '../cityData';
 import { weatherURL, appID } from '../apiURL';
 
 const fetchWeatherData = async () => {
-  const { lat, lon } = await fetchCityData();
+  const {
+    lat, lon, country, name,
+  } = await fetchCityData();
   const response = await fetch(`${weatherURL}lat=${lat}&lon=${lon}${appID}`)
     .then((res) => res.json())
     .then((data) => {
@@ -10,8 +12,6 @@ const fetchWeatherData = async () => {
       const wind = data.wind.speed;
       const { humidity } = data.main;
       const temperature = data.main.temp;
-      const maxTemp = data.main.temp_max;
-      const minTemp = data.main.temp_min;
       const { icon } = data.weather[0];
 
       return {
@@ -19,9 +19,11 @@ const fetchWeatherData = async () => {
         wind,
         humidity,
         temperature,
-        maxTemp,
-        minTemp,
         icon,
+        name,
+        country,
+        lat,
+        lon,
       };
     });
   return response;
