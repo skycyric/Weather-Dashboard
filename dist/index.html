@@ -14,19 +14,22 @@
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
   <script defer src="main.js"></script></head>
-  <body>
+  <body class="">
+    <div id="loader"></div>
     <header>
       <nav>
         <span id="location"></span>
-        <input type="search" placeholder="Search city..." />
-        <div id="toggle">
-          <input type="checkbox" id="darkmode-toggle" />
-          <label for="darkmode-toggle" />
-        </div>
+        <span id="lat"></span>
+        <span id="lon"></span>
+        <input type="search" placeholder="Search city..." id="search" />
+        <p id="error"></p>
+        <button>
+          <img id="toggle-icon" alt="toggle icon" src="" />
+        </button>
       </nav>
     </header>
     <main>
-      <section id="main-section">
+      <section class="animate-bottom" id="main-section">
         <section id="current-section">
           <img src="" alt="weather icon" id="current-weather-icon" />
           <h2 id="current-temp"></h2>
@@ -37,17 +40,17 @@
         <section id="chart">
           <canvas id="myChart"></canvas>
         </section>
-        <section id="7-day-forecast">
-          <div class="carousel" data-flickity='{ "groupCells": "true" }'>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-          </div>
-        </section>
+      </section>
+      <section id="7-day-forecast">
+        <div class="carousel" data-flickity='{ "groupCells": "true" }'>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+        </div>
       </section>
       <section id="side-section"></section>
     </main>

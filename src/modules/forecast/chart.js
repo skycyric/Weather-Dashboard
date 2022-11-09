@@ -53,6 +53,4 @@ const getDates = async () => {
   dateStrings.map((d) => xValues.push(d));
 };
 
-getDates();
-
 export default getDates;
