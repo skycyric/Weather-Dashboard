@@ -17,7 +17,7 @@ label::after {
   position: absolute;
   top: 10px;
   left: 10px;
-  background-image: url('../assets/moon.png');
+  background-image: url('../moon.png');
   background-size: cover;
   border-radius: 180px;
   transition: 0.3s;
@@ -36,6 +36,6 @@ input:checked + label {
 input:checked + label::after {
   left: 70px;
   transform: translateX(-100%);
-  background-image: url('../assets/sun.png');
+  background-image: url('../sun.png');
   background-size: cover;
 }

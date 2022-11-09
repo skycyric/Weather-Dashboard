@@ -12,8 +12,8 @@ const fetchForecast = async () => {
   )
     .then((res) => res.json())
     .then((data) => {
-      const maxTempArray = data.daily.temperature_2m_max.slice(1);
-      const minTempArray = data.daily.temperature_2m_min.slice(1);
+      const maxTempArray = data.daily.temperature_2m_max;
+      const minTempArray = data.daily.temperature_2m_min;
       const dateArray = data.daily.time.slice(1);
       return {
         maxTempArray,

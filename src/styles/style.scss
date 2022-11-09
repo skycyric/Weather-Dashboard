@@ -1,6 +1,12 @@
 @import 'base';
 @import 'toggle_button';
 @import 'carousel';
+@import 'loader';
+
+#main-section {
+  display: none;
+  text-align: center;
+}
 
 #chart {
   position: relative;
