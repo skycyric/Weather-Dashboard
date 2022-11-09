@@ -2,8 +2,9 @@ import fetchForecast from './forecastData';
 import translateWeatherCode from './weatherCodes';
 
 const createForecast = async () => {
-  const { maxTempArray, minTempArray, dateArray, weathercode } =
-    await fetchForecast();
+  const {
+    maxTempArray, minTempArray, dateArray, weathercode,
+  } = await fetchForecast();
   const cells = [...document.querySelectorAll('.carousel-cell')];
 
   for (let i = 0; i < cells.length; i += 1) {

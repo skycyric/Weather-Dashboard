@@ -357,7 +357,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nbutton {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n          box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\n#toggle-icon {\n  position: absolute;\n  width: 40%;\n  height: auto;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0px;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section {\n  display: none;\n}\n\n#chart {\n  position: relative;\n}\n\n#myChart {\n  width: auto;\n}\n/*# sourceMappingURL=style.css.map */", "",{"version":3,"sources":["webpack://./src/styles/_base.scss","webpack://./src/styles/style.css","webpack://./src/styles/_toggle_button.scss","webpack://./src/styles/_carousel.scss","webpack://./src/styles/_loader.scss","webpack://./src/styles/style.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAAsB;UACvB,sBAAA;ACCD;;AAEA;EDCC,YAAA;ACCD;;AAEA;ECXE,WAAQ;EACR,YAAU;EACV,kBAAa;EACb,oBAAmB;EACnB,oBAAiB;EACjB,aAAY;EACZ,yBAAoB;MACpB,sBAAwB;UAChB,mBAAO;EACf,wBAAgB;MACjB,qBAAA;UDaS,uBAAuB;ECXjC,mBAAa;EACX,oBAAkB;EAClB,mGAAU;UACF,2FAAI;EACb,eAAA;EDaC,wBAAwB;EE/B1B,gBAAU;AFiCV;;AAEA;EE/BA,kBAAe;EACb,UAAU;EACV,YAAQ;AFiCV;;AAEA;EE/BC,gBAAA;AFiCD;;AAEA;EG3CE,UAAS;EACT,aAAQ;EACR,kBAAU;EACV,gBAAY;EACZ,kBAAa;AH6Cf;;AAEA;EG3CE,kBAAY;EACZ,SAAA;EACA,QAAA;EACD,UAAA;EH6CC,YAAY;EG3Cd,aAAA;EACE,uBAAE;EH6CF,0BG7CwB;EH8CxB,kBAAkB;EG7ClB,8BAAI;EH+CJ,0CG/CwC;EHgDxC,kCAAkC;AACpC;;AG9CA;EACE;IAAK,+BAAuB;EHkD5B;EGjDA;IAAO,iCAAyB;EHoDhC;AACF;;AGlDA;EACE;IACA,+BAAwB;YACxB,uBAA8B;EAC9B;EACA;IACD,iCAAA;YHqDW,yBAAyB;EGnDrC;AHqDA;;AAEA;EACE,kBAAkB;EGtDlB,qCAAE;EHwDF,8BGxDe;EHyDf,6BGzD2B;EH0D3B,sBAAsB;AACxB;;AGxDA;EACE;IAAM,cAAa;IAAE,UAAU;EH6D/B;EG5DA;IAAI,WAAQ;IAAE,UAAU;EHgExB;AACF;;AIpGA;EACE;IACD,cAAA;IJuGG,UAAU;EIrGd;EACE;IACD,SAAA;IJuGG,UAAU;EIrGd;AJuGA;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;AACA,oCAAoC","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nbutton {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\n#toggle-icon {\n  position: absolute;\n  width: 40%;\n  height: auto;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section {\n  display: none;\n}\n\n#chart {\n  position: relative;\n}\n\n#myChart {\n  width: auto;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAA8B;EAC9B,sBAAsB;AACxB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;EACzB,sBAAsB;EACtB,mBAAmB;EACnB,wBAAwB;EACxB,qBAAqB;EACrB,uBAAuB;EACvB,mBAAmB;EACnB,oBAAoB;EACpB,mGAAmG;EACnG,2FAA2F;EAC3F,eAAe;EACf,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,kBAAkB;EAClB,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,UAAU;EACV,YAAY;EACZ,aAAa;EACb,uBAAuB;EACvB,0BAA0B;EAC1B,kBAAkB;EAClB,8BAA8B;EAC9B,0CAA0C;EAC1C,kCAAkC;AACpC;;AAEA;EACE;IACE,+BAA+B;EACjC;;EAEA;IACE,iCAAiC;EACnC;AACF;;AAEA;EACE;IACE,+BAA+B;IAC/B,uBAAuB;EACzB;;EAEA;IACE,iCAAiC;IACjC,yBAAyB;EAC3B;AACF;;AAEA;EACE,kBAAkB;EAClB,qCAAqC;EACrC,8BAA8B;EAC9B,6BAA6B;EAC7B,sBAAsB;AACxB;;AAEA;EACE;IACE,cAAc;IACd,UAAU;EACZ;;EAEA;IACE,SAAS;IACT,UAAU;EACZ;AACF;;AAEA;EACE;IACE,cAAc;IACd,UAAU;EACZ;;EAEA;IACE,SAAS;IACT,UAAU;EACZ;AACF;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb","sourcesContent":["*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nbutton {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\n#toggle-icon {\n  position: absolute;\n  width: 40%;\n  height: auto;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section {\n  display: none;\n}\n\n#chart {\n  position: relative;\n}\n\n#myChart {\n  width: auto;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -691,21 +691,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const fetchWeatherData = async () => {
-  const {
-    lat, lon, country, name,
-  } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const { lat, lon, country, name } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const response = await fetch(`${_apiURL__WEBPACK_IMPORTED_MODULE_1__.weatherURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       const { description } = data.weather[0];
-      const wind = data.wind.speed;
+      const windSpeed = data.wind.speed;
+      const windGust = data.wind.gust;
+      const windDeg = data.wind.deg;
       const { humidity } = data.main;
       const temperature = data.main.temp;
       const { icon } = data.weather[0];
+      const pressure = data.main.pressure;
 
       return {
         description,
-        wind,
+        pressure,
+        windSpeed,
+        windDeg,
+        windGust,
         humidity,
         temperature,
         icon,
@@ -839,14 +844,15 @@ const fetchForecast = async () => {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       const maxTempArray = data.daily.temperature_2m_max;
       const minTempArray = data.daily.temperature_2m_min;
       const dateArray = data.daily.time.slice(1);
+      const weathercode = data.daily.weathercode.slice(1);
       return {
         maxTempArray,
         minTempArray,
         dateArray,
+        weathercode,
       };
     });
   return response;
@@ -22030,22 +22036,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _forecastData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _weatherCodes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(160);
+
 
 
 const createForecast = async () => {
-  const { maxTempArray, minTempArray, dateArray } = await (0,_forecastData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const { maxTempArray, minTempArray, dateArray, weathercode } =
+    await (0,_forecastData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const cells = [...document.querySelectorAll('.carousel-cell')];
 
   for (let i = 0; i < cells.length; i += 1) {
+    const { icon, description } = (0,_weatherCodes__WEBPACK_IMPORTED_MODULE_1__["default"])(weathercode[i]);
+    const dayIcon = document.createElement('img');
+    dayIcon.setAttribute('class', 'day-icon');
+    dayIcon.src = `icons/${icon}.png`;
+
+    const weatherDescription = document.createElement('span');
+    weatherDescription.textContent = `${description}`;
+
     const maxTemp = document.createElement('span');
-    maxTemp.textContent = `Max: ${maxTempArray[i + 1]}`;
+    maxTemp.textContent = `Max: ${maxTempArray[i + 1]}°C`;
 
     const minTemp = document.createElement('span');
-    minTemp.textContent = `Min: ${minTempArray[i + 1]}`;
+    minTemp.textContent = `Min: ${minTempArray[i + 1]}°C`;
 
     const day = document.createElement('span');
-    day.textContent = `${dateArray[i + 1]}`;
+    day.textContent = `${dateArray[i]}`;
 
+    cells[i].appendChild(dayIcon);
+    cells[i].appendChild(weatherDescription);
     cells[i].appendChild(maxTemp);
     cells[i].appendChild(minTemp);
     cells[i].appendChild(day);
@@ -22053,6 +22072,142 @@ const createForecast = async () => {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createForecast);
+
+
+/***/ }),
+/* 160 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const translateWeatherCode = (code) => {
+  let icon;
+  let description;
+  switch (code) {
+    case 0:
+      description = 'Clear sky';
+      icon = '01d';
+      break;
+    case 1:
+      description = 'Mainly clear';
+      icon = '02d';
+      break;
+    case 2:
+      description = 'Partly cloudy';
+      icon = '03d';
+      break;
+    case 3:
+      description = 'Overcast';
+      icon = '04d';
+      break;
+    case 45:
+      description = 'Fog';
+      icon = '50d';
+      break;
+    case 48:
+      description = 'Depositing rime fog';
+      icon = '50d';
+      break;
+    case 51:
+      description = 'Light drizzle';
+      icon = '09d';
+      break;
+    case 53:
+      description = 'Moderate drizzle';
+      icon = '09d';
+      break;
+    case 55:
+      description = 'Dense drizzle';
+      icon = '09d';
+      break;
+    case 56:
+      description = 'Freezing light drizzle';
+      icon = '09d';
+      break;
+    case 57:
+      description = 'Freezing dense drizzle';
+      icon = '09d';
+      break;
+    case 61:
+      description = 'Slight rain';
+      icon = '09d';
+      break;
+    case 63:
+      description = 'Moderate rain';
+      icon = '09d';
+      break;
+    case 65:
+      description = 'Heavy rain';
+      icon = '10d';
+      break;
+    case 66:
+      description = 'Freezing light rain';
+      icon = '09d';
+      break;
+    case 67:
+      description = 'Freezing heavy rain';
+      icon = '10d';
+      break;
+    case 71:
+      description = 'Slight snow fall';
+      icon = '13d';
+      break;
+    case 73:
+      description = 'Moderate snow fall';
+      icon = '13d';
+      break;
+    case 75:
+      description = 'Heavy snow fall';
+      icon = '13d';
+      break;
+    case 77:
+      description = 'Snow grains';
+      icon = '13d';
+      break;
+    case 80:
+      description = 'Slight rain showers';
+      icon = '09d';
+      break;
+    case 81:
+      description = 'Moderate rain showers';
+      icon = '09d';
+      break;
+    case 82:
+      description = 'Violent rain showers';
+      icon = '10d';
+      break;
+    case 85:
+      description = 'Slight snow showers';
+      icon = '13d';
+      break;
+    case 86:
+      description = 'Heavy snow showers';
+      icon = '13d';
+      break;
+    case 95:
+      description = 'Thunderstorms';
+      icon = '11d';
+      break;
+    case 96:
+      description = 'Thunderstorms with slight hail';
+      icon = '11d';
+      break;
+    case 99:
+      description = 'Thunderstorms with heavy hail';
+      icon = '11d';
+      break;
+    default:
+      description = 'Unknown';
+      icon = 'unknown';
+      break;
+  }
+  return { icon, description };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translateWeatherCode);
 
 
 /***/ })
