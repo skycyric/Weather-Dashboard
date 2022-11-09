@@ -19,16 +19,18 @@ const fetchCityData = async () => {
   const response = await fetch(`${cityURL}${city}${appID}`)
     .then((res) => res.json())
     .then((data) => {
-      const {
-        lat, lon, country, name,
-      } = data[0];
+      const { lat, lon, country, name } = data[0];
       return {
-        lat, lon, country, name,
+        lat,
+        lon,
+        country,
+        name,
       };
     })
     .catch(() => {
       const errorMsg = document.getElementById('error');
-      errorMsg.textContent = 'Please, enter a correct city or a starting letter...';
+      errorMsg.textContent =
+        'Please, enter a correct city or a starting letter...';
       errorMsg.style.display = 'block';
       document.querySelector('main').style.display = 'none';
     });
