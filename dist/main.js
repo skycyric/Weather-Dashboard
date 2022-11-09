@@ -357,7 +357,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nbutton {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n          box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\n#toggle-icon {\n  position: absolute;\n  width: 40%;\n  height: auto;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0px;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section {\n  display: none;\n  text-align: center;\n}\n\n#chart {\n  position: relative;\n}\n\n#myChart {\n  width: auto;\n}\n/*# sourceMappingURL=style.css.map */", "",{"version":3,"sources":["webpack://./src/styles/_base.scss","webpack://./src/styles/style.css","webpack://./src/styles/_toggle_button.scss","webpack://./src/styles/_carousel.scss","webpack://./src/styles/_loader.scss","webpack://./src/styles/style.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAAsB;UACvB,sBAAA;ACCD;;AAEA;EDCC,YAAA;ACCD;;AAEA;ECXE,WAAQ;EACR,YAAU;EACV,kBAAa;EACb,oBAAmB;EACnB,oBAAiB;EACjB,aAAY;EACZ,yBAAoB;MACpB,sBAAwB;UAChB,mBAAO;EACf,wBAAgB;MACjB,qBAAA;UDaS,uBAAuB;ECXjC,mBAAa;EACX,oBAAkB;EAClB,mGAAU;UACF,2FAAI;EACb,eAAA;EDaC,wBAAwB;EE/B1B,gBAAU;AFiCV;;AAEA;EE/BA,kBAAe;EACb,UAAU;EACV,YAAQ;AFiCV;;AAEA;EE/BC,gBAAA;AFiCD;;AAEA;EG3CE,UAAS;EACT,aAAQ;EACR,kBAAU;EACV,gBAAY;EACZ,kBAAa;AH6Cf;;AAEA;EG3CE,kBAAY;EACZ,SAAA;EACA,QAAA;EACD,UAAA;EH6CC,YAAY;EG3Cd,aAAA;EACE,uBAAE;EH6CF,0BG7CwB;EH8CxB,kBAAkB;EG7ClB,8BAAI;EH+CJ,0CG/CwC;EHgDxC,kCAAkC;AACpC;;AG9CA;EACE;IAAK,+BAAuB;EHkD5B;EGjDA;IAAO,iCAAyB;EHoDhC;AACF;;AGlDA;EACE;IACA,+BAAwB;YACxB,uBAA8B;EAC9B;EACA;IACD,iCAAA;YHqDW,yBAAyB;EGnDrC;AHqDA;;AAEA;EACE,kBAAkB;EGtDlB,qCAAE;EHwDF,8BGxDe;EHyDf,6BGzD2B;EH0D3B,sBAAsB;AACxB;;AGxDA;EACE;IAAM,cAAa;IAAE,UAAU;EH6D/B;EG5DA;IAAI,WAAQ;IAAE,UAAU;EHgExB;AACF;;AIpGA;EACE;IACA,cAAY;IACb,UAAA;EJuGC;EIrGF;IACE,SAAU;IACX,UAAA;EJuGC;AIrGF;;AJwGA;EACE,aAAa;EACb,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;AACA,oCAAoC","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\nbutton {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n          box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\n#toggle-icon {\n  position: absolute;\n  width: 40%;\n  height: auto;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 200px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0px;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section {\n  display: none;\n}\n\n#chart {\n  position: relative;\n}\n\n#myChart {\n  width: auto;\n}\n/*# sourceMappingURL=style.css.map */", "",{"version":3,"sources":["webpack://./src/styles/_base.scss","webpack://./src/styles/style.css","webpack://./src/styles/_toggle_button.scss","webpack://./src/styles/_carousel.scss","webpack://./src/styles/_loader.scss","webpack://./src/styles/style.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAAsB;UACvB,sBAAA;ACCD;;AAEA;EDCC,YAAA;ACCD;;AAEA;ECXE,WAAQ;EACR,YAAU;EACV,kBAAa;EACb,oBAAmB;EACnB,oBAAiB;EACjB,aAAY;EACZ,yBAAoB;MACpB,sBAAwB;UAChB,mBAAO;EACf,wBAAgB;MACjB,qBAAA;UDaS,uBAAuB;ECXjC,mBAAa;EACX,oBAAkB;EAClB,mGAAU;UACF,2FAAI;EACb,eAAA;EDaC,wBAAwB;EE/B1B,gBAAU;AFiCV;;AAEA;EE/BA,kBAAe;EACb,UAAU;EACV,YAAQ;AFiCV;;AAEA;EE/BC,gBAAA;AFiCD;;AAEA;EG3CE,UAAS;EACT,aAAQ;EACR,kBAAU;EACV,gBAAY;EACZ,kBAAa;AH6Cf;;AAEA;EG3CE,kBAAY;EACZ,SAAA;EACA,QAAA;EACD,UAAA;EH6CC,YAAY;EG3Cd,aAAA;EACE,uBAAE;EH6CF,0BG7CwB;EH8CxB,kBAAkB;EG7ClB,8BAAI;EH+CJ,0CG/CwC;EHgDxC,kCAAkC;AACpC;;AG9CA;EACE;IAAK,+BAAuB;EHkD5B;EGjDA;IAAO,iCAAyB;EHoDhC;AACF;;AGlDA;EACE;IACA,+BAAwB;YACxB,uBAA8B;EAC9B;EACA;IACD,iCAAA;YHqDW,yBAAyB;EGnDrC;AHqDA;;AAEA;EACE,kBAAkB;EGtDlB,qCAAE;EHwDF,8BGxDe;EHyDf,6BGzD2B;EH0D3B,sBAAsB;AACxB;;AGxDA;EACE;IAAM,cAAa;IAAE,UAAU;EH6D/B;EG5DA;IAAI,WAAQ;IAAE,UAAU;EHgExB;AACF;;AIpGA;EACE;IACD,cAAA;IJuGG,UAAU;EIrGd;EACE;IACD,SAAA;IJuGG,UAAU;EIrGd;AJuGA;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;AACA,oCAAoC","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -835,10 +835,11 @@ const fetchForecast = async () => {
   const endDate = (0,_dateRange__WEBPACK_IMPORTED_MODULE_0__.formatDate)((0,_dateRange__WEBPACK_IMPORTED_MODULE_0__.getEndDate)());
 
   const response = await fetch(
-    `${_apiURL__WEBPACK_IMPORTED_MODULE_2__.forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`,
+    `${_apiURL__WEBPACK_IMPORTED_MODULE_2__.forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`
   )
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       const maxTempArray = data.daily.temperature_2m_max;
       const minTempArray = data.daily.temperature_2m_min;
       const dateArray = data.daily.time.slice(1);
@@ -21963,6 +21964,97 @@ webpackContext.id = 21;
 })));
 
 
+/***/ }),
+/* 157 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(158);
+
+
+const displayContents = () => {
+  document.getElementById('loader').style.display = 'none';
+
+  document.getElementById('main-section').style.display = 'block';
+};
+
+const loadContents = () => {
+  setTimeout(displayContents, 5000);
+  (0,_toggle__WEBPACK_IMPORTED_MODULE_0__["default"])();
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadContents);
+
+
+/***/ }),
+/* 158 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const toggleDarkMode = () => {
+  const toggleBtn = document.querySelector('button');
+  const toggleIcon = document.getElementById('toggle-icon');
+
+  toggleIcon.src = '../icons/moon.png';
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.className === '') {
+      toggleIcon.src = '../icons/moon.png';
+      toggleBtn.style.background = '#ebebeb';
+    } else {
+      toggleIcon.src = '../icons/sun.png';
+      toggleBtn.style.background = '#000';
+    }
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toggleDarkMode);
+
+
+/***/ }),
+/* 159 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _forecastData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+
+
+const createForecast = async () => {
+  const { maxTempArray, minTempArray, dateArray } = await (0,_forecastData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const cells = [...document.querySelectorAll('.carousel-cell')];
+
+  for (let i = 0; i < cells.length; i += 1) {
+    const maxTemp = document.createElement('span');
+    maxTemp.textContent = `Max: ${maxTempArray[i + 1]}`;
+
+    const minTemp = document.createElement('span');
+    minTemp.textContent = `Min: ${minTempArray[i + 1]}`;
+
+    const day = document.createElement('span');
+    day.textContent = `${dateArray[i + 1]}`;
+
+    cells[i].appendChild(maxTemp);
+    cells[i].appendChild(minTemp);
+    cells[i].appendChild(day);
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createForecast);
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -22058,35 +22150,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_airQualityData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _modules_currentWeather_createCurrentWeather__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 /* harmony import */ var _modules_forecast_chart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
+/* harmony import */ var _modules_loadContents__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(157);
+/* harmony import */ var _modules_forecast_7DayForecast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(159);
+
+
 
 
 
 
 
 window.onload = () => {
-  const toggleBtn = document.querySelector('button');
-  const toggleIcon = document.getElementById('toggle-icon');
-  toggleIcon.src = '../icons/moon.png';
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    if (document.body.className === '') {
-      toggleIcon.src = '../icons/moon.png';
-    } else {
-      toggleIcon.src = '../icons/sun.png';
-    }
-  });
-
   (0,_modules_airQualityData__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_currentWeather_createCurrentWeather__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_forecast_chart__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  const displayContents = () => {
-    document.getElementById('loader').style.display = 'none';
-    document.getElementById('main-section').style.display = 'block';
-  };
-  const loadContents = () => {
-    setTimeout(displayContents, 5000);
-  };
-  loadContents();
+  (0,_modules_forecast_7DayForecast__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_modules_loadContents__WEBPACK_IMPORTED_MODULE_4__["default"])();
 };
 
 })();
