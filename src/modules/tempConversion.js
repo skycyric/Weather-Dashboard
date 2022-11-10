@@ -1,10 +1,8 @@
 import fetchWeatherData from './currentWeather/currentWeatherData';
+import { createChart } from './forecast/chart';
+import fetchForecast from './forecast/forecastData';
 
 let temp = 'celsius';
-// const setTemperature = async () => {
-//   const { temperature } = await fetchWeatherData();
-
-// };
 
 const conversionToCelsius = (currTemp) => {
   const celsius = currTemp - 273.15;
@@ -31,6 +29,8 @@ const convertTemperature = (currTemp) => {
 
 convertBtn.addEventListener('click', async (e) => {
   const { temperature } = await fetchWeatherData();
+  const { dateArray } = await fetchForecast();
+  const next24Hours = dateArray.slice(0, 9);
   if (temp === 'celsius') {
     temp = 'fahrenheit';
     e.target.textContent = 'Show temperature in Celsius °C';
@@ -40,6 +40,16 @@ convertBtn.addEventListener('click', async (e) => {
   }
   const currentTemp = document.getElementById('current-temp');
   currentTemp.textContent = convertTemperature(temperature);
+  document.getElementById('myChart').remove();
+  const newChart = document.createElement('canvas');
+  newChart.setAttribute('id', 'myChart');
+  document.getElementById('chart').appendChild(newChart);
+  createChart(temp, next24Hours);
 });
 
-export { conversionToCelsius, conversionToFahrenheit, convertTemperature };
+export {
+  conversionToCelsius,
+  conversionToFahrenheit,
+  convertTemperature,
+  temp,
+};

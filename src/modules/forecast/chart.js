@@ -1,9 +1,27 @@
+import { convertTemperature } from '../tempConversion';
 import fetchForecast from './forecastData';
 
 const xValues = [];
 let temperature;
 
-const createChart = () => {
+const getTemperature = (arr) => {
+  temperature = arr.map((data) => data.main.temp);
+  for (let i = 0; i < temperature.length; i += 1) {
+    temperature[i] = convertTemperature(temperature[i]);
+  }
+  temperature = temperature.map((data) => data.split(' '));
+  temperature = temperature.map((data) => data[0]);
+  return temperature;
+};
+
+export const createChart = (temp, arr) => {
+  getTemperature(arr);
+  let metric = '°C';
+  if (temp === 'celsius') {
+    metric = '°C';
+  } else {
+    metric = '°F';
+  }
   /* eslint-disable */
   const weatherChart = new Chart('myChart', {
     /* eslint-enable */
@@ -15,7 +33,7 @@ const createChart = () => {
           data: temperature,
           borderColor: 'blue',
           fill: false,
-          label: 'Temperature °C',
+          label: `Temperature ${metric}`,
         },
       ],
     },
@@ -26,19 +44,13 @@ const createChart = () => {
   return weatherChart;
 };
 
-const getTemperature = (arr) => {
-  temperature = arr.map((data) => data.main.temp);
-  return temperature;
-};
-
 const getNext24HoursChart = async (temp) => {
   const { dateArray } = await fetchForecast();
   const next24Hours = dateArray.slice(0, 9);
   const hoursArray = next24Hours.map((data) => data.dt_txt.split(' '));
   const hours = hoursArray.map((arr) => arr[1]);
   hours.map((hour) => xValues.push(hour));
-  getTemperature(next24Hours);
-  createChart();
+  createChart(temp, next24Hours);
 };
 
 export default getNext24HoursChart;
