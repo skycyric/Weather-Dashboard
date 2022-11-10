@@ -1,9 +1,7 @@
 import fetchForecast from './forecastData';
-import { convertDaysOfWeek } from './dateRange';
 
-const xValues = ['°C'];
-const minimums = [];
-const maximums = [];
+const xValues = [];
+let temperature;
 
 const createChart = () => {
   /* eslint-disable */
@@ -14,16 +12,10 @@ const createChart = () => {
       labels: xValues,
       datasets: [
         {
-          data: maximums,
-          borderColor: 'red',
-          fill: false,
-          label: 'Maximum °C',
-        },
-        {
-          data: minimums,
+          data: temperature,
           borderColor: 'blue',
           fill: false,
-          label: 'Minimum °C',
+          label: 'Temperature °C',
         },
       ],
     },
@@ -34,23 +26,19 @@ const createChart = () => {
   return weatherChart;
 };
 
-const getMaximums = async () => {
-  const { maxTempArray } = await fetchForecast();
-  maxTempArray.map((x) => maximums.push(x));
+const getTemperature = (arr) => {
+  temperature = arr.map((data) => data.main.temp);
+  return temperature;
 };
 
-const getMinimums = async () => {
-  const { minTempArray } = await fetchForecast();
-  minTempArray.map((x) => minimums.push(x));
-};
-
-const getDates = async () => {
+const getNext24HoursChart = async () => {
   const { dateArray } = await fetchForecast();
-  await getMaximums();
-  await getMinimums();
+  const next24Hours = dateArray.slice(0, 9);
+  const hoursArray = next24Hours.map((data) => data.dt_txt.split(' '));
+  const hours = hoursArray.map((arr) => arr[1]);
+  hours.map((hour) => xValues.push(hour));
+  getTemperature(next24Hours);
   createChart();
-  const dateStrings = dateArray.map((d) => convertDaysOfWeek(d));
-  dateStrings.map((d) => xValues.push(d));
 };
 
-export default getDates;
+export default getNext24HoursChart;

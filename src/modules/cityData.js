@@ -23,7 +23,10 @@ const fetchCityData = async () => {
         lat, lon, country, name,
       } = data[0];
       return {
-        lat, lon, country, name,
+        lat,
+        lon,
+        country,
+        name,
       };
     })
     .catch(() => {

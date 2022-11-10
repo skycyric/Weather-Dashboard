@@ -10,7 +10,6 @@ const fetchWeatherData = async () => {
     .then((data) => {
       const { description } = data.weather[0];
       const windSpeed = data.wind.speed;
-      const windGust = data.wind.gust;
       const windDeg = data.wind.deg;
       const { humidity } = data.main;
       const temperature = data.main.temp;
@@ -22,7 +21,6 @@ const fetchWeatherData = async () => {
         pressure,
         windSpeed,
         windDeg,
-        windGust,
         humidity,
         temperature,
         icon,

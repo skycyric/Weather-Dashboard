@@ -1,5 +1,6 @@
 import fetchWeatherData from './currentWeatherData';
 import { conversionToCelsius } from '../tempConversion';
+import currentDay from '../forecast/date';
 
 const createCurrentWeather = async () => {
   const {
@@ -14,6 +15,9 @@ const createCurrentWeather = async () => {
 
   const longitude = document.getElementById('lon');
   longitude.textContent = `Longitude: ${lon}`;
+
+  const day = document.getElementById('current-day');
+  day.textContent = currentDay;
 
   const currentTemp = document.getElementById('current-temp');
   currentTemp.textContent = `${conversionToCelsius(temperature)} °C`;
