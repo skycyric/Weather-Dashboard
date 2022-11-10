@@ -667,15 +667,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const fetchWeatherData = async () => {
-  const {
-    lat, lon, country, name,
-  } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const { lat, lon, country, name } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const response = await fetch(`${_apiURL__WEBPACK_IMPORTED_MODULE_1__.weatherURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`)
     .then((res) => res.json())
     .then((data) => {
       const { description } = data.weather[0];
       const windSpeed = data.wind.speed;
-      const windGust = data.wind.gust;
       const windDeg = data.wind.deg;
       const { humidity } = data.main;
       const temperature = data.main.temp;
@@ -687,7 +684,6 @@ const fetchWeatherData = async () => {
         pressure,
         windSpeed,
         windDeg,
-        windGust,
         humidity,
         temperature,
         icon,
@@ -22204,6 +22200,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wind__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(162);
 /* harmony import */ var _pressure__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(163);
 /* harmony import */ var _airQuality__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(164);
+/* harmony import */ var _humidity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(165);
+
 
 
 
@@ -22212,6 +22210,7 @@ const createDailyInfo = async () => {
   (0,_wind__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_pressure__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_airQuality__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_humidity__WEBPACK_IMPORTED_MODULE_3__["default"])();
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createDailyInfo);
@@ -22279,15 +22278,12 @@ const estimateWindSpeed = (speed) => {
 };
 
 const createWindInfo = async () => {
-  const { windSpeed, windDeg, windGust } = await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const { windSpeed, windDeg } = await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const windDescription = document.getElementById('wind-description');
   windDescription.textContent = estimateWindSpeed(speed);
 
   const windDegree = document.getElementById('deg');
   windDegree.textContent = `Degree: ${windDeg}`;
-
-  const windGustSpeed = document.getElementById('gust');
-  windGustSpeed.textContent = `Gust: ${windGust}mph`;
 
   const dailyWindSpeed = document.getElementById('speed');
   dailyWindSpeed.textContent = `Speed: ${windSpeed}mph`;
@@ -22351,6 +22347,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _airQualityData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+
+
 const getAirQuality = (data) => {
   let qualityOfAir = '';
   switch (data) {
@@ -22378,15 +22377,43 @@ const getAirQuality = (data) => {
 
 const createAirQuality = async () => {
   const { airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide } =
-    await fetchAirPollutionData();
+    await (0,_airQualityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const quality = document.getElementById('quality');
   quality.textContent = getAirQuality(airQuality);
 
   const carbonMonoxideAmount = document.getElementById('carbon-monoxide');
-  carbonMonoxideAmount.textContent = `CO: ${carbonMonoxide}μg/m<sup>3</sup>`;
+  carbonMonoxideAmount.innerHTML = `CO: ${carbonMonoxide}μg/m<sup>3</sup>`;
+
+  const nitrogenMonoxideAmount = document.getElementById('nitrogen-monoxide');
+  nitrogenMonoxideAmount.innerHTML = `NO: ${nitrogenMonoxide}μg/m<sup>3</sup>`;
+
+  const nitrogenDioxideAmount = document.getElementById('nitrogen-dioxide');
+  nitrogenDioxideAmount.innerHTML = `NO<sub>2</sub>: ${nitrogenDioxide}μg/m<sup>3</sup>`;
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createAirQuality);
+
+
+/***/ }),
+/* 165 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _currentWeatherData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
+
+
+const createHumidity = async () => {
+  const { humidity } = await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+  const dailyHumidity = document.getElementById('humidity');
+  dailyHumidity.textContent = `Humidity: ${humidity}%`;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHumidity);
 
 
 /***/ })

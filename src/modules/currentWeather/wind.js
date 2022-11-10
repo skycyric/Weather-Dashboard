@@ -50,15 +50,12 @@ const estimateWindSpeed = (speed) => {
 };
 
 const createWindInfo = async () => {
-  const { windSpeed, windDeg, windGust } = await fetchWeatherData();
+  const { windSpeed, windDeg } = await fetchWeatherData();
   const windDescription = document.getElementById('wind-description');
   windDescription.textContent = estimateWindSpeed(speed);
 
   const windDegree = document.getElementById('deg');
   windDegree.textContent = `Degree: ${windDeg}`;
-
-  const windGustSpeed = document.getElementById('gust');
-  windGustSpeed.textContent = `Gust: ${windGust}mph`;
 
   const dailyWindSpeed = document.getElementById('speed');
   dailyWindSpeed.textContent = `Speed: ${windSpeed}mph`;
