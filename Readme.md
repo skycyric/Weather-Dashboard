@@ -64,10 +64,11 @@ npm start
 
 - <a href="https://www.flaticon.com/free-icons/weather" title="weather icons">Weather icons created by iconixar - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/moon" title="moon icons">Moon icons created by Good Ware - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/wind" title="wind icons">Wind icons created by Freepik - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/air-pollution" title="air pollution icons">Air pollution icons created by kornkun - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/pressure" title="pressure icons">Pressure icons created by lutfix - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/wind" title="wind icons">Wind icons created by Ifanicon - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/air-filter" title="air filter icons">Air filter icons created by itim2101 - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/pressure" title="pressure icons">Pressure icons created by justicon - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/humidity" title="humidity icons">Humidity icons created by adriansyah - Flaticon</a>
 
 ### Libraries:
 
@@ -78,3 +79,8 @@ npm start
 
 - [OpenWeatherMap](https://openweathermap.org/api)
 - [Open-Meteo](https://open-meteo.com/en)
+
+### Useful Information:
+
+- [Wind Speed](https://www.weather.gov/pqr/wind)
+- [Difference between wind speed and wind gust](https://business.weatherzone.com.au/uncategorized/what-is-the-difference-between-average-wind-and-wind-gusts/)
