@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -23,15 +23,15 @@ button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #ebebeb;
   border-radius: 200px;
   -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);
+          box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -74,7 +74,6 @@ button {
   0% {
     -webkit-transform: rotate(0deg);
   }
-
   100% {
     -webkit-transform: rotate(360deg);
   }
@@ -83,12 +82,11 @@ button {
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -105,7 +103,6 @@ button {
     bottom: -100px;
     opacity: 0;
   }
-
   to {
     bottom: 0;
     opacity: 1;
@@ -117,7 +114,6 @@ button {
     bottom: -100px;
     opacity: 0;
   }
-
   to {
     bottom: 0;
     opacity: 1;
@@ -129,16 +125,20 @@ header {
   display: none;
 }
 
+main #temp-conversion {
+  width: 250px;
+}
+
 main #daily-info {
   border: solid black;
   width: 100%;
   height: 400px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [2];
-  grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr) [2];
-  grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
 }
 
 main #daily-info div {
@@ -156,3 +156,4 @@ main #chart {
 main #chart #myChart {
   width: auto;
 }
+/*# sourceMappingURL=style.css.map */

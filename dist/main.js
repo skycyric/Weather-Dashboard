@@ -357,7 +357,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\n.hidden {\n  visibility: hidden;\n}\n\nbutton {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n          box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\n#toggle-icon {\n  position: absolute;\n  width: 40%;\n  height: auto;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 250px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section, header {\n  display: none;\n}\n\nmain #daily-info {\n  border: solid black;\n  width: 100%;\n  height: 400px;\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: (1fr)[2];\n      grid-template-columns: repeat(2, 1fr);\n  -ms-grid-rows: (1fr)[2];\n      grid-template-rows: repeat(2, 1fr);\n}\n\nmain #daily-info div {\n  border: solid black;\n}\n\nmain #daily-info div .daily-icon {\n  width: 80px;\n}\n\nmain #chart {\n  position: relative;\n}\n\nmain #chart #myChart {\n  width: auto;\n}\n/*# sourceMappingURL=style.css.map */", "",{"version":3,"sources":["webpack://./src/styles/_base.scss","webpack://./src/styles/style.css","webpack://./src/styles/_toggle_button.scss","webpack://./src/styles/_carousel.scss","webpack://./src/styles/_loader.scss","webpack://./src/styles/style.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAAsB;UACvB,sBAAA;ACCD;;AAEA;EDCC,YAAA;ACCD;;AAEA;EDCC,kBAAA;ACCD;;AAEA;ECfE,WAAQ;EACR,YAAU;EACV,kBAAa;EACb,oBAAmB;EACnB,oBAAiB;EACjB,aAAY;EACZ,yBAAoB;MACpB,sBAAwB;UAChB,mBAAO;EACf,wBAAgB;MACjB,qBAAA;UDiBS,uBAAuB;ECfjC,mBAAa;EACX,oBAAkB;EAClB,mGAAU;UACF,2FAAI;EACb,eAAA;EDiBC,wBAAwB;EEnC1B,gBAAU;AFqCV;;AAEA;EEnCA,kBAAe;EACb,UAAU;EACV,YAAQ;AFqCV;;AAEA;EEnCC,gBAAA;AFqCD;;AAEA;EG/CE,UAAS;EACT,aAAQ;EACR,kBAAU;EACV,gBAAY;EACZ,kBAAa;AHiDf;;AAEA;EG/CE,kBAAY;EACZ,SAAA;EACA,QAAA;EACD,UAAA;EHiDC,YAAY;EG/Cd,aAAA;EACE,uBAAE;EHiDF,0BGjDwB;EHkDxB,kBAAkB;EGjDlB,8BAAI;EHmDJ,0CGnDwC;EHoDxC,kCAAkC;AACpC;;AGlDA;EACE;IAAK,+BAAuB;EHsD5B;EGrDA;IAAO,iCAAyB;EHwDhC;AACF;;AGtDA;EACE;IACA,+BAAwB;YACxB,uBAA8B;EAC9B;EACA;IACD,iCAAA;YHyDW,yBAAyB;EGvDrC;AHyDA;;AAEA;EACE,kBAAkB;EGtDlB,qCAAE;EHwDF,8BGvDW;EHwDX,6BGvDY;EHwDZ,sBAAsB;AACxB;;AGrDA;EACE;IACE,cAAc;IACd,UAAU;EHwDZ;EGrDA;IACE,SAAS;IACT,UAAU;EHuDZ;AACF;;AIxGA;EACE;IACD,cAAA;IJ2GG,UAAU;EIzGd;EAEI;IACA,SAAW;IACX,UAAQ;EACR;AJ0GJ;;AAEA;EACE,aAAa;AIlHf;;AJqHA;EACE,mBAAmB;EItHrB,WACE;EAYM,aAAW;EACZ,iBAAA;EJ4GL,aAAa;EI1Hf,0BAkBS;MACL,qCAAkB;EAKnB,uBAAA;MJsGG,kCAAkC;AI9HxC;;AJiIA;EACE,mBAAmB;AACrB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb;AACA,oCAAoC","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\n.hidden {\n  visibility: hidden;\n}\n\nbutton {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\n#toggle-icon {\n  position: absolute;\n  width: 40%;\n  height: auto;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 250px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section,\nheader {\n  display: none;\n}\n\nmain #daily-info {\n  border: solid black;\n  width: 100%;\n  height: 400px;\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: (1fr) [2];\n  grid-template-columns: repeat(2, 1fr);\n  -ms-grid-rows: (1fr) [2];\n  grid-template-rows: repeat(2, 1fr);\n}\n\nmain #daily-info div {\n  border: solid black;\n}\n\nmain #daily-info div .daily-icon {\n  width: 80px;\n}\n\nmain #chart {\n  position: relative;\n}\n\nmain #chart #myChart {\n  width: auto;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,8BAA8B;EAC9B,sBAAsB;AACxB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;EACzB,sBAAsB;EACtB,mBAAmB;EACnB,wBAAwB;EACxB,qBAAqB;EACrB,uBAAuB;EACvB,mBAAmB;EACnB,oBAAoB;EACpB,mGAAmG;EACnG,2FAA2F;EAC3F,eAAe;EACf,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,kBAAkB;EAClB,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,UAAU;EACV,YAAY;EACZ,aAAa;EACb,uBAAuB;EACvB,0BAA0B;EAC1B,kBAAkB;EAClB,8BAA8B;EAC9B,0CAA0C;EAC1C,kCAAkC;AACpC;;AAEA;EACE;IACE,+BAA+B;EACjC;;EAEA;IACE,iCAAiC;EACnC;AACF;;AAEA;EACE;IACE,+BAA+B;IAC/B,uBAAuB;EACzB;;EAEA;IACE,iCAAiC;IACjC,yBAAyB;EAC3B;AACF;;AAEA;EACE,kBAAkB;EAClB,qCAAqC;EACrC,8BAA8B;EAC9B,6BAA6B;EAC7B,sBAAsB;AACxB;;AAEA;EACE;IACE,cAAc;IACd,UAAU;EACZ;;EAEA;IACE,SAAS;IACT,UAAU;EACZ;AACF;;AAEA;EACE;IACE,cAAc;IACd,UAAU;EACZ;;EAEA;IACE,SAAS;IACT,UAAU;EACZ;AACF;;AAEA;;EAEE,aAAa;AACf;;AAEA;EACE,mBAAmB;EACnB,WAAW;EACX,aAAa;EACb,iBAAiB;EACjB,aAAa;EACb,2BAA2B;EAC3B,qCAAqC;EACrC,wBAAwB;EACxB,kCAAkC;AACpC;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,WAAW;AACb","sourcesContent":["*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\nbody {\n  height: auto;\n}\n\n.hidden {\n  visibility: hidden;\n}\n\nbutton {\n  width: 80px;\n  height: 45px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: #ebebeb;\n  border-radius: 200px;\n  -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);\n  cursor: pointer;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n}\n\n#toggle-icon {\n  position: absolute;\n  width: 40%;\n  height: auto;\n}\n\n.carousel {\n  background: #eee;\n}\n\n.carousel-cell {\n  width: 28%;\n  height: 250px;\n  margin-right: 10px;\n  background: #8c8;\n  border-radius: 5px;\n}\n\n#loader {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 1;\n  width: 120px;\n  height: 120px;\n  margin: -76px 0 0 -76px;\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  -webkit-animation: spin 2s linear infinite;\n  animation: spin 2s linear infinite;\n}\n\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\n@keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.animate-bottom {\n  position: relative;\n  -webkit-animation-name: animatebottom;\n  -webkit-animation-duration: 1s;\n  animation-name: animatebottom;\n  animation-duration: 1s;\n}\n\n@-webkit-keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n@keyframes animatebottom {\n  from {\n    bottom: -100px;\n    opacity: 0;\n  }\n\n  to {\n    bottom: 0;\n    opacity: 1;\n  }\n}\n\n#main-section,\nheader {\n  display: none;\n}\n\nmain #daily-info {\n  border: solid black;\n  width: 100%;\n  height: 400px;\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: (1fr) [2];\n  grid-template-columns: repeat(2, 1fr);\n  -ms-grid-rows: (1fr) [2];\n  grid-template-rows: repeat(2, 1fr);\n}\n\nmain #daily-info div {\n  border: solid black;\n}\n\nmain #daily-info div .daily-icon {\n  width: 80px;\n}\n\nmain #chart {\n  position: relative;\n}\n\nmain #chart #myChart {\n  width: auto;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -510,7 +510,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
 /* harmony import */ var _currentWeather_createCurrentWeather__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 /* harmony import */ var _forecast_chart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(156);
-/* harmony import */ var _forecast_7DayForecast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(158);
+/* harmony import */ var _forecast_5DayForecast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(158);
 /* harmony import */ var _currentWeather_createDailyInfo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(159);
 
 
@@ -533,7 +533,7 @@ const loadContents = () => {
   (0,_toggle__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_currentWeather_createCurrentWeather__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_forecast_chart__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_forecast_7DayForecast__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_forecast_5DayForecast__WEBPACK_IMPORTED_MODULE_3__["default"])();
   (0,_currentWeather_createDailyInfo__WEBPACK_IMPORTED_MODULE_4__["default"])();
 };
 
@@ -587,8 +587,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const createCurrentWeather = async () => {
-  const { description, temperature, icon, name, country, lat, lon } =
-    await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const {
+    description, temperature, icon, name, country, lat, lon,
+  } = await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
   const location = document.getElementById('location');
   location.textContent = `Location: ${name}, ${country}`;
@@ -600,10 +601,7 @@ const createCurrentWeather = async () => {
   longitude.textContent = `Longitude: ${lon}`;
 
   const day = document.getElementById('current-day');
-  day.textContent = _forecast_date__WEBPACK_IMPORTED_MODULE_2__.currentDay;
-
-  const date = document.getElementById('current-date');
-  date.textContent = _forecast_date__WEBPACK_IMPORTED_MODULE_2__.currentTimeAndDate;
+  day.textContent = _forecast_date__WEBPACK_IMPORTED_MODULE_2__["default"];
 
   const currentTemp = document.getElementById('current-temp');
   currentTemp.textContent = `${(0,_tempConversion__WEBPACK_IMPORTED_MODULE_1__.conversionToCelsius)(temperature)} °C`;
@@ -633,11 +631,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const fetchWeatherData = async () => {
-  const { lat, lon, country, name } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const {
+    lat, lon, country, name,
+  } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const response = await fetch(`${_apiURL__WEBPACK_IMPORTED_MODULE_1__.weatherURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       const { description } = data.weather[0];
       const windSpeed = data.wind.speed;
       const windDeg = data.wind.deg;
@@ -697,7 +696,9 @@ const fetchCityData = async () => {
   const response = await fetch(`${_apiURL__WEBPACK_IMPORTED_MODULE_0__.cityURL}${city}${_apiURL__WEBPACK_IMPORTED_MODULE_0__.appID}`)
     .then((res) => res.json())
     .then((data) => {
-      const { lat, lon, country, name } = data[0];
+      const {
+        lat, lon, country, name,
+      } = data[0];
       return {
         lat,
         lon,
@@ -707,8 +708,7 @@ const fetchCityData = async () => {
     })
     .catch(() => {
       const errorMsg = document.getElementById('error');
-      errorMsg.textContent =
-        'Please, enter a correct city or a starting letter...';
+      errorMsg.textContent = 'Please, enter a correct city or a starting letter...';
       errorMsg.style.display = 'block';
       document.querySelector('main').style.display = 'none';
     });
@@ -771,18 +771,23 @@ const conversionToFahrenheit = (temp) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "currentDay": () => (/* binding */ currentDay),
-/* harmony export */   "currentTimeAndDate": () => (/* binding */ currentTimeAndDate)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var moment_moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
 /* harmony import */ var moment_moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment_moment__WEBPACK_IMPORTED_MODULE_0__);
 
 
-const currentTimeAndDate = moment_moment__WEBPACK_IMPORTED_MODULE_0___default()().format('MMMM Do YYYY, h:mm:ss a');
+const createDate = () => {
+  const currentTimeAndDate = moment_moment__WEBPACK_IMPORTED_MODULE_0___default()().format('MMMM Do YYYY, h:mm:ss a');
+  const date = document.getElementById('current-date');
+  date.textContent = currentTimeAndDate;
+};
+
+setInterval(createDate, 1000);
 
 const currentDay = moment_moment__WEBPACK_IMPORTED_MODULE_0___default()().format('dddd');
 
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (currentDay);
 
 
 /***/ }),
@@ -22075,7 +22080,7 @@ const estimateWindSpeed = (speed) => {
 const createWindInfo = async () => {
   const { windSpeed, windDeg } = await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const windDescription = document.getElementById('wind-description');
-  windDescription.textContent = estimateWindSpeed(speed);
+  windDescription.textContent = estimateWindSpeed(windSpeed);
 
   const windDegree = document.getElementById('deg');
   windDegree.textContent = `Degree: ${windDeg}`;
@@ -22171,8 +22176,9 @@ const getAirQuality = (data) => {
 };
 
 const createAirQuality = async () => {
-  const { airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide } =
-    await (0,_airQualityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const {
+    airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide,
+  } = await (0,_airQualityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const quality = document.getElementById('quality');
   quality.textContent = getAirQuality(airQuality);
 
@@ -22206,7 +22212,7 @@ __webpack_require__.r(__webpack_exports__);
 const fetchAirPollutionData = async () => {
   const { lat, lon } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const response = await fetch(
-    `${_apiURL__WEBPACK_IMPORTED_MODULE_1__.airPollutionURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`
+    `${_apiURL__WEBPACK_IMPORTED_MODULE_1__.airPollutionURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`,
   )
     .then((res) => res.json())
     .then((data) => {

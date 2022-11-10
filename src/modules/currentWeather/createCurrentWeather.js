@@ -1,11 +1,10 @@
 import fetchWeatherData from './currentWeatherData';
-import { conversionToCelsius } from '../tempConversion';
+import { convertTemperature } from '../tempConversion';
 import currentDay from '../forecast/date';
 
 const createCurrentWeather = async () => {
-  const {
-    description, temperature, icon, name, country, lat, lon,
-  } = await fetchWeatherData();
+  const { description, temperature, icon, name, country, lat, lon } =
+    await fetchWeatherData();
 
   const location = document.getElementById('location');
   location.textContent = `Location: ${name}, ${country}`;
@@ -20,7 +19,7 @@ const createCurrentWeather = async () => {
   day.textContent = currentDay;
 
   const currentTemp = document.getElementById('current-temp');
-  currentTemp.textContent = `${conversionToCelsius(temperature)} °C`;
+  currentTemp.textContent = convertTemperature(temperature);
 
   const currentDescription = document.getElementById('description');
   currentDescription.textContent = description;
