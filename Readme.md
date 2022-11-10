@@ -74,6 +74,7 @@ npm start
 
 - Carousel used in mobile version: [Flickity](https://flickity.metafizzy.co/)
 - Weather chart: [Chart.js](https://www.chartjs.org/)
+- [Moment.js](https://momentjs.com/)
 
 ### API:
 

@@ -22,7 +22,6 @@ const fetchForecast = async () => {
         descriptionArray,
       };
     });
-  console.log(response);
   return response;
 };
 

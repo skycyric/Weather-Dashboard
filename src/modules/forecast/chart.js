@@ -34,7 +34,6 @@ const getTemperature = (arr) => {
 const getNext24HoursChart = async () => {
   const { dateArray } = await fetchForecast();
   const next24Hours = dateArray.slice(0, 9);
-  console.log(next24Hours);
   const hoursArray = next24Hours.map((data) => data.dt_txt.split(' '));
   const hours = hoursArray.map((arr) => arr[1]);
   hours.map((hour) => xValues.push(hour));
