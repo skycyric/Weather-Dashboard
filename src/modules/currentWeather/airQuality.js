@@ -26,8 +26,9 @@ const getAirQuality = (data) => {
 };
 
 const createAirQuality = async () => {
-  const { airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide } =
-    await fetchAirPollutionData();
+  const {
+    airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide,
+  } = await fetchAirPollutionData();
   const quality = document.getElementById('quality');
   quality.textContent = getAirQuality(airQuality);
 

@@ -52,7 +52,7 @@ const estimateWindSpeed = (speed) => {
 const createWindInfo = async () => {
   const { windSpeed, windDeg } = await fetchWeatherData();
   const windDescription = document.getElementById('wind-description');
-  windDescription.textContent = estimateWindSpeed(speed);
+  windDescription.textContent = estimateWindSpeed(windSpeed);
 
   const windDegree = document.getElementById('deg');
   windDegree.textContent = `Degree: ${windDeg}`;

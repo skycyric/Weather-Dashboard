@@ -4,7 +4,7 @@ import { airPollutionURL, appID } from './apiURL';
 const fetchAirPollutionData = async () => {
   const { lat, lon } = await fetchCityData();
   const response = await fetch(
-    `${airPollutionURL}lat=${lat}&lon=${lon}${appID}`
+    `${airPollutionURL}lat=${lat}&lon=${lon}${appID}`,
   )
     .then((res) => res.json())
     .then((data) => {

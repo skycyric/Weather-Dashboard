@@ -3,8 +3,9 @@ import { conversionToCelsius } from '../tempConversion';
 import currentDay from '../forecast/date';
 
 const createCurrentWeather = async () => {
-  const { description, temperature, icon, name, country, lat, lon } =
-    await fetchWeatherData();
+  const {
+    description, temperature, icon, name, country, lat, lon,
+  } = await fetchWeatherData();
 
   const location = document.getElementById('location');
   location.textContent = `Location: ${name}, ${country}`;
