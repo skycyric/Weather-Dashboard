@@ -512,31 +512,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const getAirQuality = (data) => {
-  let qualityOfAir = '';
-  switch (data) {
-    case 1:
-      qualityOfAir = 'Good';
-      break;
-    case 2:
-      qualityOfAir = 'Fair';
-      break;
-    case 3:
-      qualityOfAir = 'Moderate';
-      break;
-    case 4:
-      qualityOfAir = 'Poor';
-      break;
-    case 5:
-      qualityOfAir = 'Very Poor';
-      break;
-    default:
-      qualityOfAir = 'Good';
-      break;
-  }
-  return qualityOfAir;
-};
-
 const fetchAirPollutionData = async () => {
   const { lat, lon } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const response = await fetch(
@@ -544,7 +519,7 @@ const fetchAirPollutionData = async () => {
   )
     .then((res) => res.json())
     .then((data) => {
-      const airQuality = getAirQuality(data.list[0].main.aqi);
+      const airQuality = data.list[0].main.aqi;
       const carbonMonoxide = data.list[0].components.co;
       const nitrogenMonoxide = data.list[0].components.no;
       const nitrogenDioxide = data.list[0].components.no2;
@@ -22226,22 +22201,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _airQualityData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
-/* harmony import */ var _currentWeatherData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
-/* harmony import */ var _wind__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(162);
-/* harmony import */ var _pressure__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(163);
-
+/* harmony import */ var _wind__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(162);
+/* harmony import */ var _pressure__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(163);
+/* harmony import */ var _airQuality__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(164);
 
 
 
 
 const createDailyInfo = async () => {
-  const { pressure, windSpeed, windDeg, windGust, humidity } =
-    await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  const { airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide } =
-    await (0,_airQualityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_wind__WEBPACK_IMPORTED_MODULE_2__["default"])(windDeg, windGust, windSpeed);
-  (0,_pressure__WEBPACK_IMPORTED_MODULE_3__["default"])(pressure);
+  (0,_wind__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_pressure__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_airQuality__WEBPACK_IMPORTED_MODULE_2__["default"])();
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createDailyInfo);
@@ -22256,6 +22226,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _currentWeatherData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
+
+
 const estimateWindSpeed = (speed) => {
   let description;
   switch (true) {
@@ -22305,18 +22278,19 @@ const estimateWindSpeed = (speed) => {
   return description;
 };
 
-const createWindInfo = (deg, gust, speed) => {
+const createWindInfo = async () => {
+  const { windSpeed, windDeg, windGust } = await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
   const windDescription = document.getElementById('wind-description');
   windDescription.textContent = estimateWindSpeed(speed);
 
-  const windDeg = document.getElementById('deg');
-  windDeg.textContent = `Degree: ${deg}`;
+  const windDegree = document.getElementById('deg');
+  windDegree.textContent = `Degree: ${windDeg}`;
 
-  const windGust = document.getElementById('gust');
-  windGust.textContent = `Gust: ${gust}mph`;
+  const windGustSpeed = document.getElementById('gust');
+  windGustSpeed.textContent = `Gust: ${windGust}mph`;
 
-  const windSpeed = document.getElementById('speed');
-  windSpeed.textContent = `Speed: ${speed}mph`;
+  const dailyWindSpeed = document.getElementById('speed');
+  dailyWindSpeed.textContent = `Speed: ${windSpeed}mph`;
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createWindInfo);
@@ -22331,7 +22305,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const convertPressure = (inHg) => {
+/* harmony import */ var _currentWeatherData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
+
+
+const getPressure = (inHg) => {
   let description;
   switch (true) {
     case inHg > 30.2:
@@ -22350,16 +22327,66 @@ const convertPressure = (inHg) => {
   return description;
 };
 
-const createPressureInfo = (pressure) => {
-  const inchOfMercury = pressure * 0.02953;
+const convertPressureToInchOfMercury = (pressure) => pressure * 0.02953;
+
+const createPressureInfo = async () => {
+  const { pressure } = await (0,_currentWeatherData__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  const inchOfMercury = convertPressureToInchOfMercury(pressure);
   const pressureDescription = document.getElementById('pressure-description');
-  pressureDescription.textContent = convertPressure(inchOfMercury);
+  pressureDescription.textContent = getPressure(inchOfMercury);
 
   const dailyPressure = document.getElementById('pressure');
   dailyPressure.textContent = `Pressure: ${pressure}hPa`;
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createPressureInfo);
+
+
+/***/ }),
+/* 164 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const getAirQuality = (data) => {
+  let qualityOfAir = '';
+  switch (data) {
+    case 1:
+      qualityOfAir = 'Good';
+      break;
+    case 2:
+      qualityOfAir = 'Fair';
+      break;
+    case 3:
+      qualityOfAir = 'Moderate';
+      break;
+    case 4:
+      qualityOfAir = 'Poor';
+      break;
+    case 5:
+      qualityOfAir = 'Very Poor';
+      break;
+    default:
+      qualityOfAir = 'Good';
+      break;
+  }
+  return qualityOfAir;
+};
+
+const createAirQuality = async () => {
+  const { airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide } =
+    await fetchAirPollutionData();
+  const quality = document.getElementById('quality');
+  quality.textContent = getAirQuality(airQuality);
+
+  const carbonMonoxideAmount = document.getElementById('carbon-monoxide');
+  carbonMonoxideAmount.textContent = `CO: ${carbonMonoxide}μg/m<sup>3</sup>`;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createAirQuality);
 
 
 /***/ })

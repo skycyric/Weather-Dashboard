@@ -1,4 +1,6 @@
-const convertPressure = (inHg) => {
+import fetchWeatherData from './currentWeatherData';
+
+const getPressure = (inHg) => {
   let description;
   switch (true) {
     case inHg > 30.2:
@@ -17,10 +19,13 @@ const convertPressure = (inHg) => {
   return description;
 };
 
-const createPressureInfo = (pressure) => {
-  const inchOfMercury = pressure * 0.02953;
+const convertPressureToInchOfMercury = (pressure) => pressure * 0.02953;
+
+const createPressureInfo = async () => {
+  const { pressure } = await fetchWeatherData();
+  const inchOfMercury = convertPressureToInchOfMercury(pressure);
   const pressureDescription = document.getElementById('pressure-description');
-  pressureDescription.textContent = convertPressure(inchOfMercury);
+  pressureDescription.textContent = getPressure(inchOfMercury);
 
   const dailyPressure = document.getElementById('pressure');
   dailyPressure.textContent = `Pressure: ${pressure}hPa`;

@@ -1,3 +1,5 @@
+import fetchAirPollutionData from '../airQualityData';
+
 const getAirQuality = (data) => {
   let qualityOfAir = '';
   switch (data) {
@@ -23,6 +25,20 @@ const getAirQuality = (data) => {
   return qualityOfAir;
 };
 
-const createAirQuality = () => {};
+const createAirQuality = async () => {
+  const { airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide } =
+    await fetchAirPollutionData();
+  const quality = document.getElementById('quality');
+  quality.textContent = getAirQuality(airQuality);
+
+  const carbonMonoxideAmount = document.getElementById('carbon-monoxide');
+  carbonMonoxideAmount.innerHTML = `CO: ${carbonMonoxide}μg/m<sup>3</sup>`;
+
+  const nitrogenMonoxideAmount = document.getElementById('nitrogen-monoxide');
+  nitrogenMonoxideAmount.innerHTML = `NO: ${nitrogenMonoxide}μg/m<sup>3</sup>`;
+
+  const nitrogenDioxideAmount = document.getElementById('nitrogen-dioxide');
+  nitrogenDioxideAmount.innerHTML = `NO<sub>2</sub>: ${nitrogenDioxide}μg/m<sup>3</sup>`;
+};
 
 export default createAirQuality;

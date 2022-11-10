@@ -1,3 +1,5 @@
+import fetchWeatherData from './currentWeatherData';
+
 const estimateWindSpeed = (speed) => {
   let description;
   switch (true) {
@@ -47,18 +49,19 @@ const estimateWindSpeed = (speed) => {
   return description;
 };
 
-const createWindInfo = (deg, gust, speed) => {
+const createWindInfo = async () => {
+  const { windSpeed, windDeg, windGust } = await fetchWeatherData();
   const windDescription = document.getElementById('wind-description');
   windDescription.textContent = estimateWindSpeed(speed);
 
-  const windDeg = document.getElementById('deg');
-  windDeg.textContent = `Degree: ${deg}`;
+  const windDegree = document.getElementById('deg');
+  windDegree.textContent = `Degree: ${windDeg}`;
 
-  const windGust = document.getElementById('gust');
-  windGust.textContent = `Gust: ${gust}mph`;
+  const windGustSpeed = document.getElementById('gust');
+  windGustSpeed.textContent = `Gust: ${windGust}mph`;
 
-  const windSpeed = document.getElementById('speed');
-  windSpeed.textContent = `Speed: ${speed}mph`;
+  const dailyWindSpeed = document.getElementById('speed');
+  dailyWindSpeed.textContent = `Speed: ${windSpeed}mph`;
 };
 
 export default createWindInfo;
