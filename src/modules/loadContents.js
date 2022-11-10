@@ -1,4 +1,8 @@
 import toggleDarkMode from './toggle';
+import createCurrentWeather from './currentWeather/createCurrentWeather';
+import getNext24HoursChart from './forecast/chart';
+import createForecast from './forecast/7DayForecast';
+import createDailyInfo from './currentWeather/createDailyInfo';
 
 const displayContents = () => {
   document.getElementById('loader').style.display = 'none';
@@ -13,6 +17,10 @@ const displayContents = () => {
 const loadContents = () => {
   setTimeout(displayContents, 5000);
   toggleDarkMode();
+  createCurrentWeather();
+  getNext24HoursChart();
+  createForecast();
+  createDailyInfo();
 };
 
 export default loadContents;

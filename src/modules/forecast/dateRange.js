@@ -1,9 +1,5 @@
 import moment from 'moment/moment';
 
-const getStartDate = () => moment().format('L');
-
-const getEndDate = () => moment().add(7, 'days').calendar();
-
 const getDaysOfWeek = (num) => {
   let day = '';
   switch (num) {
@@ -42,12 +38,12 @@ const convertDaysOfWeek = (str) => {
   return dayOfWeek;
 };
 
-const formatDate = (data) => {
-  const formattedDate = data.replace(/\//g, '-');
-  const dateArray = formattedDate.split('-');
-  return `${dateArray[2]}-${dateArray[0]}-${dateArray[1]}`;
-};
+// const formatDate = (data) => {
+//   const formattedDate = data.replace(/\//g, '-');
+//   const dateArray = formattedDate.split('-');
+//   return `${dateArray[2]}-${dateArray[0]}-${dateArray[1]}`;
+// };
 
-export {
-  getStartDate, getEndDate, formatDate, convertDaysOfWeek,
-};
+// export { formatDate, convertDaysOfWeek };
+
+export default convertDaysOfWeek;

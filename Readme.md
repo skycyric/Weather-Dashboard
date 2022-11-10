@@ -6,7 +6,7 @@
 - SCSS/CSS
 - JavaScript
 - libraries
-- APIs
+- API
 - Webpack
 - mobile-first approach
 
@@ -75,10 +75,9 @@ npm start
 - Carousel used in mobile version: [Flickity](https://flickity.metafizzy.co/)
 - Weather chart: [Chart.js](https://www.chartjs.org/)
 
-### APIs:
+### API:
 
 - [OpenWeatherMap](https://openweathermap.org/api)
-- [Open-Meteo](https://open-meteo.com/en)
 
 ### Useful Information:
 

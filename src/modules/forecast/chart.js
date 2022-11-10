@@ -1,5 +1,5 @@
 import fetchForecast from './forecastData';
-import { convertDaysOfWeek } from './dateRange';
+import convertDaysOfWeek from './dateRange';
 
 const xValues = ['°C'];
 const minimums = [];
@@ -44,13 +44,15 @@ const getMinimums = async () => {
   minTempArray.map((x) => minimums.push(x));
 };
 
-const getDates = async () => {
+const getNext24HoursChart = async () => {
   const { dateArray } = await fetchForecast();
+  const next24Hours = dateArray.slice(0, 9);
+  console.log(next24Hours);
   await getMaximums();
   await getMinimums();
   createChart();
-  const dateStrings = dateArray.map((d) => convertDaysOfWeek(d));
-  dateStrings.map((d) => xValues.push(d));
+  // const dateStrings = dateArray.map((d) => convertDaysOfWeek(d));
+  // dateStrings.map((d) => xValues.push(d));
 };
 
-export default getDates;
+export default getNext24HoursChart;

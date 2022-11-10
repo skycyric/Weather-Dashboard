@@ -606,7 +606,7 @@ const appID = `&appid=${"31d683314d5ebc4e9834eae1972044a2"}`;
 const cityURL = 'http://api.openweathermap.org/geo/1.0/direct?q=';
 const weatherURL = 'https://api.openweathermap.org/data/2.5/weather?';
 const airPollutionURL = 'http://api.openweathermap.org/data/2.5/air_pollution?';
-const forecastURL = 'https://api.open-meteo.com/v1/forecast?';
+const forecastURL = 'http://api.openweathermap.org/data/2.5/forecast?';
 
 
 
@@ -784,7 +784,7 @@ const getDates = async () => {
   await getMaximums();
   await getMinimums();
   createChart();
-  const dateStrings = dateArray.map((d) => (0,_dateRange__WEBPACK_IMPORTED_MODULE_1__.convertDaysOfWeek)(d));
+  const dateStrings = dateArray.map((d) => (0,_dateRange__WEBPACK_IMPORTED_MODULE_1__["default"])(d));
   dateStrings.map((d) => xValues.push(d));
 };
 
@@ -800,34 +800,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _dateRange__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
-/* harmony import */ var _cityData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
-/* harmony import */ var _apiURL__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
-
+/* harmony import */ var _cityData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+/* harmony import */ var _apiURL__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 
 
 
 const fetchForecast = async () => {
-  const { lat, lon } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  const startDate = (0,_dateRange__WEBPACK_IMPORTED_MODULE_0__.formatDate)((0,_dateRange__WEBPACK_IMPORTED_MODULE_0__.getStartDate)());
-  const endDate = (0,_dateRange__WEBPACK_IMPORTED_MODULE_0__.formatDate)((0,_dateRange__WEBPACK_IMPORTED_MODULE_0__.getEndDate)());
+  const { lat, lon } = await (0,_cityData__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
-  const response = await fetch(
-    `${_apiURL__WEBPACK_IMPORTED_MODULE_2__.forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`,
-  )
+  const response = await fetch(`${_apiURL__WEBPACK_IMPORTED_MODULE_1__.forecastURL}lat=${lat}&lon=${lon}${_apiURL__WEBPACK_IMPORTED_MODULE_1__.appID}`)
     .then((res) => res.json())
     .then((data) => {
-      const maxTempArray = data.daily.temperature_2m_max;
-      const minTempArray = data.daily.temperature_2m_min;
-      const dateArray = data.daily.time.slice(1);
-      const weathercode = data.daily.weathercode.slice(1);
+      console.log(data);
+      const dateArray = data.list;
       return {
-        maxTempArray,
-        minTempArray,
         dateArray,
-        weathercode,
       };
     });
+  console.log(response);
   return response;
 };
 
@@ -841,18 +831,11 @@ const fetchForecast = async () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "convertDaysOfWeek": () => (/* binding */ convertDaysOfWeek),
-/* harmony export */   "formatDate": () => (/* binding */ formatDate),
-/* harmony export */   "getEndDate": () => (/* binding */ getEndDate),
-/* harmony export */   "getStartDate": () => (/* binding */ getStartDate)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var moment_moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var moment_moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment_moment__WEBPACK_IMPORTED_MODULE_0__);
 
-
-const getStartDate = () => moment_moment__WEBPACK_IMPORTED_MODULE_0___default()().format('L');
-
-const getEndDate = () => moment_moment__WEBPACK_IMPORTED_MODULE_0___default()().add(7, 'days').calendar();
 
 const getDaysOfWeek = (num) => {
   let day = '';
@@ -892,13 +875,15 @@ const convertDaysOfWeek = (str) => {
   return dayOfWeek;
 };
 
-const formatDate = (data) => {
-  const formattedDate = data.replace(/\//g, '-');
-  const dateArray = formattedDate.split('-');
-  return `${dateArray[2]}-${dateArray[0]}-${dateArray[1]}`;
-};
+// const formatDate = (data) => {
+//   const formattedDate = data.replace(/\//g, '-');
+//   const dateArray = formattedDate.split('-');
+//   return `${dateArray[2]}-${dateArray[0]}-${dateArray[1]}`;
+// };
 
+// export { formatDate, convertDaysOfWeek };
 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (convertDaysOfWeek);
 
 
 /***/ }),

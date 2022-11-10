@@ -1,28 +1,19 @@
-import { getStartDate, getEndDate, formatDate } from './dateRange';
 import fetchCityData from '../cityData';
-import { forecastURL } from '../apiURL';
+import { forecastURL, appID } from '../apiURL';
 
 const fetchForecast = async () => {
   const { lat, lon } = await fetchCityData();
-  const startDate = formatDate(getStartDate());
-  const endDate = formatDate(getEndDate());
 
-  const response = await fetch(
-    `${forecastURL}latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&start_date=${startDate}&end_date=${endDate}`,
-  )
+  const response = await fetch(`${forecastURL}lat=${lat}&lon=${lon}${appID}`)
     .then((res) => res.json())
     .then((data) => {
-      const maxTempArray = data.daily.temperature_2m_max;
-      const minTempArray = data.daily.temperature_2m_min;
-      const dateArray = data.daily.time.slice(1);
-      const weathercode = data.daily.weathercode.slice(1);
+      console.log(data);
+      const dateArray = data.list;
       return {
-        maxTempArray,
-        minTempArray,
         dateArray,
-        weathercode,
       };
     });
+  console.log(response);
   return response;
 };
 
