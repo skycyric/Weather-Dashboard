@@ -84,3 +84,4 @@ npm start
 
 - [Wind Speed](https://www.weather.gov/pqr/wind)
 - [Difference between wind speed and wind gust](https://business.weatherzone.com.au/uncategorized/what-is-the-difference-between-average-wind-and-wind-gusts/)
+- [Atmospheric pressure](https://www.maximum-inc.com/what-is-atmospheric-pressure-and-how-is-it-measured/)

@@ -1,20 +1,8 @@
 import fetchAirPollutionData from '../airQualityData';
 import fetchWeatherData from './currentWeatherData';
-import estimateWindSpeed from './windSpeed';
-
-const createWindInfo = (deg, gust, speed) => {
-  const windDescription = document.getElementById('wind-description');
-  windDescription.textContent = estimateWindSpeed(speed);
-
-  const windDeg = document.getElementById('deg');
-  windDeg.textContent = `Degree: ${deg}`;
-
-  const windGust = document.getElementById('gust');
-  windGust.textContent = `Gust: ${gust}mph`;
-
-  const windSpeed = document.getElementById('speed');
-  windSpeed.textContent = `Speed: ${speed}mph`;
-};
+import createWindInfo from './wind';
+import createPressureInfo from './pressure';
+import createAirQuality from './airQuality';
 
 const createDailyInfo = async () => {
   const { pressure, windSpeed, windDeg, windGust, humidity } =
@@ -22,6 +10,13 @@ const createDailyInfo = async () => {
   const { airQuality, carbonMonoxide, nitrogenMonoxide, nitrogenDioxide } =
     await fetchAirPollutionData();
   createWindInfo(windDeg, windGust, windSpeed);
+  createPressureInfo(pressure);
+  createAirQuality(
+    airQuality,
+    carbonMonoxide,
+    nitrogenMonoxide,
+    nitrogenDioxide
+  );
 };
 
 export default createDailyInfo;

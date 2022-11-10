@@ -47,4 +47,18 @@ const estimateWindSpeed = (speed) => {
   return description;
 };
 
-export default estimateWindSpeed;
+const createWindInfo = (deg, gust, speed) => {
+  const windDescription = document.getElementById('wind-description');
+  windDescription.textContent = estimateWindSpeed(speed);
+
+  const windDeg = document.getElementById('deg');
+  windDeg.textContent = `Degree: ${deg}`;
+
+  const windGust = document.getElementById('gust');
+  windGust.textContent = `Gust: ${gust}mph`;
+
+  const windSpeed = document.getElementById('speed');
+  windSpeed.textContent = `Speed: ${speed}mph`;
+};
+
+export default createWindInfo;
