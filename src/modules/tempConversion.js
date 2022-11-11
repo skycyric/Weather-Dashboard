@@ -1,11 +1,21 @@
-const conversionToCelsius = (temp) => {
-  const celsius = temp - 273.15;
+const conversionToCelsius = (currTemp) => {
+  const celsius = currTemp - 273.15;
   return celsius.toFixed(1);
 };
 
-const conversionToFahrenheit = (temp) => {
-  const fahrenheit = ((temp - 273.15) * 9) / 5 + 32;
+const conversionToFahrenheit = (currTemp) => {
+  const fahrenheit = ((currTemp - 273.15) * 9) / 5 + 32;
   return fahrenheit.toFixed(2);
 };
 
-export { conversionToCelsius, conversionToFahrenheit };
+const convertTemperature = (currTemp, temp) => {
+  let newTemp;
+  if (temp === 'celsius') {
+    newTemp = `${conversionToCelsius(currTemp)} °C`;
+  } else {
+    newTemp = `${conversionToFahrenheit(currTemp)} °F`;
+  }
+  return newTemp;
+};
+
+export default convertTemperature;

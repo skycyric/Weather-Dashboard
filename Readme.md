@@ -64,11 +64,11 @@ npm start
 
 - <a href="https://www.flaticon.com/free-icons/weather" title="weather icons">Weather icons created by iconixar - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/moon" title="moon icons">Moon icons created by Good Ware - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/wind" title="wind icons">Wind icons created by Ifanicon - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/air-filter" title="air filter icons">Air filter icons created by itim2101 - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/wind" title="wind icons">Wind icons created by Good Ware - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/air-filter" title="air filter icons">Air filter icons created by Freepik - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/pressure" title="pressure icons">Pressure icons created by justicon - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/humidity" title="humidity icons">Humidity icons created by adriansyah - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/humidity" title="humidity icons">Humidity icons created by Pixelmeetup - Flaticon</a>
 
 ### Libraries:
 

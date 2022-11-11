@@ -1,7 +1,7 @@
 import toggleDarkMode from './toggle';
 import createCurrentWeather from './currentWeather/createCurrentWeather';
 import getNext24HoursChart from './forecast/chart';
-import createForecast from './forecast/7DayForecast';
+import createForecast from './forecast/5DayForecast';
 import createDailyInfo from './currentWeather/createDailyInfo';
 
 const displayContents = () => {
