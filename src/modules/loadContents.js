@@ -3,7 +3,6 @@ import createCurrentWeather from './currentWeather/createCurrentWeather';
 import getNext24HoursChart from './forecast/chart';
 import createForecast from './forecast/5DayForecast';
 import createDailyInfo from './currentWeather/createDailyInfo';
-import { temp } from './tempConversion';
 
 const displayContents = () => {
   document.getElementById('loader').style.display = 'none';
@@ -19,7 +18,7 @@ const loadContents = () => {
   setTimeout(displayContents, 5000);
   toggleDarkMode();
   createCurrentWeather();
-  getNext24HoursChart(temp);
+  getNext24HoursChart();
   createForecast();
   createDailyInfo();
 };

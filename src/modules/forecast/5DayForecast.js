@@ -1,4 +1,5 @@
 import fetchForecast from './forecastData';
+import convertTemperature from '../changeTemperature';
 
 const createForecast = async () => {
   const {
@@ -17,9 +18,14 @@ const createForecast = async () => {
     dayIcon.src = `icons/${iconArray[i]}.png`;
 
     const temperature = document.createElement('span');
-    temperature.textContent = `${temperatureArray[i]}`;
+    temperature.setAttribute('class', 'cell-temp');
+    temperature.textContent = convertTemperature(
+      temperatureArray[i],
+      'celsius',
+    );
 
     const weatherDescription = document.createElement('span');
+    weatherDescription.setAttribute('class', 'cell-description');
     weatherDescription.textContent = `${descriptionArray[i]}`;
 
     const maxTemp = document.createElement('span');
