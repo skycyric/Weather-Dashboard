@@ -15,7 +15,7 @@ const displayContents = () => {
 };
 
 const loadContents = () => {
-  setTimeout(displayContents, 5000);
+  setTimeout(displayContents, 1000);
   toggleDarkMode();
   createCurrentWeather();
   getNext24HoursChart();

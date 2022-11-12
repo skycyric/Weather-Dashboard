@@ -47,6 +47,7 @@
   },
   "homepage": "https://github.com/virag-ky/Weather-Dashboard#readme",
   "dependencies": {
+    "cities.json": "^1.1.14",
     "env-create": "^1.1.4",
     "lozad": "^1.16.0",
     "moment": "^2.29.4",
