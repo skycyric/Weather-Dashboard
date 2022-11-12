@@ -1,6 +1,5 @@
 import { cityURL, appID } from './apiURL';
-
-const search = document.getElementById('search');
+import { autoComplete, search } from './autocomplete';
 
 let city = JSON.parse(localStorage.getItem('city')) || 'London';
 
@@ -12,6 +11,8 @@ search.addEventListener('keypress', (e) => {
     city = search.value.trim();
     localStorage.setItem('city', JSON.stringify(city));
     window.location.reload();
+  } else {
+    autoComplete();
   }
 });
 

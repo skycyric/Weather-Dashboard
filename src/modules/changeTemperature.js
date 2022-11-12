@@ -6,7 +6,7 @@ import convertTemperature from './tempConversion';
 let temp = 'celsius';
 
 const convertBtn = document.getElementById('temp-conversion');
-convertBtn.textContent = 'Show temperature in Fahrenheit °F';
+convertBtn.textContent = '°F';
 
 const removeElements = () => {
   document.getElementById('myChart').remove();
@@ -44,10 +44,10 @@ const changeCarouselTemp = async () => {
 convertBtn.addEventListener('click', (e) => {
   if (temp === 'celsius') {
     temp = 'fahrenheit';
-    e.target.textContent = 'Show temperature in Celsius °C';
+    e.target.textContent = '°C';
   } else {
     temp = 'celsius';
-    e.target.textContent = 'Show temperature in Fahrenheit °F';
+    e.target.textContent = '°F';
   }
   removeElements();
   changeCurrentTemp();
