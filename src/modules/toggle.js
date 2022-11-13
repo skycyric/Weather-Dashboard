@@ -8,7 +8,7 @@ const toggleDarkMode = () => {
     document.body.classList.toggle('dark');
     if (document.body.className === '') {
       toggleIcon.src = '../icons/moon.png';
-      toggleBtn.style.background = '#ebebeb';
+      toggleBtn.style.background = '#fff';
     } else {
       toggleIcon.src = '../icons/sun.png';
       toggleBtn.style.background = '#000';

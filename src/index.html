@@ -25,7 +25,7 @@
             id="search"
             placeholder="Search city..."
           />
-          <p id="error"></p>
+          <img src="../icons/search.png" alt="search icon" id="search-icon" />
         </div>
         <span id="temp-conversion"></span>
         <button id="toggle-btn">
@@ -34,19 +34,40 @@
       </nav>
       <div id="results"></div>
       <div id="location-container">
-        <span id="location"></span>
-        <span id="lat"></span>
-        <span id="lon"></span>
+        <div id="location-info">
+          <div id="location-image">
+            <img
+              src="../icons/location.png"
+              alt="location icon"
+              id="location-icon"
+            />
+            <span id="location"></span>
+          </div>
+          <span id="lat"></span>
+          <span id="lon"></span>
+        </div>
       </div>
     </header>
+    <p id="error"></p>
     <main>
       <section class="animate-bottom" id="main-section">
-        <section id="current-section">
-          <img src="" alt="weather icon" id="current-weather-icon" />
+        <div id="todays-date">
+          <img
+            src="../icons/timetable.png"
+            alt="calendar icon"
+            id="calendar-icon"
+          />
           <span id="current-date"></span>
-          <h2 id="current-temp"></h2>
-          <span id="current-day"></span>
-          <span id="description"></span>
+        </div>
+        <section id="current-section">
+          <div id="todays-temp">
+            <img src="" alt="weather icon" id="current-weather-icon" />
+          </div>
+          <div id="current-info">
+            <span id="current-day"></span>
+            <h2 id="current-temp"></h2>
+            <h3 id="description"></h3>
+          </div>
         </section>
         <section id="daily-info">
           <div id="wind">

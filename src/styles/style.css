@@ -12,7 +12,7 @@
 body {
   height: auto;
   font-family: "Montserrat", sans-serif;
-  background: #ECFCFF;
+  background: #fff;
 }
 
 body .hidden {
@@ -39,9 +39,9 @@ body .hidden {
   width: 120px;
   height: 120px;
   margin: -76px 0 0 -76px;
-  border: 16px solid #E6F4F1;
+  border: 16px solid #e6f4f1;
   border-radius: 50%;
-  border-top: 16px solid #60D2F0;
+  border-top: 16px solid #60d2f0;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
@@ -102,7 +102,7 @@ header {
 }
 
 header {
-  padding: 10px 5px;
+  padding: 10px 8px 0 8px;
 }
 
 header nav {
@@ -113,7 +113,7 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #60D2F0;
+  background: #219bec;
   border-radius: 30px;
   padding: 8px;
 }
@@ -122,19 +122,22 @@ header nav #autocomplete {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 65%;
+  background: #fff;
+  border-radius: 25px;
+  padding-right: 12px;
 }
 
 header nav #autocomplete #search {
   width: 100%;
   height: 100%;
+  font-size: 16px;
   border-radius: 25px;
   border: none;
   padding: 0 8px;
@@ -144,12 +147,17 @@ header nav #autocomplete #search:focus {
   outline: none;
 }
 
+header nav #autocomplete #search-icon {
+  width: 15px;
+}
+
 header nav #temp-conversion {
-  background: #00A7DB;
-  color: #fff;
+  background: #fff;
+  color: #000;
   font-weight: 700;
-  width: 15%;
-  border-radius: 200px;
+  font-size: 14px;
+  width: 45px;
+  border-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,8 +171,8 @@ header nav #temp-conversion {
 }
 
 header nav button {
-  width: 15%;
-  height: 45px;
+  width: 45px;
+  height: 30px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,7 +184,7 @@ header nav button {
       -ms-flex-pack: center;
           justify-content: center;
   background: #fff;
-  border-radius: 200px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
   -webkit-transition: 0.3s;
@@ -198,11 +206,11 @@ header #results {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #fff;
-  color: #00A7DB;
+  color: #219bec;
   overflow: auto;
   position: absolute;
-  -webkit-box-shadow: 10px 0 10px #00A7DB;
-          box-shadow: 10px 0 10px #00A7DB;
+  -webkit-box-shadow: 0 0 20px #222222;
+          box-shadow: 0 0 20px #222222;
   z-index: 1;
   padding: 20px 10px;
 }
@@ -215,7 +223,7 @@ header #results .selection {
 
 header #results .selection:hover {
   cursor: pointer;
-  background: #00A7DB;
+  background: #219bec;
   color: #fff;
   font-weight: 700;
 }
@@ -224,17 +232,127 @@ header #location-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../../icons/map.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin: 15px 0;
+}
+
+header #location-container #location-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  background: rgba(209, 208, 208, 0.6);
+}
+
+header #location-container #location-info #location-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #location-container #location-info #location-image #location-icon {
+  width: 20px;
+  margin-right: 5px;
+}
+
+header #location-container #location-info #location-image #location {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+header #location-container #location-info #lat, header #location-container #location-info #lon {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
 main #main-section {
   background: #ecfaff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ecfaff), to(#60d2f0));
-  background: linear-gradient(0deg, #ecfaff 0%, #60d2f0 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#219bec), to(white));
+  background: linear-gradient(0deg, #219bec 0%, white 100%);
   border-radius: 50px 50px 0 0;
+}
+
+main #main-section #todays-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+}
+
+main #main-section #todays-date #calendar-icon {
+  width: 20px;
+}
+
+main #main-section #todays-date #current-date {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+main #main-section #current-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #main-section #current-section #todays-temp #current-weather-icon {
+  width: 200px;
+}
+
+main #main-section #current-section #current-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #main-section #current-section #current-info #current-day {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+main #main-section #current-section #current-info #current-temp {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+}
+
+main #main-section #current-section #current-info #description {
+  font-weight: normal;
+  font-size: 16px;
 }
 
 main #main-section #daily-info {

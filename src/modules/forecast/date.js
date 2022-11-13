@@ -1,12 +1,12 @@
 import moment from 'moment/moment';
 
 const createDate = () => {
-  const currentTimeAndDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+  const currentTimeAndDate = moment().format('MMMM Do YYYY');
   const date = document.getElementById('current-date');
   date.textContent = currentTimeAndDate;
 };
 
-setInterval(createDate, 1000);
+createDate();
 
 const currentDay = moment().format('dddd');
 
