@@ -8,13 +8,13 @@ header {
 }
 
 header {
-  padding: 10px 8px;
+  padding: 10px 8px 0 8px;
 
   nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background: $main-color;
+    background: rgb(33, 155, 236);
     border-radius: 30px;
     padding: 8px;
 
@@ -41,7 +41,7 @@ header {
       }
 
       #search-icon {
-        width: 20px;
+        width: 15px;
       }
     }
 
@@ -49,8 +49,9 @@ header {
       background: #fff;
       color: #000;
       font-weight: 700;
-      width: 48px;
-      border-radius: 50%;
+      font-size: 14px;
+      width: 45px;
+      border-radius: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,14 +59,14 @@ header {
     }
 
     button {
-      width: 48px;
-      height: 45px;
+      width: 45px;
+      height: 30px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #fff;
-      border-radius: 50%;
+      border-radius: 50px;
       border: none;
       cursor: pointer;
       transition: 0.3s;
@@ -84,10 +85,10 @@ header {
     width: 300px;
     flex-direction: column;
     background: #fff;
-    color: $bold-color;
+    color: rgb(33, 155, 236);
     overflow: auto;
     position: absolute;
-    box-shadow: 10px 0  10px $bold-color;
+    box-shadow: 0 0 20px rgb(34, 34, 34);
     z-index: 1;
     padding: 20px 10px;
 
@@ -98,7 +99,7 @@ header {
 
       &:hover {
         cursor: pointer;
-        background: $bold-color;
+        background: rgb(33, 155, 236);
         color: #fff;
         font-weight: 700;
       }
@@ -109,40 +110,49 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 30px;
-    background: rgba(209, 208, 208, 0.3);
-    margin-top: 16px;
-    padding: 10px 15px;
+    background: url('../../icons/map.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 15px 0;
 
     #location-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      padding: 15px;
+      border-radius: 25px;
+      background: rgba(209, 208, 208, 0.6);
 
-    #location {
-      font-weight: 700;
-    }
+      #location-image {
+        display: flex;
+        align-items: center;
 
-    #lat, #lon {
-      font-family: $font1;
-      font-size: 14px;
+        #location-icon {
+          width: 20px;
+          margin-right: 5px;
+        }
+
+        #location {
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+
+      #lat,
+      #lon {
+        font-family: $font1;
+        font-size: 14px;
+      }
     }
   }
-
-  #location-image {
-
-    #location-icon {
-      width: 60px;
-    }
-  }
- }
-
 }
 
 main {
   #main-section {
     background: rgb(236, 250, 255);
-    background: linear-gradient(0deg, rgba(96, 210, 240, 1) 0%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(0deg, rgb(33, 155, 236) 0%, rgb(255, 255, 255) 100%);
     border-radius: 50px 50px 0 0;
 
     #todays-date {
@@ -152,7 +162,7 @@ main {
       padding: 10px 15px;
 
       #calendar-icon {
-        width: 25px;
+        width: 20px;
       }
 
       #current-date {
@@ -178,7 +188,7 @@ main {
         justify-content: space-between;
 
         #current-day {
-          font-size: 26px;
+          font-size: 22px;
           margin-bottom: 15px;
         }
 
@@ -189,6 +199,7 @@ main {
 
         #description {
           font-weight: normal;
+          font-size: 16px;
         }
       }
     }

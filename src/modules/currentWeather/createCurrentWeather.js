@@ -8,7 +8,7 @@ const createCurrentWeather = async () => {
   } = await fetchWeatherData();
 
   const location = document.getElementById('location');
-  location.textContent = `Location: ${name}, ${country}`;
+  location.textContent = `${name}, ${country}`;
 
   const latitude = document.getElementById('lat');
   latitude.textContent = `Latitude: ${lat}`;
@@ -23,7 +23,9 @@ const createCurrentWeather = async () => {
   currentTemp.textContent = convertTemperature(temperature, 'celsius');
 
   const currentDescription = document.getElementById('description');
-  currentDescription.textContent = description;
+  const capitalLetter = description.charAt(0).toUpperCase();
+  const restOfString = description.slice(1);
+  currentDescription.textContent = `${capitalLetter}${restOfString}`;
 
   const currentIcon = document.getElementById('current-weather-icon');
   currentIcon.src = `icons/${icon}.png`;

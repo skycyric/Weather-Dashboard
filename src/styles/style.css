@@ -102,7 +102,7 @@ header {
 }
 
 header {
-  padding: 10px 8px;
+  padding: 10px 8px 0 8px;
 }
 
 header nav {
@@ -113,7 +113,7 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #60d2f0;
+  background: #219bec;
   border-radius: 30px;
   padding: 8px;
 }
@@ -148,15 +148,16 @@ header nav #autocomplete #search:focus {
 }
 
 header nav #autocomplete #search-icon {
-  width: 20px;
+  width: 15px;
 }
 
 header nav #temp-conversion {
   background: #fff;
   color: #000;
   font-weight: 700;
-  width: 48px;
-  border-radius: 50%;
+  font-size: 14px;
+  width: 45px;
+  border-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,8 +171,8 @@ header nav #temp-conversion {
 }
 
 header nav button {
-  width: 48px;
-  height: 45px;
+  width: 45px;
+  height: 30px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,7 +184,7 @@ header nav button {
       -ms-flex-pack: center;
           justify-content: center;
   background: #fff;
-  border-radius: 50%;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
   -webkit-transition: 0.3s;
@@ -205,11 +206,11 @@ header #results {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #fff;
-  color: #00a7db;
+  color: #219bec;
   overflow: auto;
   position: absolute;
-  -webkit-box-shadow: 10px 0 10px #00a7db;
-          box-shadow: 10px 0 10px #00a7db;
+  -webkit-box-shadow: 0 0 20px #222222;
+          box-shadow: 0 0 20px #222222;
   z-index: 1;
   padding: 20px 10px;
 }
@@ -222,7 +223,7 @@ header #results .selection {
 
 header #results .selection:hover {
   cursor: pointer;
-  background: #00a7db;
+  background: #219bec;
   color: #fff;
   font-weight: 700;
 }
@@ -237,10 +238,11 @@ header #location-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 30px;
-  background: rgba(209, 208, 208, 0.3);
-  margin-top: 16px;
-  padding: 10px 15px;
+  background: url("../../icons/map.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin: 15px 0;
 }
 
 header #location-container #location-info {
@@ -252,10 +254,29 @@ header #location-container #location-info {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  background: rgba(209, 208, 208, 0.6);
 }
 
-header #location-container #location-info #location {
+header #location-container #location-info #location-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #location-container #location-info #location-image #location-icon {
+  width: 20px;
+  margin-right: 5px;
+}
+
+header #location-container #location-info #location-image #location {
   font-weight: 700;
+  font-size: 14px;
 }
 
 header #location-container #location-info #lat, header #location-container #location-info #lon {
@@ -263,14 +284,10 @@ header #location-container #location-info #lat, header #location-container #loca
   font-size: 14px;
 }
 
-header #location-container #location-image #location-icon {
-  width: 60px;
-}
-
 main #main-section {
   background: #ecfaff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#60d2f0), to(white));
-  background: linear-gradient(0deg, #60d2f0 0%, white 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#219bec), to(white));
+  background: linear-gradient(0deg, #219bec 0%, white 100%);
   border-radius: 50px 50px 0 0;
 }
 
@@ -286,7 +303,7 @@ main #main-section #todays-date {
 }
 
 main #main-section #todays-date #calendar-icon {
-  width: 25px;
+  width: 20px;
 }
 
 main #main-section #todays-date #current-date {
@@ -324,7 +341,7 @@ main #main-section #current-section #current-info {
 }
 
 main #main-section #current-section #current-info #current-day {
-  font-size: 26px;
+  font-size: 22px;
   margin-bottom: 15px;
 }
 
@@ -335,6 +352,7 @@ main #main-section #current-section #current-info #current-temp {
 
 main #main-section #current-section #current-info #description {
   font-weight: normal;
+  font-size: 16px;
 }
 
 main #main-section #daily-info {
