@@ -12,7 +12,7 @@
 body {
   height: auto;
   font-family: "Montserrat", sans-serif;
-  background: #ecfcff;
+  background: #fff;
 }
 
 body .hidden {
@@ -102,7 +102,7 @@ header {
 }
 
 header {
-  padding: 10px 5px;
+  padding: 10px 8px;
 }
 
 header nav {
@@ -231,17 +231,110 @@ header #location-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  background: rgba(209, 208, 208, 0.3);
+  margin-top: 16px;
+  padding: 10px 15px;
+}
+
+header #location-container #location-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 10px;
+}
+
+header #location-container #location-info #location {
+  font-weight: 700;
+}
+
+header #location-container #location-info #lat, header #location-container #location-info #lon {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+header #location-container #location-image #location-icon {
+  width: 60px;
 }
 
 main #main-section {
   background: #ecfaff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ecfaff), to(#60d2f0));
-  background: linear-gradient(0deg, #ecfaff 0%, #60d2f0 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#60d2f0), to(white));
+  background: linear-gradient(0deg, #60d2f0 0%, white 100%);
   border-radius: 50px 50px 0 0;
+}
+
+main #main-section #todays-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+}
+
+main #main-section #todays-date #calendar-icon {
+  width: 25px;
+}
+
+main #main-section #todays-date #current-date {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+main #main-section #current-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #main-section #current-section #todays-temp #current-weather-icon {
+  width: 200px;
+}
+
+main #main-section #current-section #current-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #main-section #current-section #current-info #current-day {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+main #main-section #current-section #current-info #current-temp {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+}
+
+main #main-section #current-section #current-info #description {
+  font-weight: normal;
 }
 
 main #main-section #daily-info {

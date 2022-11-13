@@ -8,7 +8,7 @@ header {
 }
 
 header {
-  padding: 10px 5px;
+  padding: 10px 8px;
 
   nav {
     width: 100%;
@@ -107,15 +107,91 @@ header {
 
   #location-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background: rgba(209, 208, 208, 0.3);
+    margin-top: 16px;
+    padding: 10px 15px;
+
+    #location-info {
+    display: flex;
     flex-direction: column;
+    gap: 10px;
+
+    #location {
+      font-weight: 700;
+    }
+
+    #lat, #lon {
+      font-family: $font1;
+      font-size: 14px;
+    }
   }
+
+  #location-image {
+
+    #location-icon {
+      width: 60px;
+    }
+  }
+ }
+
 }
 
 main {
   #main-section {
     background: rgb(236, 250, 255);
-    background: linear-gradient(0deg, rgba(236, 250, 255, 1) 0%, rgba(96, 210, 240, 1) 100%);
+    background: linear-gradient(0deg, rgba(96, 210, 240, 1) 0%, rgb(255, 255, 255) 100%);
     border-radius: 50px 50px 0 0;
+
+    #todays-date {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 10px 15px;
+
+      #calendar-icon {
+        width: 25px;
+      }
+
+      #current-date {
+        font-size: 14px;
+        font-family: $font1;
+      }
+    }
+
+    #current-section {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      #todays-temp {
+        #current-weather-icon {
+          width: 200px;
+        }
+      }
+
+      #current-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        #current-day {
+          font-size: 26px;
+          margin-bottom: 15px;
+        }
+
+        #current-temp {
+          font-family: $font1;
+          font-size: 40px;
+        }
+
+        #description {
+          font-weight: normal;
+        }
+      }
+    }
 
     #daily-info {
       border: solid black;

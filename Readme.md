@@ -70,6 +70,8 @@ npm start
 - <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/humidity" title="humidity icons">Humidity icons created by Pixelmeetup - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Vaadin - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/location" title="location icons">Location icons created by Yogi Aprelliyanto - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/calendar" title="calendar icons">Calendar icons created by Freepik - Flaticon</a>
 
 ### Libraries:
 
