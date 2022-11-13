@@ -69,12 +69,14 @@ npm start
 - <a href="https://www.flaticon.com/free-icons/pressure" title="pressure icons">Pressure icons created by justicon - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/humidity" title="humidity icons">Humidity icons created by Pixelmeetup - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Vaadin - Flaticon</a>
 
 ### Libraries:
 
-- Carousel used in mobile version: [Flickity](https://flickity.metafizzy.co/)
+- Carousel: [Flickity](https://flickity.metafizzy.co/)
 - Weather chart: [Chart.js](https://www.chartjs.org/)
 - [Moment.js](https://momentjs.com/)
+- [cities.json](https://github.com/lutangar/cities.json)
 
 ### API:
 
@@ -83,5 +85,4 @@ npm start
 ### Useful Information:
 
 - [Wind Speed](https://www.weather.gov/pqr/wind)
-- [Difference between wind speed and wind gust](https://business.weatherzone.com.au/uncategorized/what-is-the-difference-between-average-wind-and-wind-gusts/)
 - [Atmospheric pressure](https://www.maximum-inc.com/what-is-atmospheric-pressure-and-how-is-it-measured/)
