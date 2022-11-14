@@ -42,6 +42,11 @@ const autoComplete = () => {
   if (search.value === '') {
     results.style.display = 'none';
   }
+  if (results.style.display === 'flex') {
+    document.body.addEventListener('click', () => {
+      results.style.display = 'none';
+    });
+  }
   selectOptions();
 };
 

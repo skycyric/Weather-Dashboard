@@ -21,18 +21,22 @@ const changeCurrentTemp = async () => {
 };
 
 const changeChartTemp = async () => {
+  const xValues = [];
   const { dateArray } = await fetchForecast();
   const next24Hours = dateArray.slice(0, 9);
+  const hoursArray = next24Hours.map((data) => data.dt_txt.split(' '));
+  const hours = hoursArray.map((arr) => arr[1]);
+  hours.map((hour) => xValues.push(hour));
   const newChart = document.createElement('canvas');
   newChart.setAttribute('id', 'myChart');
   document.getElementById('chart').appendChild(newChart);
-  createChart(temp, next24Hours);
+  createChart(temp, next24Hours, xValues);
 };
 
 const changeCarouselTemp = async () => {
   const { temperatureArray } = await fetchForecast();
   const cellMaxTemp = [...document.querySelectorAll('.cell-description')];
-  const cells = [...document.querySelectorAll('.carousel-cell')];
+  const cells = [...document.querySelectorAll('.slide')];
   for (let i = 0; i < temperatureArray.length; i += 1) {
     const cellTemperature = document.createElement('span');
     cellTemperature.setAttribute('class', 'cell-temp');

@@ -1,11 +1,5 @@
 @import 'base';
 @import 'carousel';
-@import 'loader';
-
-#main-section,
-header {
-  display: none;
-}
 
 header {
   padding: 10px 8px 0 8px;
@@ -153,7 +147,6 @@ main {
   #main-section {
     background: rgb(236, 250, 255);
     background: linear-gradient(0deg, rgb(33, 155, 236) 0%, rgb(255, 255, 255) 100%);
-    border-radius: 50px 50px 0 0;
 
     #todays-date {
       display: flex;
