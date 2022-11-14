@@ -10,7 +10,7 @@ const createForecast = async () => {
     temperatureArray,
     dateArray,
   } = await fetchForecast();
-  const cells = [...document.querySelectorAll('.carousel-cell')];
+  const cells = [...document.querySelectorAll('.slide')];
 
   for (let i = 0; i < cells.length; i += 1) {
     const dayIcon = document.createElement('img');
