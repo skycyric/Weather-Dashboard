@@ -160,6 +160,10 @@ header nav #temp-conversion {
   cursor: pointer;
 }
 
+header nav #temp-conversion:hover {
+  background: #cde8fa;
+}
+
 header nav button {
   width: 45px;
   height: 30px;
