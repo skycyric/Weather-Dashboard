@@ -2,21 +2,46 @@ import { cityURL, appID } from './apiURL';
 import { search, autoComplete } from './autocomplete';
 import loadContents from './loadContents';
 
+const searchIcon = document.getElementById('search-icon');
+const errorMsg = document.getElementById('error');
+const mainSection = document.querySelector('main');
 let city = JSON.parse(localStorage.getItem('city')) || 'London';
+
+const removeError = () => {
+  if (mainSection.style.display === 'none') {
+    mainSection.style.display = 'block';
+    errorMsg.style.display = 'none';
+    console.clear();
+  }
+};
+
+const setNewData = () => {
+  city = search.value.trim();
+  localStorage.setItem('city', JSON.stringify(city));
+  const cells = [...document.querySelectorAll('.slide')];
+  cells.forEach((cell) => (cell.innerHTML = ''));
+};
 
 search.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     if (search.value === '') {
       return;
     }
-    city = search.value.trim();
-    localStorage.setItem('city', JSON.stringify(city));
-    const cells = [...document.querySelectorAll('.slide')];
-    cells.forEach((cell) => (cell.innerHTML = ''));
+    removeError();
+    setNewData();
     loadContents();
   } else {
     autoComplete();
   }
+});
+
+searchIcon.addEventListener('click', () => {
+  if (search.value === '') {
+    return;
+  }
+  removeError();
+  setNewData();
+  loadContents();
 });
 
 const fetchCityData = async () => {
@@ -32,11 +57,8 @@ const fetchCityData = async () => {
       };
     })
     .catch(() => {
-      const errorMsg = document.getElementById('error');
-      errorMsg.textContent =
-        'Please, enter a correct city or a starting letter...';
       errorMsg.style.display = 'block';
-      document.querySelector('main').style.display = 'none';
+      mainSection.style.display = 'none';
     });
   search.value = '';
   return response;

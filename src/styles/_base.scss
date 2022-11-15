@@ -3,8 +3,10 @@
 
 $font1: 'Open Sans', sans-serif;
 $font2: 'Montserrat', sans-serif;
+$small: 14px;
 $main-color: #60d2f0;
-$bold-color: #00a7db;
+$secondary-color: #00a7db;
+$darkblue-color: rgb(4, 111, 252);
 $light-bg1: #ecfcff;
 $light-bg2: #e6f4f1;
 
@@ -15,7 +17,23 @@ $light-bg2: #e6f4f1;
 }
 
 body {
-  height: auto;
+  height: 100vh;
   font-family: $font2;
   background: #fff;
+
+  #error {
+    display: none;
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

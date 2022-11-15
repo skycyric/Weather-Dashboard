@@ -1,5 +1,5 @@
 .slider-wrapper {
-  margin: 1rem;
+  margin-top: 20px;
   position: relative;
   overflow: hidden;
 
@@ -38,12 +38,12 @@
   }
 
   .slides-container {
-    height: calc(100vh - 2rem);
+    height: 250px;
     width: 100%;
-    display: flex;
+    display: -webkit-box;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-bottom: 30px;
     overflow: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -55,9 +55,41 @@
     }
 
     .slide {
-      width: 100%;
+      @include center;
+
+      flex-direction: column;
+      justify-content: space-between;
+      width: 150px;
       height: 100%;
-      flex: 1 0 100%;
+      padding: 10px 5px;
+      border-radius: 20px;
+      margin-left: 35px;
+      background: rgba(255, 255, 255, 0.9);
+
+      .day-icon {
+        width: 60px;
+      }
+
+      .cell-temp {
+        font-weight: 700;
+        color: $secondary-color;
+        font-family: $font1;
+        margin-bottom: 5px;
+      }
+
+      .cell-description {
+        font-weight: 700;
+        font-size: 15px;
+        color: $secondary-color;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .italic {
+        font-style: italic;
+        font-family: $font1;
+        font-weight: 700;
+      }
     }
   }
 }

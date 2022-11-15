@@ -2,14 +2,8 @@ import fetchForecast from './forecastData';
 import convertTemperature from '../changeTemperature';
 
 const createForecast = async () => {
-  const {
-    maxTemperatureArray,
-    minTemperatureArray,
-    descriptionArray,
-    iconArray,
-    temperatureArray,
-    dateArray,
-  } = await fetchForecast();
+  const { descriptionArray, iconArray, temperatureArray, dateArray } =
+    await fetchForecast();
   const cells = [...document.querySelectorAll('.slide')];
 
   for (let i = 0; i < cells.length; i += 1) {
@@ -21,21 +15,19 @@ const createForecast = async () => {
     temperature.setAttribute('class', 'cell-temp');
     temperature.textContent = convertTemperature(
       temperatureArray[i],
-      'celsius',
+      'celsius'
     );
 
     const weatherDescription = document.createElement('span');
     weatherDescription.setAttribute('class', 'cell-description');
-    weatherDescription.textContent = `${descriptionArray[i]}`;
-
-    const maxTemp = document.createElement('span');
-    maxTemp.textContent = `Max: ${maxTemperatureArray[i]}°C`;
-
-    const minTemp = document.createElement('span');
-    minTemp.textContent = `Min: ${minTemperatureArray[i]}°C`;
+    const capitalLetter = descriptionArray[i].charAt(0).toUpperCase();
+    const restOfString = descriptionArray[i].slice(1);
+    weatherDescription.textContent = `${capitalLetter}${restOfString}`;
 
     const day = document.createElement('span');
+    day.setAttribute('class', 'italic');
     const hour = document.createElement('span');
+    hour.setAttribute('class', 'italic');
     const hoursAndDateArray = dateArray.map((data) => data.dt_txt.split(' '));
     day.textContent = `${hoursAndDateArray[i][0]}`;
     hour.textContent = `${hoursAndDateArray[i][1]}`;
@@ -43,8 +35,6 @@ const createForecast = async () => {
     cells[i].appendChild(dayIcon);
     cells[i].appendChild(temperature);
     cells[i].appendChild(weatherDescription);
-    cells[i].appendChild(maxTemp);
-    cells[i].appendChild(minTemp);
     cells[i].appendChild(day);
     cells[i].appendChild(hour);
   }

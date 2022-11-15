@@ -8,13 +8,17 @@
 }
 
 body {
-  height: auto;
+  height: 100vh;
   font-family: "Montserrat", sans-serif;
   background: #fff;
 }
 
+body #error {
+  display: none;
+}
+
 .slider-wrapper {
-  margin: 1rem;
+  margin-top: 20px;
   position: relative;
   overflow: hidden;
 }
@@ -56,14 +60,12 @@ body {
 }
 
 .slider-wrapper .slides-container {
-  height: calc(100vh - 2rem);
+  height: 250px;
   width: 100%;
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-bottom: 30px;
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -76,26 +78,74 @@ body {
 }
 
 .slider-wrapper .slides-container .slide {
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 150px;
   height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
+  padding: 10px 5px;
+  border-radius: 20px;
+  margin-left: 35px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.slider-wrapper .slides-container .slide .day-icon {
+  width: 60px;
+}
+
+.slider-wrapper .slides-container .slide .cell-temp {
+  font-weight: 700;
+  color: #00a7db;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 5px;
+}
+
+.slider-wrapper .slides-container .slide .cell-description {
+  font-weight: 700;
+  font-size: 15px;
+  color: #00a7db;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.slider-wrapper .slides-container .slide .italic {
+  font-style: italic;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 header {
-  padding: 10px 8px 0 8px;
+  padding: 10px 15px 0 15px;
 }
 
 header nav {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #219bec;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  width: 100%;
+  background: #60d2f0;
   border-radius: 30px;
   padding: 8px;
 }
@@ -133,38 +183,41 @@ header nav #autocomplete #search-icon {
   width: 15px;
 }
 
+header nav #autocomplete #search-icon:hover {
+  cursor: pointer;
+}
+
 header nav #temp-conversion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fff;
-  color: #000;
   font-weight: 700;
   font-size: 14px;
   width: 45px;
   border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   cursor: pointer;
 }
 
 header nav button {
-  width: 45px;
-  height: 30px;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 30px;
+  position: relative;
   background: #fff;
   border-radius: 50px;
   border: none;
@@ -205,7 +258,7 @@ header #results .selection {
 
 header #results .selection:hover {
   cursor: pointer;
-  background: #219bec;
+  background: #60d2f0;
   color: #fff;
   font-weight: 700;
 }
@@ -239,16 +292,22 @@ header #location-container #location-info {
   width: 100%;
   padding: 15px;
   border-radius: 25px;
-  background: rgba(209, 208, 208, 0.6);
+  background: rgba(96, 210, 240, 0.8);
 }
 
 header #location-container #location-info #location-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
 }
 
 header #location-container #location-info #location-image #location-icon {
@@ -267,25 +326,34 @@ header #location-container #location-info #lon {
   font-size: 14px;
 }
 
-main #main-section {
+main {
   background: #ecfaff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#219bec), to(white));
-  background: linear-gradient(0deg, #219bec 0%, white 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#60d2f0), to(white));
+  background: linear-gradient(0deg, #60d2f0 0%, white 100%);
+  padding: 0 15px;
 }
 
 main #main-section #todays-date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
   gap: 5px;
-  padding: 10px 15px;
+  padding: 5px 8px;
+  margin-bottom: 15px;
 }
 
 main #main-section #todays-date #calendar-icon {
-  width: 20px;
+  width: 22px;
+  background: #fff;
 }
 
 main #main-section #todays-date #current-date {
@@ -297,34 +365,48 @@ main #main-section #current-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 0 10px #d5d6d6;
+          box-shadow: 0 0 10px #d5d6d6;
+  margin-bottom: 15px;
 }
 
 main #main-section #current-section #todays-temp #current-weather-icon {
-  width: 200px;
+  width: 150px;
 }
 
 main #main-section #current-section #current-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 main #main-section #current-section #current-info #current-day {
-  font-size: 22px;
-  margin-bottom: 15px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 main #main-section #current-section #current-info #current-temp {
@@ -338,7 +420,6 @@ main #main-section #current-section #current-info #description {
 }
 
 main #main-section #daily-info {
-  border: solid black;
   width: 100%;
   height: 400px;
   display: -ms-grid;
@@ -347,14 +428,55 @@ main #main-section #daily-info {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
+  row-gap: 8px;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
 }
 
 main #main-section #daily-info div {
-  border: solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 15px;
 }
 
 main #main-section #daily-info div .daily-icon {
-  width: 80px;
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+main #main-section #daily-info div span {
+  width: 100%;
+  font-size: 14px;
+  color: #4b4949;
+  padding-left: 10px;
+}
+
+main #main-section #daily-info div h3 {
+  font-size: 15px;
+  color: #00a7db;
+  width: 100%;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+main #main-section #daily-info div h3 span {
+  padding-left: 0;
 }
 
 main #main-section #chart {
@@ -363,5 +485,9 @@ main #main-section #chart {
 
 main #main-section #chart #myChart {
   width: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.9);
 }
 /*# sourceMappingURL=style.css.map */
