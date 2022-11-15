@@ -29,9 +29,9 @@ export const createChart = (temp, arr, xValues) => {
       datasets: [
         {
           data: temperature,
-          borderColor: 'blue',
+          borderColor: '#00a7db',
           fill: false,
-          label: `Temperature ${metric}`,
+          label: `Temperature ${metric} / Next 24 hours`,
         },
       ],
     },

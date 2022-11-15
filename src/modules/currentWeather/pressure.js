@@ -28,7 +28,7 @@ const createPressureInfo = async () => {
   pressureDescription.textContent = getPressure(inchOfMercury);
 
   const dailyPressure = document.getElementById('pressure');
-  dailyPressure.textContent = `/${pressure}hPa`;
+  dailyPressure.textContent = `${pressure}hPa`;
 };
 
 export default createPressureInfo;

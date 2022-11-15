@@ -5,17 +5,17 @@ header {
   padding: 10px 15px 0 15px;
 
   nav {
+    @include space-between;
+
+    align-items:unset;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     background: $main-color;
     border-radius: 30px;
     padding: 8px;
 
     #autocomplete {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include space-between;
+
       width: 65%;
       background: #fff;
       border-radius: 25px;
@@ -44,25 +44,22 @@ header {
     }
 
     #temp-conversion {
+      @include center;
+
       background: #fff;
-      color: #000;
       font-weight: 700;
-      font-size: 14px;
+      font-size: $small;
       width: 45px;
       border-radius: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       cursor: pointer;
     }
 
     button {
+      @include center;
+
       width: 45px;
       height: 30px;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: #fff;
       border-radius: 50px;
       border: none;
@@ -97,7 +94,7 @@ header {
 
       &:hover {
         cursor: pointer;
-        background: rgb(33, 155, 236);
+        background: $main-color;
         color: #fff;
         font-weight: 700;
       }
@@ -105,9 +102,8 @@ header {
   }
 
   #location-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include space-between;
+
     background: url('../../icons/map.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -121,12 +117,12 @@ header {
       width: 100%;
       padding: 15px;
       border-radius: 25px;
-      box-shadow: 0 0 10px rgb(213, 214, 214);
       background: rgba(96, 210, 240, .8);
 
       #location-image {
-        display: flex;
-        align-items: center;
+        @include center;
+
+        justify-content: unset;
 
         #location-icon {
           width: 20px;
@@ -135,28 +131,30 @@ header {
 
         #location {
           font-weight: 700;
-          font-size: 14px;
+          font-size: $small;
         }
       }
 
       #lat,
       #lon {
         font-family: $font1;
-        font-size: 14px;
+        font-size: $small;
       }
     }
   }
 }
 
 main {
+  background: rgb(236, 250, 255);
+  background: linear-gradient(0deg, $main-color 0%, rgb(255, 255, 255) 100%);
+  padding: 0 15px;
+
   #main-section {
-    background: rgb(236, 250, 255);
-    background: linear-gradient(0deg, $main-color 0%, rgb(255, 255, 255) 100%);
-    padding: 0 15px;
 
     #todays-date {
-      display: flex;
-      align-items: center;
+      @include center;
+
+      justify-content: unset;
       gap: 5px;
       padding: 5px 8px;
       margin-bottom: 15px;
@@ -167,15 +165,15 @@ main {
       }
 
       #current-date {
-        font-size: 14px;
+        font-size: $small;
         font-family: $font1;
       }
     }
 
     #current-section {
-      display: flex;
+      @include center;
+
       justify-content: flex-start;
-      align-items: center;
       border-radius: 25px;
       background: rgba(255, 255, 255, 0.3);
       box-shadow: 0 0 10px rgb(213, 214, 214);
@@ -188,13 +186,14 @@ main {
       }
 
       #current-info {
-        display: flex;
+        @include center;
+
+        align-items: unset;
         flex-direction: column;
-        justify-content: space-between;
 
         #current-day {
           font-size: 18px;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
         }
 
         #current-temp {
@@ -219,12 +218,13 @@ main {
       column-gap: 8px;
 
       div {
+        @include center;
+
         border-radius: 25px;
+        justify-content: unset;
         background: rgba(255, 255, 255, 0.9);
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        padding: 15px 0;
+        padding-top: 15px;
 
         .daily-icon {
           width: 60px;
@@ -233,7 +233,7 @@ main {
 
         span {
           width: 100%;
-          font-size: 14px;
+          font-size: $small;
           color: rgb(75, 73, 73);
           padding-left: 10px;
         }
@@ -256,8 +256,13 @@ main {
     #chart {
       position: relative;
 
+
       #myChart {
         width: auto;
+        border-radius: 20px;
+        margin-top: 20px;
+        padding: 3px;
+        background: rgba(255, 255, 255, 0.9);
       }
     }
   }
