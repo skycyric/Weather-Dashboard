@@ -88,7 +88,7 @@ body #error {
 }
 
 header {
-  padding: 10px 8px 0 8px;
+  padding: 10px 15px 0 15px;
 }
 
 header nav {
@@ -99,7 +99,7 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #219bec;
+  background: #60d2f0;
   border-radius: 30px;
   padding: 8px;
 }
@@ -158,10 +158,6 @@ header nav #temp-conversion {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-}
-
-header nav #temp-conversion:hover {
-  background: #cde8fa;
 }
 
 header nav button {
@@ -251,7 +247,9 @@ header #location-container #location-info {
   width: 100%;
   padding: 15px;
   border-radius: 25px;
-  background: rgba(209, 208, 208, 0.6);
+  -webkit-box-shadow: 0 0 10px #d5d6d6;
+          box-shadow: 0 0 10px #d5d6d6;
+  background: rgba(96, 210, 240, 0.8);
 }
 
 header #location-container #location-info #location-image {
@@ -281,8 +279,9 @@ header #location-container #location-info #lon {
 
 main #main-section {
   background: #ecfaff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#219bec), to(white));
-  background: linear-gradient(0deg, #219bec 0%, white 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#60d2f0), to(white));
+  background: linear-gradient(0deg, #60d2f0 0%, white 100%);
+  padding: 0 15px;
 }
 
 main #main-section #todays-date {
@@ -293,11 +292,13 @@ main #main-section #todays-date {
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
-  padding: 10px 15px;
+  padding: 5px 8px;
+  margin-bottom: 15px;
 }
 
 main #main-section #todays-date #calendar-icon {
-  width: 20px;
+  width: 22px;
+  background: #fff;
 }
 
 main #main-section #todays-date #current-date {
@@ -315,10 +316,15 @@ main #main-section #current-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 0 10px #d5d6d6;
+          box-shadow: 0 0 10px #d5d6d6;
+  margin-bottom: 15px;
 }
 
 main #main-section #current-section #todays-temp #current-weather-icon {
-  width: 200px;
+  width: 150px;
 }
 
 main #main-section #current-section #current-info {
@@ -335,7 +341,7 @@ main #main-section #current-section #current-info {
 }
 
 main #main-section #current-section #current-info #current-day {
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 15px;
 }
 
@@ -350,7 +356,6 @@ main #main-section #current-section #current-info #description {
 }
 
 main #main-section #daily-info {
-  border: solid black;
   width: 100%;
   height: 400px;
   display: -ms-grid;
@@ -359,14 +364,49 @@ main #main-section #daily-info {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
+  row-gap: 8px;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
 }
 
 main #main-section #daily-info div {
-  border: solid black;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
 }
 
 main #main-section #daily-info div .daily-icon {
-  width: 80px;
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+main #main-section #daily-info div span {
+  width: 100%;
+  font-size: 14px;
+  color: #4b4949;
+  padding-left: 10px;
+}
+
+main #main-section #daily-info div h3 {
+  font-size: 15px;
+  color: #00a7db;
+  width: 100%;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+main #main-section #daily-info div h3 span {
+  padding-left: 0;
 }
 
 main #main-section #chart {
