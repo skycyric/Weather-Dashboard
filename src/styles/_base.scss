@@ -4,7 +4,7 @@
 $font1: 'Open Sans', sans-serif;
 $font2: 'Montserrat', sans-serif;
 $main-color: #60d2f0;
-$bold-color: #00a7db;
+$secondary-color: #00a7db;
 $light-bg1: #ecfcff;
 $light-bg2: #e6f4f1;
 
@@ -18,4 +18,8 @@ body {
   height: auto;
   font-family: $font2;
   background: #fff;
+
+  #error {
+    display: none;
+  }
 }

@@ -21,9 +21,8 @@ export const createChart = (temp, arr, xValues) => {
   } else {
     metric = '°F';
   }
-  /* eslint-disable */
+
   const weatherChart = new Chart('myChart', {
-    /* eslint-enable */
     type: 'line',
     data: {
       labels: xValues,

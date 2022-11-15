@@ -36,6 +36,10 @@ header {
 
       #search-icon {
         width: 15px;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
