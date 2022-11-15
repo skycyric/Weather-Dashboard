@@ -18,7 +18,7 @@ body #error {
 }
 
 .slider-wrapper {
-  margin: 1rem;
+  margin-top: 20px;
   position: relative;
   overflow: hidden;
 }
@@ -60,14 +60,12 @@ body #error {
 }
 
 .slider-wrapper .slides-container {
-  height: calc(100vh - 2rem);
+  height: 250px;
   width: 100%;
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-bottom: 30px;
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -80,11 +78,53 @@ body #error {
 }
 
 .slider-wrapper .slides-container .slide {
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 150px;
   height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
+  padding: 10px 5px;
+  border-radius: 20px;
+  margin-left: 35px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.slider-wrapper .slides-container .slide .day-icon {
+  width: 60px;
+}
+
+.slider-wrapper .slides-container .slide .cell-temp {
+  font-weight: 700;
+  color: #00a7db;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 5px;
+}
+
+.slider-wrapper .slides-container .slide .cell-description {
+  font-weight: 700;
+  font-size: 15px;
+  color: #00a7db;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.slider-wrapper .slides-container .slide .italic {
+  font-style: italic;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 header {
