@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,30 @@ body {
 
 body #error {
   display: none;
+  padding: 10px;
+  text-align: center;
+  color: #00a7db;
+  font-weight: 700;
+}
+
+.dark {
+  background: #1d1d1d;
+}
+
+.dark header nav {
+  background: transparent;
+}
+
+.dark header nav #autocomplete {
+  background: #727272;
+}
+
+.dark header nav #autocomplete #search {
+  background: #727272;
+}
+
+.dark main {
+  background: #1d1d1d;
 }
 
 .slider-wrapper {
@@ -64,7 +89,6 @@ body #error {
   width: 100%;
   display: -webkit-box;
   list-style: none;
-  margin: 0;
   padding-bottom: 30px;
   overflow: scroll;
   scroll-behavior: smooth;
@@ -124,7 +148,8 @@ body #error {
 .slider-wrapper .slides-container .slide .italic {
   font-style: italic;
   font-family: "Open Sans", sans-serif;
-  font-weight: 700;
+  color: #00a7db;
+  font-size: 14px;
 }
 
 header {
@@ -145,7 +170,7 @@ header nav {
       -ms-flex-align: unset;
           align-items: unset;
   width: 100%;
-  background: #60d2f0;
+  background: #00a7db;
   border-radius: 30px;
   padding: 8px;
 }
@@ -199,9 +224,10 @@ header nav #temp-conversion {
           align-items: center;
   background: #fff;
   font-weight: 700;
-  font-size: 14px;
   width: 45px;
   border-radius: 50px;
+  color: #00a7db;
+  font-family: "Questrial", sans-serif;
   cursor: pointer;
 }
 
@@ -241,7 +267,7 @@ header #results {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #fff;
-  color: #219bec;
+  color: #00a7db;
   overflow: auto;
   position: absolute;
   -webkit-box-shadow: 0 0 20px #222222;
@@ -258,7 +284,7 @@ header #results .selection {
 
 header #results .selection:hover {
   cursor: pointer;
-  background: #60d2f0;
+  background: #00a7db;
   color: #fff;
   font-weight: 700;
 }
@@ -292,7 +318,9 @@ header #location-container #location-info {
   width: 100%;
   padding: 15px;
   border-radius: 25px;
-  background: rgba(96, 210, 240, 0.8);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 10px #dededf;
+          box-shadow: 0 0 10px #dededf;
 }
 
 header #location-container #location-info #location-image {
@@ -318,18 +346,21 @@ header #location-container #location-info #location-image #location-icon {
 header #location-container #location-info #location-image #location {
   font-weight: 700;
   font-size: 14px;
+  color: #00a7db;
 }
 
 header #location-container #location-info #lat,
 header #location-container #location-info #lon {
-  font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  font-family: "Questrial", sans-serif;
+  letter-spacing: 0.5px;
+  color: #838282;
 }
 
 main {
   background: #ecfaff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#60d2f0), to(white));
-  background: linear-gradient(0deg, #60d2f0 0%, white 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#00a7db), to(white));
+  background: linear-gradient(0deg, #00a7db 0%, white 100%);
   padding: 0 15px;
 }
 
@@ -352,13 +383,14 @@ main #main-section #todays-date {
 }
 
 main #main-section #todays-date #calendar-icon {
-  width: 22px;
+  width: 30px;
   background: #fff;
 }
 
 main #main-section #todays-date #current-date {
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #00a7db;
 }
 
 main #main-section #current-section {
@@ -374,15 +406,14 @@ main #main-section #current-section {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  gap: 10px;
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: 0 0 10px #d5d6d6;
-          box-shadow: 0 0 10px #d5d6d6;
   margin-bottom: 15px;
+  padding: 55px 0;
 }
 
 main #main-section #current-section #todays-temp #current-weather-icon {
-  width: 150px;
+  width: 180px;
 }
 
 main #main-section #current-section #current-info {
@@ -395,6 +426,7 @@ main #main-section #current-section #current-info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Questrial", sans-serif;
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
@@ -402,6 +434,7 @@ main #main-section #current-section #current-info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #00a7db;
 }
 
 main #main-section #current-section #current-info #current-day {
@@ -412,6 +445,7 @@ main #main-section #current-section #current-info #current-day {
 main #main-section #current-section #current-info #current-temp {
   font-family: "Open Sans", sans-serif;
   font-size: 40px;
+  margin-bottom: 5px;
 }
 
 main #main-section #current-section #current-info #description {
@@ -421,16 +455,16 @@ main #main-section #current-section #current-info #description {
 
 main #main-section #daily-info {
   width: 100%;
-  height: 400px;
+  height: 390px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-  row-gap: 8px;
-  -webkit-column-gap: 8px;
-          column-gap: 8px;
+  row-gap: 4px;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
 }
 
 main #main-section #daily-info div {
@@ -444,15 +478,13 @@ main #main-section #daily-info div {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 25px;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
   background: rgba(255, 255, 255, 0.9);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
 }
 
 main #main-section #daily-info div .daily-icon {
@@ -460,19 +492,21 @@ main #main-section #daily-info div .daily-icon {
   margin-bottom: 15px;
 }
 
+main #main-section #daily-info div #air-icon {
+  width: 50px;
+}
+
 main #main-section #daily-info div span {
   width: 100%;
   font-size: 14px;
-  color: #4b4949;
-  padding-left: 10px;
+  color: #00a7db;
 }
 
 main #main-section #daily-info div h3 {
-  font-size: 15px;
+  font-size: 14px;
   color: #00a7db;
   width: 100%;
   margin-bottom: 5px;
-  padding-left: 10px;
 }
 
 main #main-section #daily-info div h3 span {

@@ -4,6 +4,7 @@ import createForecast from './forecast/5DayForecast';
 import createDailyInfo from './currentWeather/createDailyInfo';
 import setCarousel from './carousel';
 
+const cells = [...document.querySelectorAll('.slide')];
 const toggleBtn = document.querySelector('button');
 const toggleIcon = document.getElementById('toggle-icon');
 toggleIcon.src = '../icons/moon.png';
@@ -13,9 +14,13 @@ toggleBtn.addEventListener('click', () => {
   if (document.body.className === '') {
     toggleIcon.src = '../icons/moon.png';
     toggleBtn.style.background = '#fff';
+    cells.forEach((cell) => (cell.innerHTML = ''));
+    loadContents();
   } else {
     toggleIcon.src = '../icons/sun.png';
     toggleBtn.style.background = '#000';
+    cells.forEach((cell) => (cell.innerHTML = ''));
+    loadContents();
   }
 });
 

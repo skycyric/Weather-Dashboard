@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 $font1: 'Open Sans', sans-serif;
 $font2: 'Montserrat', sans-serif;
+$font3: 'Questrial', sans-serif;
 $small: 14px;
 $main-color: #60d2f0;
 $secondary-color: #00a7db;
-$darkblue-color: rgb(4, 111, 252);
-$light-bg1: #ecfcff;
-$light-bg2: #e6f4f1;
+$dark-bg: rgb(29, 29, 29);
+$dark-bg2: rgb(114, 114, 114);
 
 * {
   margin: 0;
@@ -23,6 +24,33 @@ body {
 
   #error {
     display: none;
+    padding: 10px;
+    text-align: center;
+    color: $secondary-color;
+    font-weight: 700;
+  }
+}
+
+.dark {
+  background: $dark-bg;
+
+  header {
+
+    nav {
+      background: transparent;
+
+      #autocomplete {
+        background: $dark-bg2;
+
+        #search {
+          background: $dark-bg2;
+        }
+      }
+    }
+  }
+
+  main {
+    background: $dark-bg;
   }
 }
 
