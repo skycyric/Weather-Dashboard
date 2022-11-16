@@ -87,7 +87,8 @@
       .italic {
         font-style: italic;
         font-family: $font1;
-        font-weight: 700;
+        color: $secondary-color;
+        font-size: $small;
       }
     }
   }

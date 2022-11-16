@@ -16,6 +16,30 @@ body {
 
 body #error {
   display: none;
+  padding: 10px;
+  text-align: center;
+  color: #00a7db;
+  font-weight: 700;
+}
+
+.dark {
+  background: #1d1d1d;
+}
+
+.dark header nav {
+  background: transparent;
+}
+
+.dark header nav #autocomplete {
+  background: #727272;
+}
+
+.dark header nav #autocomplete #search {
+  background: #727272;
+}
+
+.dark main {
+  background: #1d1d1d;
 }
 
 .slider-wrapper {
@@ -124,7 +148,8 @@ body #error {
 .slider-wrapper .slides-container .slide .italic {
   font-style: italic;
   font-family: "Open Sans", sans-serif;
-  font-weight: 700;
+  color: #00a7db;
+  font-size: 14px;
 }
 
 header {
