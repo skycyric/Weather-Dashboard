@@ -9,7 +9,7 @@ header {
 
     align-items:unset;
     width: 100%;
-    background: $main-color;
+    background: $secondary-color;
     border-radius: 30px;
     padding: 8px;
 
@@ -48,9 +48,10 @@ header {
 
       background: #fff;
       font-weight: 700;
-      font-size: $small;
       width: 45px;
       border-radius: 50px;
+      color: $secondary-color;
+      font-family: $font3;
       cursor: pointer;
     }
 
@@ -117,7 +118,8 @@ header {
       width: 100%;
       padding: 15px;
       border-radius: 25px;
-      background: rgba(96, 210, 240, .8);
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 10px rgb(222, 222, 223);
 
       #location-image {
         @include center;
@@ -132,13 +134,16 @@ header {
         #location {
           font-weight: 700;
           font-size: $small;
+          color: $secondary-color;
         }
       }
 
       #lat,
       #lon {
-        font-family: $font1;
         font-size: $small;
+        font-family: $font3;
+        letter-spacing: 0.5px;
+        color: rgb(131, 130, 130);
       }
     }
   }
@@ -146,7 +151,7 @@ header {
 
 main {
   background: rgb(236, 250, 255);
-  background: linear-gradient(0deg, $main-color 0%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(0deg, $secondary-color 0%, rgb(255, 255, 255) 100%);
   padding: 0 15px;
 
   #main-section {
@@ -160,13 +165,14 @@ main {
       margin-bottom: 15px;
 
       #calendar-icon {
-        width: 22px;
+        width: 30px;
         background: #fff;
       }
 
       #current-date {
         font-size: $small;
-        font-family: $font1;
+        font-family: $font2;
+        color: $secondary-color;
       }
     }
 
@@ -178,6 +184,7 @@ main {
       background: rgba(255, 255, 255, 0.3);
       box-shadow: 0 0 10px rgb(213, 214, 214);
       margin-bottom: 15px;
+      padding: 55px 10px;
 
       #todays-temp {
         #current-weather-icon {
@@ -188,8 +195,10 @@ main {
       #current-info {
         @include center;
 
+        font-family: $font3;
         align-items: unset;
         flex-direction: column;
+        color: $secondary-color;
 
         #current-day {
           font-size: 18px;
@@ -199,6 +208,7 @@ main {
         #current-temp {
           font-family: $font1;
           font-size: 40px;
+          margin-bottom: 5px;
         }
 
         #description {

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -144,7 +145,7 @@ header nav {
       -ms-flex-align: unset;
           align-items: unset;
   width: 100%;
-  background: #60d2f0;
+  background: #00a7db;
   border-radius: 30px;
   padding: 8px;
 }
@@ -198,9 +199,10 @@ header nav #temp-conversion {
           align-items: center;
   background: #fff;
   font-weight: 700;
-  font-size: 14px;
   width: 45px;
   border-radius: 50px;
+  color: #00a7db;
+  font-family: "Questrial", sans-serif;
   cursor: pointer;
 }
 
@@ -291,7 +293,9 @@ header #location-container #location-info {
   width: 100%;
   padding: 15px;
   border-radius: 25px;
-  background: rgba(96, 210, 240, 0.8);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 10px #dededf;
+          box-shadow: 0 0 10px #dededf;
 }
 
 header #location-container #location-info #location-image {
@@ -317,18 +321,21 @@ header #location-container #location-info #location-image #location-icon {
 header #location-container #location-info #location-image #location {
   font-weight: 700;
   font-size: 14px;
+  color: #00a7db;
 }
 
 header #location-container #location-info #lat,
 header #location-container #location-info #lon {
-  font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  font-family: "Questrial", sans-serif;
+  letter-spacing: 0.5px;
+  color: #838282;
 }
 
 main {
   background: #ecfaff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#60d2f0), to(white));
-  background: linear-gradient(0deg, #60d2f0 0%, white 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#00a7db), to(white));
+  background: linear-gradient(0deg, #00a7db 0%, white 100%);
   padding: 0 15px;
 }
 
@@ -351,13 +358,14 @@ main #main-section #todays-date {
 }
 
 main #main-section #todays-date #calendar-icon {
-  width: 22px;
+  width: 30px;
   background: #fff;
 }
 
 main #main-section #todays-date #current-date {
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #00a7db;
 }
 
 main #main-section #current-section {
@@ -378,6 +386,7 @@ main #main-section #current-section {
   -webkit-box-shadow: 0 0 10px #d5d6d6;
           box-shadow: 0 0 10px #d5d6d6;
   margin-bottom: 15px;
+  padding: 55px 10px;
 }
 
 main #main-section #current-section #todays-temp #current-weather-icon {
@@ -394,6 +403,7 @@ main #main-section #current-section #current-info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Questrial", sans-serif;
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
@@ -401,6 +411,7 @@ main #main-section #current-section #current-info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #00a7db;
 }
 
 main #main-section #current-section #current-info #current-day {
@@ -411,6 +422,7 @@ main #main-section #current-section #current-info #current-day {
 main #main-section #current-section #current-info #current-temp {
   font-family: "Open Sans", sans-serif;
   font-size: 40px;
+  margin-bottom: 5px;
 }
 
 main #main-section #current-section #current-info #description {

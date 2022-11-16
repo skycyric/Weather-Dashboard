@@ -71,7 +71,7 @@ npm start
 - <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/humidity" title="humidity icons">Humidity icons created by Pixelmeetup - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Vaadin - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/location" title="location icons">Location icons created by Yogi Aprelliyanto - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/location" title="location icons">Location icons created by Freepik - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/calendar" title="calendar icons">Calendar icons created by Freepik - Flaticon</a>
 - Image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=306235">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=306235">Pixabay</a>
 
