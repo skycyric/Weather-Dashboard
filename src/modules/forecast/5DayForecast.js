@@ -7,9 +7,17 @@ const createForecast = async () => {
   const cells = [...document.querySelectorAll('.slide')];
 
   for (let i = 0; i < cells.length; i += 1) {
+    let weatherIcon;
+
+    if (document.body.className === '') {
+      weatherIcon = `light/${iconArray[i]}.png`;
+    } else {
+      weatherIcon = `dark/${iconArray[i]}.png`;
+    }
+
     const dayIcon = document.createElement('img');
     dayIcon.setAttribute('class', 'day-icon');
-    dayIcon.src = `icons/${iconArray[i]}.png`;
+    dayIcon.src = weatherIcon;
 
     const temperature = document.createElement('span');
     temperature.setAttribute('class', 'cell-temp');

@@ -12,7 +12,17 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: 'icons', to: 'icons' }],
+      patterns: [
+        { from: 'icons', to: 'icons' },
+        {
+          from: 'light',
+          to: 'light',
+        },
+        {
+          from: 'dark',
+          to: 'dark',
+        },
+      ],
     }),
     new Dotenv({
       systemvars: true,

@@ -62,6 +62,7 @@ npm start
 
 ### Icons:
 
+- [Weather icon sets](https://www.figma.com/community/file/972934576657989859)
 - <a href="https://www.flaticon.com/free-icons/weather" title="weather icons">Weather icons created by iconixar - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/moon" title="moon icons">Moon icons created by Good Ware - Flaticon</a>
 - <a href="https://www.flaticon.com/free-icons/wind" title="wind icons">Wind icons created by Good Ware - Flaticon</a>
@@ -76,7 +77,6 @@ npm start
 
 ### Libraries:
 
-- Carousel: [Flickity](https://flickity.metafizzy.co/)
 - Weather chart: [Chart.js](https://www.chartjs.org/)
 - [Moment.js](https://momentjs.com/)
 - [cities.json](https://github.com/lutangar/cities.json)

@@ -3,9 +3,16 @@ import convertTemperature from '../tempConversion';
 import currentDay from '../forecast/date';
 
 const createCurrentWeather = async () => {
-  const {
-    description, temperature, icon, name, country, lat, lon,
-  } = await fetchWeatherData();
+  const { description, temperature, icon, name, country, lat, lon } =
+    await fetchWeatherData();
+
+  let weatherIcon;
+
+  if (document.body.className === '') {
+    weatherIcon = `light/${icon}.png`;
+  } else {
+    weatherIcon = `dark/${icon}.png`;
+  }
 
   const location = document.getElementById('location');
   location.textContent = `${name}, ${country}`;
@@ -28,7 +35,8 @@ const createCurrentWeather = async () => {
   currentDescription.textContent = `${capitalLetter}${restOfString}`;
 
   const currentIcon = document.getElementById('current-weather-icon');
-  currentIcon.src = `icons/${icon}.png`;
+
+  currentIcon.src = weatherIcon;
 };
 
 export default createCurrentWeather;
