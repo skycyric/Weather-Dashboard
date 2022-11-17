@@ -22,6 +22,14 @@ export const createChart = (temp, arr, xValues) => {
     metric = '°F';
   }
 
+  let borderColor;
+
+  if (document.body.className === '') {
+    borderColor = '#00a7db';
+  } else {
+    borderColor = '#60d2f0';
+  }
+
   const weatherChart = new Chart('myChart', {
     type: 'line',
     data: {
@@ -29,14 +37,16 @@ export const createChart = (temp, arr, xValues) => {
       datasets: [
         {
           data: temperature,
-          borderColor: '#00a7db',
+          borderColor: borderColor,
           fill: false,
           label: `Temperature ${metric} / Next 24 hours`,
         },
       ],
     },
     options: {
-      legend: { display: true },
+      legend: {
+        display: true,
+      },
     },
   });
   return weatherChart;

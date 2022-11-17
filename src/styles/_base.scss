@@ -9,7 +9,24 @@ $small: 14px;
 $main-color: #60d2f0;
 $secondary-color: #00a7db;
 $dark-bg: rgb(29, 29, 29);
-$dark-bg2: rgb(114, 114, 114);
+$dark-bg2: rgb(82, 82, 82);
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin grey-font {
+  color: #fff;
+  opacity: .5;
+}
 
 * {
   margin: 0;
@@ -29,39 +46,4 @@ body {
     color: $secondary-color;
     font-weight: 700;
   }
-}
-
-.dark {
-  background: $dark-bg;
-
-  header {
-
-    nav {
-      background: transparent;
-
-      #autocomplete {
-        background: $dark-bg2;
-
-        #search {
-          background: $dark-bg2;
-        }
-      }
-    }
-  }
-
-  main {
-    background: $dark-bg;
-  }
-}
-
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
