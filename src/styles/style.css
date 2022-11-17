@@ -31,11 +31,48 @@ body #error {
 }
 
 .dark header nav #autocomplete {
-  background: #727272;
+  background: #525252;
+  padding-right: 0;
 }
 
 .dark header nav #autocomplete #search {
-  background: #727272;
+  background: #525252;
+  color: #fff;
+}
+
+.dark header nav #autocomplete #search::-webkit-input-placeholder {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark header nav #autocomplete #search:-ms-input-placeholder {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark header nav #autocomplete #search::-ms-input-placeholder {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark header nav #autocomplete #search::placeholder {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark header nav #temp-conversion {
+  background: #525252;
+  color: #60d2f0;
+}
+
+.dark header #results {
+  background: #525252;
+  color: #60d2f0;
+}
+
+.dark header #results .selection:hover {
+  background: #60d2f0;
+  color: #1d1d1d;
 }
 
 .dark main {
@@ -188,13 +225,12 @@ header nav #autocomplete {
   width: 65%;
   background: #fff;
   border-radius: 25px;
-  padding-right: 12px;
 }
 
 header nav #autocomplete #search {
   width: 100%;
   height: 100%;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 25px;
   border: none;
   padding: 0 8px;
@@ -205,7 +241,7 @@ header nav #autocomplete #search:focus {
 }
 
 header nav #autocomplete #search-icon {
-  width: 15px;
+  width: 30px;
 }
 
 header nav #autocomplete #search-icon:hover {
@@ -260,8 +296,9 @@ header nav button #toggle-icon {
 
 header #results {
   display: none;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
+  font-size: 14px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -277,7 +314,7 @@ header #results {
 }
 
 header #results .selection {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 10px;
   border-radius: 25px;
 }
@@ -286,7 +323,6 @@ header #results .selection:hover {
   cursor: pointer;
   background: #00a7db;
   color: #fff;
-  font-weight: 700;
 }
 
 header #location-container {

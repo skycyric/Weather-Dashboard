@@ -18,7 +18,7 @@ toggleBtn.addEventListener('click', () => {
     loadContents();
   } else {
     toggleIcon.src = '../icons/sun.png';
-    toggleBtn.style.background = '#000';
+    toggleBtn.style.background = 'rgb(82, 82, 82)';
     cells.forEach((cell) => (cell.innerHTML = ''));
     loadContents();
   }

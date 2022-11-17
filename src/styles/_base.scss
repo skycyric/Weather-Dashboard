@@ -9,7 +9,7 @@ $small: 14px;
 $main-color: #60d2f0;
 $secondary-color: #00a7db;
 $dark-bg: rgb(29, 29, 29);
-$dark-bg2: rgb(114, 114, 114);
+$dark-bg2: rgb(82, 82, 82);
 
 * {
   margin: 0;
@@ -41,9 +41,34 @@ body {
 
       #autocomplete {
         background: $dark-bg2;
+        padding-right: 0;
 
         #search {
           background: $dark-bg2;
+          color: #fff;
+
+          &::placeholder {
+            color: #fff;
+            opacity: .5;
+          }
+        }
+      }
+
+      #temp-conversion {
+        background: $dark-bg2;
+        color: $main-color;
+      }
+    }
+
+    #results {
+      background: $dark-bg2;
+      color: $main-color;
+
+      .selection {
+
+        &:hover {
+          background: $main-color;
+          color: $dark-bg;
         }
       }
     }
