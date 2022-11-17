@@ -11,6 +11,23 @@ $secondary-color: #00a7db;
 $dark-bg: rgb(29, 29, 29);
 $dark-bg2: rgb(82, 82, 82);
 
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin grey-font {
+  color: #fff;
+  opacity: .5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,8 +65,7 @@ body {
           color: #fff;
 
           &::placeholder {
-            color: #fff;
-            opacity: .5;
+           @include grey-font;
           }
         }
       }
@@ -72,21 +88,48 @@ body {
         }
       }
     }
+
+    #location-container {
+
+      #location-info {
+        background: rgba(100, 100, 100, 0.6);
+        box-shadow: none;
+
+        #location-image {
+
+          #location {
+            color: $main-color
+          }
+        }
+
+        #lat, #lon {
+          @include grey-font;
+        }
+      }
+    }
   }
 
   main {
     background: $dark-bg;
+
+    #main-section {
+
+      #todays-date {
+
+        #current-date {
+          color: $main-color;
+        }
+      }
+
+      #current-section {
+
+        #current-info {
+
+          #current-temp {
+            color: $main-color;
+          }
+        }
+      }
+    }
   }
-}
-
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }

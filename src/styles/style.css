@@ -75,8 +75,31 @@ body #error {
   color: #1d1d1d;
 }
 
+.dark header #location-container #location-info {
+  background: rgba(100, 100, 100, 0.6);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dark header #location-container #location-info #location-image #location {
+  color: #60d2f0;
+}
+
+.dark header #location-container #location-info #lat, .dark header #location-container #location-info #lon {
+  color: #fff;
+  opacity: .5;
+}
+
 .dark main {
   background: #1d1d1d;
+}
+
+.dark main #main-section #todays-date #current-date {
+  color: #60d2f0;
+}
+
+.dark main #main-section #current-section #current-info #current-temp {
+  color: #60d2f0;
 }
 
 .slider-wrapper {
@@ -421,6 +444,7 @@ main #main-section #todays-date {
 main #main-section #todays-date #calendar-icon {
   width: 30px;
   background: #fff;
+  background: transparent;
 }
 
 main #main-section #todays-date #current-date {
