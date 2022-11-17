@@ -22,88 +22,8 @@ body #error {
   font-weight: 700;
 }
 
-.dark {
-  background: #1d1d1d;
-}
-
-.dark header nav {
-  background: transparent;
-}
-
-.dark header nav #autocomplete {
-  background: #525252;
-  padding-right: 0;
-}
-
-.dark header nav #autocomplete #search {
-  background: #525252;
-  color: #fff;
-}
-
-.dark header nav #autocomplete #search::-webkit-input-placeholder {
-  color: #fff;
-  opacity: .5;
-}
-
-.dark header nav #autocomplete #search:-ms-input-placeholder {
-  color: #fff;
-  opacity: .5;
-}
-
-.dark header nav #autocomplete #search::-ms-input-placeholder {
-  color: #fff;
-  opacity: .5;
-}
-
-.dark header nav #autocomplete #search::placeholder {
-  color: #fff;
-  opacity: .5;
-}
-
-.dark header nav #temp-conversion {
-  background: #525252;
-  color: #60d2f0;
-}
-
-.dark header #results {
-  background: #525252;
-  color: #60d2f0;
-}
-
-.dark header #results .selection:hover {
-  background: #60d2f0;
-  color: #1d1d1d;
-}
-
-.dark header #location-container #location-info {
-  background: rgba(100, 100, 100, 0.6);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.dark header #location-container #location-info #location-image #location {
-  color: #60d2f0;
-}
-
-.dark header #location-container #location-info #lat, .dark header #location-container #location-info #lon {
-  color: #fff;
-  opacity: .5;
-}
-
-.dark main {
-  background: #1d1d1d;
-}
-
-.dark main #main-section #todays-date #current-date {
-  color: #60d2f0;
-}
-
-.dark main #main-section #current-section #current-info #current-temp {
-  color: #60d2f0;
-}
-
 .slider-wrapper {
-  margin-top: 20px;
+  margin-top: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -210,6 +130,108 @@ body #error {
   font-family: "Open Sans", sans-serif;
   color: #00a7db;
   font-size: 14px;
+}
+
+.dark {
+  background: #1d1d1d;
+}
+
+.dark header nav {
+  background: transparent;
+}
+
+.dark header nav #autocomplete {
+  background: #525252;
+  padding-right: 0;
+}
+
+.dark header nav #autocomplete #search {
+  background: #525252;
+  color: #fff;
+}
+
+.dark header nav #autocomplete #search::-webkit-input-placeholder {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark header nav #autocomplete #search:-ms-input-placeholder {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark header nav #autocomplete #search::-ms-input-placeholder {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark header nav #autocomplete #search::placeholder {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark header nav #temp-conversion {
+  background: #525252;
+  color: #60d2f0;
+}
+
+.dark header #results {
+  background: #525252;
+  color: #60d2f0;
+}
+
+.dark header #results .selection:hover {
+  background: #60d2f0;
+  color: #1d1d1d;
+}
+
+.dark header #location-container #location-info {
+  background: rgba(100, 100, 100, 0.6);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dark header #location-container #location-info #location-image #location {
+  color: #60d2f0;
+}
+
+.dark header #location-container #location-info #lat, .dark header #location-container #location-info #lon {
+  color: #fff;
+  opacity: .5;
+}
+
+.dark main {
+  background: #1d1d1d;
+}
+
+.dark main #main-section #todays-date #current-date {
+  color: #60d2f0;
+}
+
+.dark main #main-section #current-section #current-info #current-temp {
+  color: #60d2f0;
+}
+
+.dark main #main-section #daily-info div {
+  background: #525252;
+}
+
+.dark main #main-section #daily-info div h3 {
+  color: #60d2f0;
+}
+
+.dark main #main-section #chart #myChart {
+  background: transparent;
+  -webkit-box-shadow: 0 0 10px #525252;
+          box-shadow: 0 0 10px #525252;
+}
+
+.dark main .slider-wrapper .slides-container .slide {
+  background: #525252;
+}
+
+.dark main .slider-wrapper .slides-container .slide .italic {
+  color: #b4b4b4;
 }
 
 header {
@@ -545,6 +567,7 @@ main #main-section #daily-info div {
           flex-direction: column;
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  color: #00a7db;
 }
 
 main #main-section #daily-info div .daily-icon {
@@ -559,12 +582,10 @@ main #main-section #daily-info div #air-icon {
 main #main-section #daily-info div span {
   width: 100%;
   font-size: 14px;
-  color: #00a7db;
 }
 
 main #main-section #daily-info div h3 {
   font-size: 14px;
-  color: #00a7db;
   width: 100%;
   margin-bottom: 5px;
 }

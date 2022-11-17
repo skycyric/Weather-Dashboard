@@ -1,5 +1,6 @@
 @import 'base';
 @import 'carousel';
+@import 'dark';
 
 header {
   padding: 10px 15px 0 15px;
@@ -234,6 +235,7 @@ main {
         flex-direction: column;
         font-family: $font1;
         text-align: center;
+        color: $secondary-color;
 
         .daily-icon {
           width: 60px;
@@ -247,12 +249,10 @@ main {
         span {
           width: 100%;
           font-size: $small;
-          color: $secondary-color;
         }
 
         h3 {
           font-size: $small;
-          color: $secondary-color;
           width: 100%;
           margin-bottom: 5px;
 
