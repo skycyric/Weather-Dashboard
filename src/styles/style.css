@@ -141,12 +141,11 @@ body #error {
 }
 
 .dark header nav #autocomplete {
-  background: #525252;
-  padding-right: 0;
+  background: #303030;
 }
 
 .dark header nav #autocomplete #search {
-  background: #525252;
+  background: #303030;
   color: #fff;
 }
 
@@ -171,12 +170,12 @@ body #error {
 }
 
 .dark header nav #temp-conversion {
-  background: #525252;
+  background: #303030;
   color: #60d2f0;
 }
 
 .dark header #results {
-  background: #525252;
+  background: #303030;
   color: #60d2f0;
 }
 
@@ -186,7 +185,7 @@ body #error {
 }
 
 .dark header #location-container #location-info {
-  background: rgba(100, 100, 100, 0.6);
+  background: rgba(77, 77, 77, 0.5);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -213,7 +212,7 @@ body #error {
 }
 
 .dark main #main-section #daily-info div {
-  background: #525252;
+  background: #303030;
 }
 
 .dark main #main-section #daily-info div h3 {
@@ -222,12 +221,12 @@ body #error {
 
 .dark main #main-section #chart #myChart {
   background: transparent;
-  -webkit-box-shadow: 0 0 10px #525252;
-          box-shadow: 0 0 10px #525252;
+  -webkit-box-shadow: 0 0 10px #303030;
+          box-shadow: 0 0 10px #303030;
 }
 
 .dark main .slider-wrapper .slides-container .slide {
-  background: #525252;
+  background: #303030;
 }
 
 .dark main .slider-wrapper .slides-container .slide .italic {
