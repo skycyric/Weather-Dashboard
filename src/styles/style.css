@@ -237,6 +237,25 @@ header {
   padding: 10px 15px 0 15px;
 }
 
+@media (min-width: 600px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 25px 50px;
+  }
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,12 +299,24 @@ header nav #autocomplete #search {
   padding: 0 8px;
 }
 
+@media (min-width: 600px) {
+  header nav #autocomplete #search {
+    font-size: 18px;
+  }
+}
+
 header nav #autocomplete #search:focus {
   outline: none;
 }
 
 header nav #autocomplete #search-icon {
   width: 30px;
+}
+
+@media (min-width: 600px) {
+  header nav #autocomplete #search-icon {
+    width: 45px;
+  }
 }
 
 header nav #autocomplete #search-icon:hover {
@@ -311,6 +342,13 @@ header nav #temp-conversion {
   cursor: pointer;
 }
 
+@media (min-width: 600px) {
+  header nav #temp-conversion {
+    width: 70px;
+    font-size: 18px;
+  }
+}
+
 header nav button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -330,6 +368,13 @@ header nav button {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media (min-width: 600px) {
+  header nav button {
+    height: 45px;
+    width: 70px;
+  }
 }
 
 header nav button #toggle-icon {
@@ -386,6 +431,13 @@ header #location-container {
   margin: 15px 0;
 }
 
+@media (min-width: 600px) {
+  header #location-container {
+    width: 100%;
+    height: 150px;
+  }
+}
+
 header #location-container #location-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,6 +453,14 @@ header #location-container #location-info {
   background: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0 0 10px #dededf;
           box-shadow: 0 0 10px #dededf;
+}
+
+@media (min-width: 600px) {
+  header #location-container #location-info {
+    height: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 header #location-container #location-info #location-image {
@@ -423,10 +483,22 @@ header #location-container #location-info #location-image #location-icon {
   margin-right: 5px;
 }
 
+@media (min-width: 600px) {
+  header #location-container #location-info #location-image #location-icon {
+    width: 40px;
+  }
+}
+
 header #location-container #location-info #location-image #location {
   font-weight: 700;
   font-size: 14px;
   color: #00a7db;
+}
+
+@media (min-width: 600px) {
+  header #location-container #location-info #location-image #location {
+    font-size: 18px;
+  }
 }
 
 header #location-container #location-info #lat,
@@ -435,6 +507,13 @@ header #location-container #location-info #lon {
   font-family: "Questrial", sans-serif;
   letter-spacing: 0.5px;
   color: #838282;
+}
+
+@media (min-width: 600px) {
+  header #location-container #location-info #lat,
+  header #location-container #location-info #lon {
+    font-size: 18px;
+  }
 }
 
 main {

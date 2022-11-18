@@ -6,6 +6,7 @@ $font1: 'Open Sans', sans-serif;
 $font2: 'Montserrat', sans-serif;
 $font3: 'Questrial', sans-serif;
 $small: 14px;
+$medium: 18px;
 $main-color: #60d2f0;
 $secondary-color: #00a7db;
 $dark-bg: rgb(29, 29, 29);
@@ -26,6 +27,12 @@ $dark-bg2: rgb(48, 48, 48);
 @mixin grey-font {
   color: #fff;
   opacity: .5;
+}
+
+@mixin tablet {
+  @media (min-width: 600px) {
+    @content
+  }
 }
 
 * {

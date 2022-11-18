@@ -3,6 +3,13 @@
 @import 'dark';
 
 header {
+  @include tablet {
+    @include center;
+
+    flex-direction: column;
+    padding: 25px 50px;
+  }
+
   padding: 10px 15px 0 15px;
 
   nav {
@@ -22,6 +29,10 @@ header {
       border-radius: 25px;
 
       #search {
+        @include tablet {
+          font-size: $medium;
+        }
+
         width: 100%;
         height: 100%;
         font-size: 15px;
@@ -35,6 +46,10 @@ header {
       }
 
       #search-icon {
+        @include tablet {
+          width: 45px;
+        }
+
         width: 30px;
 
         &:hover {
@@ -45,6 +60,10 @@ header {
 
     #temp-conversion {
       @include center;
+      @include tablet {
+        width: 70px;
+        font-size: $medium;
+      }
 
       background: #fff;
       font-weight: 700;
@@ -57,6 +76,10 @@ header {
 
     button {
       @include center;
+      @include tablet {
+        height: 45px;
+        width: 70px;
+      }
 
       width: 45px;
       height: 30px;
@@ -104,6 +127,10 @@ header {
 
   #location-container {
     @include space-between;
+    @include tablet {
+      width: 100%;
+      height: 150px;
+    }
 
     background: url('../../icons/map.png');
     background-size: contain;
@@ -112,6 +139,11 @@ header {
     margin: 15px 0;
 
     #location-info {
+      @include tablet {
+        height: 100%;
+        justify-content: space-around;
+      }
+
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -127,11 +159,19 @@ header {
         justify-content: unset;
 
         #location-icon {
+          @include tablet {
+            width: 40px;
+          }
+
           width: 20px;
           margin-right: 5px;
         }
 
         #location {
+          @include tablet {
+            font-size: $medium;
+          }
+
           font-weight: 700;
           font-size: $small;
           color: $secondary-color;
@@ -140,6 +180,10 @@ header {
 
       #lat,
       #lon {
+        @include tablet {
+          font-size: $medium;
+        }
+
         font-size: $small;
         font-family: $font3;
         letter-spacing: 0.5px;
