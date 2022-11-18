@@ -3,6 +3,13 @@
 @import 'dark';
 
 header {
+  @include tablet {
+    @include center;
+
+    flex-direction: column;
+    padding: 25px 50px;
+  }
+
   padding: 10px 15px 0 15px;
 
   nav {
@@ -22,6 +29,10 @@ header {
       border-radius: 25px;
 
       #search {
+        @include tablet {
+          font-size: $medium;
+        }
+
         width: 100%;
         height: 100%;
         font-size: 15px;
@@ -35,6 +46,10 @@ header {
       }
 
       #search-icon {
+        @include tablet {
+          width: 40px;
+        }
+
         width: 30px;
 
         &:hover {
@@ -45,6 +60,10 @@ header {
 
     #temp-conversion {
       @include center;
+      @include tablet {
+        width: 70px;
+        font-size: $medium;
+      }
 
       background: #fff;
       font-weight: 700;
@@ -57,6 +76,10 @@ header {
 
     button {
       @include center;
+      @include tablet {
+        height: 40px;
+        width: 70px;
+      }
 
       width: 45px;
       height: 30px;
@@ -76,6 +99,14 @@ header {
   }
 
   #results {
+    @include tablet {
+      width: 350px;
+      height: 300px;
+      font-size: $medium;
+      top: 10%;
+      left: 8%;
+    }
+
     display: none;
     height: 250px;
     width: 250px;
@@ -85,7 +116,7 @@ header {
     color: $secondary-color;
     overflow: auto;
     position: absolute;
-    box-shadow: 0 0 20px rgb(34, 34, 34);
+    box-shadow: 0 0 10px rgb(126, 126, 126);
     z-index: 1;
     padding: 20px 10px;
 
@@ -104,6 +135,10 @@ header {
 
   #location-container {
     @include space-between;
+    @include tablet {
+      width: 100%;
+      height: 150px;
+    }
 
     background: url('../../icons/map.png');
     background-size: contain;
@@ -112,6 +147,11 @@ header {
     margin: 15px 0;
 
     #location-info {
+      @include tablet {
+        height: 100%;
+        justify-content: space-around;
+      }
+
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -127,11 +167,19 @@ header {
         justify-content: unset;
 
         #location-icon {
+          @include tablet {
+            width: 40px;
+          }
+
           width: 20px;
           margin-right: 5px;
         }
 
         #location {
+          @include tablet {
+            font-size: $medium;
+          }
+
           font-weight: 700;
           font-size: $small;
           color: $secondary-color;
@@ -140,6 +188,10 @@ header {
 
       #lat,
       #lon {
+        @include tablet {
+          font-size: $medium;
+        }
+
         font-size: $small;
         font-family: $font3;
         letter-spacing: 0.5px;
@@ -150,6 +202,10 @@ header {
 }
 
 main {
+  @include tablet {
+    padding: 0 50px;
+  }
+
   background: rgb(236, 250, 255);
   background: linear-gradient(0deg, $secondary-color 0%, rgb(255, 255, 255) 100%);
   padding: 0 15px;
@@ -165,12 +221,20 @@ main {
       margin-bottom: 15px;
 
       #calendar-icon {
+        @include tablet {
+          width: 40px;
+        }
+
         width: 30px;
         background: #fff;
         background: transparent;
       }
 
       #current-date {
+        @include tablet {
+          font-size: $medium;
+        }
+
         font-size: $small;
         font-family: $font2;
         color: $secondary-color;
@@ -188,6 +252,10 @@ main {
 
       #todays-temp {
         #current-weather-icon {
+          @include tablet {
+            width: 280px;
+          }
+
           width: 180px;
         }
       }
@@ -201,17 +269,30 @@ main {
         color: $secondary-color;
 
         #current-day {
+          @include tablet {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+          }
+
           font-size: 18px;
           margin-bottom: 10px;
         }
 
         #current-temp {
+          @include tablet {
+            font-size: 4rem;
+          }
+
           font-family: $font1;
           font-size: 40px;
           margin-bottom: 5px;
         }
 
         #description {
+          @include tablet {
+            font-size: 1.8rem;
+          }
+
           font-weight: normal;
           font-size: 16px;
         }
@@ -219,6 +300,13 @@ main {
     }
 
     #daily-info {
+      @include tablet {
+        row-gap: 20px;
+        column-gap: 20px;
+        align-content: center;
+        height: 600px;
+      }
+
       width: 100%;
       height: 390px;
       display: grid;
@@ -238,20 +326,36 @@ main {
         color: $secondary-color;
 
         .daily-icon {
+          @include tablet {
+            width: 80px;
+          }
+
           width: 60px;
           margin-bottom: 15px;
         }
 
         #air-icon {
+          @include tablet {
+            width: 70px;
+          }
+
           width: 50px;
         }
 
         span {
+          @include tablet {
+            font-size: $medium;
+          }
+
           width: 100%;
           font-size: $small;
         }
 
         h3 {
+          @include tablet {
+            font-size: $medium;
+          }
+
           font-size: $small;
           width: 100%;
           margin-bottom: 5px;
