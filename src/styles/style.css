@@ -9,16 +9,34 @@
 }
 
 body {
+  background: #ecfaff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#29b5e1), to(white));
+  background: linear-gradient(0deg, #29b5e1 0%, white 100%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   font-family: "Montserrat", sans-serif;
-  background: #fff;
+}
+
+@media (min-width: 1200px) {
+  body {
+    overflow-y: hidden;
+  }
 }
 
 body #error {
   display: none;
   padding: 10px;
   text-align: center;
-  color: #00a7db;
+  color: #29b5e1;
   font-weight: 700;
 }
 
@@ -26,6 +44,12 @@ body #error {
   margin-top: 40px;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .slider-wrapper {
+    margin-top: 20px;
+  }
 }
 
 .slider-wrapper .slide-arrow {
@@ -76,9 +100,10 @@ body #error {
   -ms-overflow-style: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
   .slider-wrapper .slides-container {
-    height: 300px;
+    padding-bottom: 0;
+    height: 200px;
   }
 }
 
@@ -112,60 +137,30 @@ body #error {
   background: rgba(255, 255, 255, 0.9);
 }
 
-@media (min-width: 600px) {
-  .slider-wrapper .slides-container .slide {
-    width: 200px;
-  }
-}
-
 .slider-wrapper .slides-container .slide .day-icon {
   width: 60px;
 }
 
-@media (min-width: 600px) {
-  .slider-wrapper .slides-container .slide .day-icon {
-    width: 80px;
-  }
-}
-
 .slider-wrapper .slides-container .slide .cell-temp {
   font-weight: 700;
-  color: #00a7db;
+  color: #29b5e1;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 5px;
-}
-
-@media (min-width: 600px) {
-  .slider-wrapper .slides-container .slide .cell-temp {
-    font-size: 18px;
-  }
 }
 
 .slider-wrapper .slides-container .slide .cell-description {
   font-weight: 700;
   font-size: 15px;
-  color: #00a7db;
+  color: #29b5e1;
   margin-bottom: 25px;
   text-align: center;
-}
-
-@media (min-width: 600px) {
-  .slider-wrapper .slides-container .slide .cell-description {
-    font-size: 18px;
-  }
 }
 
 .slider-wrapper .slides-container .slide .italic {
   font-style: italic;
   font-family: "Open Sans", sans-serif;
-  color: #00a7db;
+  color: #29b5e1;
   font-size: 14px;
-}
-
-@media (min-width: 600px) {
-  .slider-wrapper .slides-container .slide .italic {
-    font-size: 18px;
-  }
 }
 
 .dark {
@@ -205,6 +200,10 @@ body #error {
   opacity: .5;
 }
 
+.dark header nav #todays-date #current-date {
+  color: #60d2f0;
+}
+
 .dark header nav #temp-conversion {
   background: #303030;
   color: #60d2f0;
@@ -220,42 +219,42 @@ body #error {
   color: #1d1d1d;
 }
 
-.dark header #location-container #location-info {
+.dark main {
+  background: #1d1d1d;
+}
+
+.dark main #main-section #current-section #location-container #location-info {
   background: rgba(77, 77, 77, 0.5);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.dark header #location-container #location-info #location-image #location {
+.dark main #main-section #current-section #location-container #location-info #location-image #location {
   color: #60d2f0;
 }
 
-.dark header #location-container #location-info #lat, .dark header #location-container #location-info #lon {
+.dark main #main-section #current-section #location-container #location-info #lat, .dark main #main-section #current-section #location-container #location-info #lon {
   color: #fff;
   opacity: .5;
-}
-
-.dark main {
-  background: #1d1d1d;
-}
-
-.dark main #main-section #todays-date #current-date {
-  color: #60d2f0;
 }
 
 .dark main #main-section #current-section #current-info #current-temp {
   color: #60d2f0;
 }
 
-.dark main #main-section #daily-info div {
+.dark main #main-section #daily-container #daily-info {
+  background: rgba(139, 139, 139, 0.3);
+}
+
+.dark main #main-section #daily-container #daily-info div {
   background: #303030;
 }
 
-.dark main #main-section #daily-info div h3 {
+.dark main #main-section #daily-container #daily-info div h3 {
   color: #60d2f0;
 }
 
-.dark main #main-section #chart #myChart {
+.dark main #main-section #daily-container #chart #myChart {
   background: transparent;
   -webkit-box-shadow: 0 0 10px #303030;
           box-shadow: 0 0 10px #303030;
@@ -270,25 +269,13 @@ body #error {
 }
 
 header {
-  padding: 10px 15px 0 15px;
+  padding: 20px 15px 0 15px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
   header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 25px 50px;
+    padding: 25px 0 50px 0;
+    width: 90vw;
   }
 }
 
@@ -306,9 +293,16 @@ header nav {
       -ms-flex-align: unset;
           align-items: unset;
   width: 100%;
-  background: #00a7db;
+  background: #29b5e1;
   border-radius: 30px;
   padding: 8px;
+}
+
+@media (min-width: 1200px) {
+  header nav {
+    padding: 3px;
+    height: 35px;
+  }
 }
 
 header nav #autocomplete {
@@ -326,6 +320,12 @@ header nav #autocomplete {
   border-radius: 25px;
 }
 
+@media (min-width: 1200px) {
+  header nav #autocomplete {
+    max-width: 715px;
+  }
+}
+
 header nav #autocomplete #search {
   width: 100%;
   height: 100%;
@@ -333,12 +333,6 @@ header nav #autocomplete #search {
   border-radius: 25px;
   border: none;
   padding: 0 8px;
-}
-
-@media (min-width: 600px) {
-  header nav #autocomplete #search {
-    font-size: 18px;
-  }
 }
 
 header nav #autocomplete #search:focus {
@@ -349,14 +343,49 @@ header nav #autocomplete #search-icon {
   width: 30px;
 }
 
-@media (min-width: 600px) {
-  header nav #autocomplete #search-icon {
-    width: 40px;
+header nav #autocomplete #search-icon:hover {
+  cursor: pointer;
+}
+
+header nav #todays-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  height: 100%;
+  gap: 5px;
+  padding: 5px 8px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  header nav #todays-date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
-header nav #autocomplete #search-icon:hover {
-  cursor: pointer;
+header nav #todays-date #calendar-icon {
+  width: 28px;
+  background: #fff;
+  background: transparent;
+}
+
+header nav #todays-date #current-date {
+  font-size: 16px;
+  font-family: "Questrial", sans-serif;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
 header nav #temp-conversion {
@@ -373,15 +402,15 @@ header nav #temp-conversion {
   font-weight: 700;
   width: 45px;
   border-radius: 50px;
-  color: #00a7db;
+  color: #29b5e1;
   font-family: "Questrial", sans-serif;
   cursor: pointer;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
   header nav #temp-conversion {
-    width: 70px;
-    font-size: 18px;
+    margin-left: auto;
+    margin-right: 10px;
   }
 }
 
@@ -406,13 +435,6 @@ header nav button {
   transition: 0.3s;
 }
 
-@media (min-width: 600px) {
-  header nav button {
-    height: 40px;
-    width: 70px;
-  }
-}
-
 header nav button #toggle-icon {
   position: absolute;
   width: 40%;
@@ -429,7 +451,7 @@ header #results {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #fff;
-  color: #00a7db;
+  color: #29b5e1;
   overflow: auto;
   position: absolute;
   -webkit-box-shadow: 0 0 10px #7e7e7e;
@@ -456,11 +478,61 @@ header #results .selection {
 
 header #results .selection:hover {
   cursor: pointer;
-  background: #00a7db;
+  background: #29b5e1;
   color: #fff;
 }
 
-header #location-container {
+main {
+  background: transparent;
+  padding: 0 15px;
+  height: 100%;
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 90vw;
+    padding: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main #main-section {
+    max-width: 1150px;
+  }
+}
+
+main #main-section #current-section {
+  gap: 10px;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  padding: 55px 0;
+}
+
+@media (min-width: 1200px) {
+  main #main-section #current-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    height: 160px;
+    gap: 50px;
+  }
+}
+
+main #main-section #current-section #location-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,6 +542,10 @@ header #location-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: url("../../icons/map.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -477,14 +553,15 @@ header #location-container {
   margin: 15px 0;
 }
 
-@media (min-width: 600px) {
-  header #location-container {
-    width: 100%;
-    height: 150px;
+@media (min-width: 1200px) {
+  main #main-section #current-section #location-container {
+    min-width: 715px;
+    max-width: 715px;
+    height: 180px;
   }
 }
 
-header #location-container #location-info {
+main #main-section #current-section #location-container #location-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,15 +578,15 @@ header #location-container #location-info {
           box-shadow: 0 0 10px #dededf;
 }
 
-@media (min-width: 600px) {
-  header #location-container #location-info {
+@media (min-width: 1200px) {
+  main #main-section #current-section #location-container #location-info {
     height: 100%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
 }
 
-header #location-container #location-info #location-image {
+main #main-section #current-section #location-container #location-info #location-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,129 +601,74 @@ header #location-container #location-info #location-image {
           justify-content: unset;
 }
 
-header #location-container #location-info #location-image #location-icon {
+main #main-section #current-section #location-container #location-info #location-image #location-icon {
   width: 20px;
   margin-right: 5px;
 }
 
-@media (min-width: 600px) {
-  header #location-container #location-info #location-image #location-icon {
-    width: 40px;
+@media (min-width: 1200px) {
+  main #main-section #current-section #location-container #location-info #location-image #location-icon {
+    width: 25px;
   }
 }
 
-header #location-container #location-info #location-image #location {
+main #main-section #current-section #location-container #location-info #location-image #location {
   font-weight: 700;
   font-size: 14px;
-  color: #00a7db;
+  color: #29b5e1;
 }
 
-@media (min-width: 600px) {
-  header #location-container #location-info #location-image #location {
-    font-size: 18px;
+@media (min-width: 1200px) {
+  main #main-section #current-section #location-container #location-info #location-image #location {
+    font-size: 16px;
   }
 }
 
-header #location-container #location-info #lat,
-header #location-container #location-info #lon {
+main #main-section #current-section #location-container #location-info #lat,
+main #main-section #current-section #location-container #location-info #lon {
   font-size: 14px;
   font-family: "Questrial", sans-serif;
   letter-spacing: 0.5px;
   color: #838282;
 }
 
-@media (min-width: 600px) {
-  header #location-container #location-info #lat,
-  header #location-container #location-info #lon {
-    font-size: 18px;
+@media (min-width: 1200px) {
+  main #main-section #current-section #location-container #location-info #lat,
+  main #main-section #current-section #location-container #location-info #lon {
+    font-size: 16px;
   }
 }
 
-main {
-  background: #ecfaff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#00a7db), to(white));
-  background: linear-gradient(0deg, #00a7db 0%, white 100%);
-  padding: 0 15px;
-}
-
-@media (min-width: 600px) {
-  main {
-    padding: 0 50px;
+@media (min-width: 1200px) {
+  main #main-section #current-section #todays-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    height: 100%;
   }
 }
 
-main #main-section #todays-date {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  gap: 5px;
-  padding: 5px 8px;
-  margin-bottom: 15px;
-}
-
-main #main-section #todays-date #calendar-icon {
-  width: 30px;
-  background: #fff;
-  background: transparent;
-}
-
-@media (min-width: 600px) {
-  main #main-section #todays-date #calendar-icon {
-    width: 40px;
-  }
-}
-
-main #main-section #todays-date #current-date {
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
-  color: #00a7db;
-}
-
-@media (min-width: 600px) {
-  main #main-section #todays-date #current-date {
-    font-size: 18px;
-  }
-}
-
-main #main-section #current-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 10px;
-  border-radius: 25px;
-  margin-bottom: 15px;
-  padding: 55px 0;
-}
-
-main #main-section #current-section #todays-temp #current-weather-icon {
+main #main-section #current-section #todays-section #todays-temp #current-weather-icon {
   width: 180px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #current-section #todays-temp #current-weather-icon {
-    width: 280px;
+@media (min-width: 1200px) {
+  main #main-section #current-section #todays-section #todays-temp #current-weather-icon {
+    width: 200px;
   }
 }
 
-main #main-section #current-section #current-info {
+main #main-section #current-section #todays-section #current-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -664,45 +686,63 @@ main #main-section #current-section #current-info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #00a7db;
+  color: #29b5e1;
 }
 
-main #main-section #current-section #current-info #current-day {
+@media (min-width: 1200px) {
+  main #main-section #current-section #todays-section #current-info {
+    margin-left: 30px;
+  }
+}
+
+main #main-section #current-section #todays-section #current-info #current-day {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #current-section #current-info #current-day {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
+@media (min-width: 1200px) {
+  main #main-section #current-section #todays-section #current-info #current-day {
+    font-size: 22px;
   }
 }
 
-main #main-section #current-section #current-info #current-temp {
+main #main-section #current-section #todays-section #current-info #current-temp {
   font-family: "Open Sans", sans-serif;
   font-size: 40px;
   margin-bottom: 5px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #current-section #current-info #current-temp {
-    font-size: 4rem;
-  }
-}
-
-main #main-section #current-section #current-info #description {
+main #main-section #current-section #todays-section #current-info #description {
   font-weight: normal;
   font-size: 16px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #current-section #current-info #description {
-    font-size: 1.8rem;
+@media (min-width: 1200px) {
+  main #main-section #current-section #todays-section #current-info #description {
+    font-size: 18px;
   }
 }
 
-main #main-section #daily-info {
+@media (min-width: 1200px) {
+  main #main-section #daily-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    gap: 25px;
+  }
+}
+
+main #main-section #daily-container #daily-info {
   width: 100%;
   height: 390px;
   display: -ms-grid;
@@ -716,18 +756,16 @@ main #main-section #daily-info {
           column-gap: 4px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #daily-info {
-    row-gap: 20px;
-    -webkit-column-gap: 20px;
-            column-gap: 20px;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    height: 600px;
+@media (min-width: 1200px) {
+  main #main-section #daily-container #daily-info {
+    height: 355px;
+    padding: 20px;
+    background: rgba(204, 243, 255, 0.5);
+    border-radius: 25px;
   }
 }
 
-main #main-section #daily-info div {
+main #main-section #daily-container #daily-info div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -745,66 +783,80 @@ main #main-section #daily-info div {
           flex-direction: column;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  color: #00a7db;
+  color: #29b5e1;
 }
 
-main #main-section #daily-info div .daily-icon {
+@media (min-width: 1200px) {
+  main #main-section #daily-container #daily-info div {
+    padding-bottom: 5px;
+    width: 180px;
+  }
+}
+
+main #main-section #daily-container #daily-info div .daily-icon {
   width: 60px;
   margin-bottom: 15px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #daily-info div .daily-icon {
-    width: 80px;
+@media (min-width: 1200px) {
+  main #main-section #daily-container #daily-info div .daily-icon {
+    margin-bottom: 5px;
   }
 }
 
-main #main-section #daily-info div #air-icon {
+main #main-section #daily-container #daily-info div #air-icon {
   width: 50px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #daily-info div #air-icon {
-    width: 70px;
+@media (min-width: 1200px) {
+  main #main-section #daily-container #daily-info div #air-icon {
+    padding-top: 10px;
   }
 }
 
-main #main-section #daily-info div span {
+main #main-section #daily-container #daily-info div span {
   width: 100%;
   font-size: 14px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #daily-info div span {
-    font-size: 18px;
-  }
-}
-
-main #main-section #daily-info div h3 {
+main #main-section #daily-container #daily-info div h3 {
   font-size: 14px;
   width: 100%;
   margin-bottom: 5px;
 }
 
-@media (min-width: 600px) {
-  main #main-section #daily-info div h3 {
-    font-size: 18px;
+@media (min-width: 1200px) {
+  main #main-section #daily-container #daily-info div h3 {
+    font-size: 16px;
   }
 }
 
-main #main-section #daily-info div h3 span {
+main #main-section #daily-container #daily-info div h3 span {
   padding-left: 0;
 }
 
-main #main-section #chart {
+main #main-section #daily-container #chart {
   position: relative;
 }
 
-main #main-section #chart #myChart {
+@media (min-width: 1200px) {
+  main #main-section #daily-container #chart {
+    min-width: 715px;
+  }
+}
+
+main #main-section #daily-container #chart #myChart {
   width: auto;
   border-radius: 20px;
   margin-top: 20px;
   padding: 3px;
   background: rgba(255, 255, 255, 0.9);
+}
+
+main #time {
+  width: 100%;
+  border: solid black;
+  float: right;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

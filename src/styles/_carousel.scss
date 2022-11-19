@@ -1,4 +1,8 @@
 .slider-wrapper {
+  @include desktop-version {
+    margin-top: 20px;
+  }
+
   margin-top: 40px;
   position: relative;
   overflow: hidden;
@@ -38,8 +42,9 @@
   }
 
   .slides-container {
-    @include tablet {
-      height: 300px;
+    @include desktop-version {
+      padding-bottom: 0;
+      height: 200px;
     }
 
     height: 230px;
@@ -59,9 +64,6 @@
 
     .slide {
       @include center;
-      @include tablet {
-        width: 200px;
-      }
 
       flex-direction: column;
       justify-content: space-between;
@@ -73,17 +75,11 @@
       background: rgba(255, 255, 255, 0.9);
 
       .day-icon {
-        @include tablet {
-          width: 80px;
-        }
 
         width: 60px;
       }
 
       .cell-temp {
-        @include tablet {
-          font-size: $medium;
-        }
 
         font-weight: 700;
         color: $secondary-color;
@@ -92,9 +88,6 @@
       }
 
       .cell-description {
-        @include tablet {
-          font-size: $medium;
-        }
 
         font-weight: 700;
         font-size: 15px;
@@ -104,9 +97,6 @@
       }
 
       .italic {
-        @include tablet {
-          font-size: $medium;
-        }
 
         font-style: italic;
         font-family: $font1;

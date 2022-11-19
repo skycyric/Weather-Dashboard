@@ -22,30 +22,6 @@
           />
           <img src="../icons/search2.png" alt="search icon" id="search-icon" />
         </div>
-        <span id="temp-conversion"></span>
-        <button id="toggle-btn">
-          <img id="toggle-icon" alt="toggle icon" src="" />
-        </button>
-      </nav>
-      <div id="results"></div>
-      <div id="location-container">
-        <div id="location-info">
-          <div id="location-image">
-            <img
-              src="../icons/location.png"
-              alt="location icon"
-              id="location-icon"
-            />
-            <span id="location"></span>
-          </div>
-          <span id="lat"></span>
-          <span id="lon"></span>
-        </div>
-      </div>
-    </header>
-    <p id="error">Please, enter a correct city or a starting letter...</p>
-    <main>
-      <section class="animate-bottom" id="main-section">
         <div id="todays-date">
           <img
             src="../icons/calendar.png"
@@ -54,105 +30,135 @@
           />
           <span id="current-date"></span>
         </div>
+        <span id="temp-conversion"></span>
+        <button id="toggle-btn">
+          <img id="toggle-icon" alt="toggle icon" src="" />
+        </button>
+      </nav>
+      <div id="results"></div>
+    </header>
+    <p id="error">Please, enter a correct city or a starting letter...</p>
+    <main>
+      <section class="animate-bottom" id="main-section">
         <section id="current-section">
-          <div id="todays-temp">
-            <img src="" alt="weather icon" id="current-weather-icon" />
+          <div id="location-container">
+            <div id="location-info">
+              <div id="location-image">
+                <img
+                  src="../icons/location.png"
+                  alt="location icon"
+                  id="location-icon"
+                />
+                <span id="location"></span>
+              </div>
+              <span id="lat"></span>
+              <span id="lon"></span>
+            </div>
           </div>
-          <div id="current-info">
-            <span id="current-day"></span>
-            <h2 id="current-temp"></h2>
-            <h3 id="description"></h3>
-          </div>
-        </section>
-        <section id="daily-info">
-          <div id="wind">
-            <img src="../icons/wind.png" alt="wind icon" class="daily-icon" />
-            <h3>Wind: <span id="wind-description"></span></h3>
-            <span id="deg"></span>
-            <span id="speed"></span>
-          </div>
-          <div id="daily-pressure">
-            <img
-              src="../icons/pressure.png"
-              alt="pressure icon"
-              class="daily-icon"
-            />
-            <h3>Pressure: <span id="pressure-description"></span></h3>
-            <span id="pressure"></span>
-          </div>
-          <div id="air-quality">
-            <img
-              src="../icons/air-quality.png"
-              alt="air pollution icon"
-              class="daily-icon"
-              id="air-icon"
-            />
-            <h3>Air Quality: <span id="quality"></span></h3>
-            <span id="carbon-monoxide"></span>
-            <span id="nitrogen-monoxide"></span>
-            <span id="nitrogen-dioxide"></span>
-          </div>
-          <div id="daily-humidity">
-            <img
-              src="../icons/humidity.png"
-              alt="humidity icon"
-              class="daily-icon"
-            />
-            <h3>Humidity: <span id="humidity"></span></h3>
+          <div id="todays-section">
+            <div id="todays-temp">
+              <img src="" alt="weather icon" id="current-weather-icon" />
+            </div>
+            <div id="current-info">
+              <span id="current-day"></span>
+              <h2 id="current-temp"></h2>
+              <h3 id="description"></h3>
+            </div>
           </div>
         </section>
-        <section id="chart">
-          <canvas id="myChart"></canvas>
+        <section id="daily-container">
+          <section id="daily-info">
+            <div id="wind">
+              <img src="../icons/wind.png" alt="wind icon" class="daily-icon" />
+              <h3>Wind: <span id="wind-description"></span></h3>
+              <span id="deg"></span>
+              <span id="speed"></span>
+            </div>
+            <div id="daily-pressure">
+              <img
+                src="../icons/pressure.png"
+                alt="pressure icon"
+                class="daily-icon"
+              />
+              <h3>Pressure: <span id="pressure-description"></span></h3>
+              <span id="pressure"></span>
+            </div>
+            <div id="air-quality">
+              <img
+                src="../icons/air-quality.png"
+                alt="air pollution icon"
+                class="daily-icon"
+                id="air-icon"
+              />
+              <h3>Air Quality: <span id="quality"></span></h3>
+              <span id="carbon-monoxide"></span>
+              <span id="nitrogen-monoxide"></span>
+              <span id="nitrogen-dioxide"></span>
+            </div>
+            <div id="daily-humidity">
+              <img
+                src="../icons/humidity.png"
+                alt="humidity icon"
+                class="daily-icon"
+              />
+              <h3>Humidity: <span id="humidity"></span></h3>
+            </div>
+          </section>
+          <section id="chart">
+            <canvas id="myChart"></canvas>
+          </section>
+        </section>
+        <section class="slider-wrapper">
+          <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+
+          <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+
+          <ul class="slides-container" id="slides-container">
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+          </ul>
         </section>
       </section>
-      <section class="slider-wrapper">
-        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
 
-        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-
-        <ul class="slides-container" id="slides-container">
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-        </ul>
-      </section>
+      <section id="time"></section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </body>

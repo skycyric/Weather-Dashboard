@@ -19,6 +19,13 @@
         }
       }
 
+      #todays-date {
+
+        #current-date {
+          color: $main-color;
+        }
+      }
+
       #temp-conversion {
         background: $dark-bg2;
         color: $main-color;
@@ -37,25 +44,6 @@
         }
       }
     }
-
-    #location-container {
-
-      #location-info {
-        background: rgba(77, 77, 77, 0.5);
-        box-shadow: none;
-
-        #location-image {
-
-          #location {
-            color: $main-color
-          }
-        }
-
-        #lat, #lon {
-          @include grey-font;
-        }
-      }
-    }
   }
 
   main {
@@ -63,14 +51,26 @@
 
     #main-section {
 
-      #todays-date {
-
-        #current-date {
-          color: $main-color;
-        }
-      }
-
       #current-section {
+
+        #location-container {
+
+          #location-info {
+            background: rgba(77, 77, 77, 0.5);
+            box-shadow: none;
+    
+            #location-image {
+    
+              #location {
+                color: $main-color
+              }
+            }
+    
+            #lat, #lon {
+              @include grey-font;
+            }
+          }
+        }
 
         #current-info {
 
@@ -80,7 +80,10 @@
         }
       }
 
+      #daily-container {
+
       #daily-info {
+        background: rgba(139, 139, 139, 0.3);
 
         div {
           background: $dark-bg2;
@@ -99,6 +102,7 @@
         }
       }
     }
+  }
 
     .slider-wrapper {
 
