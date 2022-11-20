@@ -10,6 +10,7 @@ $normal: 16px;
 $medium: 18px;
 $main-color: #60d2f0;
 $secondary-color: #29b5e1;
+$light-bg:  rgba(255, 255, 255, 0.9);
 $dark-bg: rgb(29, 29, 29);
 $dark-bg2: rgb(48, 48, 48);
 
@@ -37,7 +38,7 @@ $dark-bg2: rgb(48, 48, 48);
 }
 
 @mixin desktop-version {
-  @media (min-width: 1200px) {
+  @media (min-width: 1600px) {
     @content
   }
 }
@@ -53,11 +54,10 @@ body {
     overflow-y: hidden;
   }
 
-  background: rgb(236, 250, 255);
+  @include center;
+
   background: linear-gradient(0deg, $secondary-color 0%, rgb(255, 255, 255) 100%);
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   font-family: $font2;
 
