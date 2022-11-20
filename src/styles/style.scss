@@ -6,6 +6,7 @@ header {
   @include desktop-version {
     padding: 25px 0 50px 0;
     width: 90vw;
+    max-width: 1900px;
   }
 
   padding: 20px 15px 0 15px;
@@ -34,7 +35,6 @@ header {
       border-radius: 25px;
 
       #search {
-
         width: 100%;
         height: 100%;
         font-size: 15px;
@@ -76,7 +76,6 @@ header {
       }
 
       #current-date {
-
         font-size: $normal;
         font-family: $font3;
         letter-spacing: 1px;
@@ -158,10 +157,11 @@ header {
 
 main {
   @include desktop-version {
+    @include space-between;
+
     width: 90vw;
+    max-width: 1900px;
     padding: 30px 0;
-    display: flex;
-    justify-content: space-between;
     gap: 25px;
   }
 
@@ -192,7 +192,7 @@ main {
         @include desktop-version {
           min-width: 715px;
           max-width: 715px;
-          height: 180px;
+          height: 100%;
         }
     
         flex-direction: column;
@@ -215,7 +215,6 @@ main {
           padding: 15px;
           border-radius: 25px;
           background: rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 10px rgb(222, 222, 223);
     
           #location-image {
             @include center;
@@ -256,68 +255,51 @@ main {
         }
       }
 
-      #todays-section {
-        @include desktop-version {
-          @include center;
+      #time {
+        @include center;
 
-          justify-content: flex-start;
-          width: 100%;
-          height: 100%;
-        }
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
 
-      #todays-temp {
-        #current-weather-icon {
+        #current-time {
           @include desktop-version {
-            width: 200px;
+            display: block;
           }
 
-          width: 180px;
+          display: none;
+          font-size: 4rem;
+          font-weight: 700;
+          font-family: $font1;
+          color: $secondary-color;
         }
-      }
-
-      #current-info {
-        @include center;
-        @include desktop-version {
-          margin-left: 30px;
-        }
-
-        font-family: $font3;
-        align-items: unset;
-        flex-direction: column;
-        color: $secondary-color;
 
         #current-day {
           @include desktop-version {
-            font-size: 22px;
+            font-size: 20px;
           }
-
+  
           font-size: 18px;
           margin-bottom: 10px;
+          font-weight: 700;
+          color: $secondary-color;
         }
 
-        #current-temp {
-
-          font-family: $font1;
-          font-size: 40px;
-          margin-bottom: 5px;
-        }
-
-        #description {
+        #todays-weather {
           @include desktop-version {
-            font-size: $medium;
+            display: none;
           }
 
-          font-weight: normal;
-          font-size: 16px;
+          display: block;
+
         }
       }
-    }
   }
 
   #daily-container {
     @include desktop-version {
-      display: flex;
-      justify-content: space-between;
+      @include space-between;
+
       flex-direction: row-reverse;
       align-items: flex-end;
       gap: 25px;
@@ -326,9 +308,8 @@ main {
     #daily-info {
       @include desktop-version {
         height: 355px;
-        padding: 20px;
-        background: rgba(204, 243, 255, 0.5);
-        border-radius: 25px;
+        column-gap: 8px;
+        row-gap: 8px;
       }
 
       width: 100%;
@@ -343,11 +324,10 @@ main {
         @include center;
         @include desktop-version {
           padding-bottom: 5px;
-          width: 180px;
         }
        
         border-radius: 25px;
-        background: rgba(255, 255, 255, 0.9);
+        background: $light-bg;
         flex-direction: column;
         font-family: $font1;
         text-align: center;
@@ -404,16 +384,60 @@ main {
         border-radius: 20px;
         margin-top: 20px;
         padding: 3px;
-        background: rgba(255, 255, 255, 0.9);
+        background: $light-bg;
       }
     }
    }
   }
 
-  #time {
+  #today {
+    @include desktop-version {
+      display: block;
+    }
+
+    display: none;
     width: 100%;
-    border: solid black;
     float: right;
     height: 100%;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+
+    #todays-section {
+        @include center;
+
+        flex-direction: column;
+        width: 100%;
+        height: 300px;
+      }
+
+    #todays-temp {
+
+      #current-weather-icon {
+          width: 250px;
+       }
+      }
+
+    #current-info {
+      @include center;
+
+      font-family: $font3;
+      align-items: center;
+      flex-direction: column;
+      color: $secondary-color;
+
+      #current-temp {
+        font-family: $font1;
+        font-size: 50px;
+        margin: 10px 0;
+        color: $secondary-color;
+      }
+
+      #description {
+        font-size: 20px;
+        font-weight: 700;
+        color: $secondary-color;
+      }
+    }
+   }
   }
-}

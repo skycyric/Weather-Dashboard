@@ -55,14 +55,17 @@
               <span id="lon"></span>
             </div>
           </div>
-          <div id="todays-section">
-            <div id="todays-temp">
-              <img src="" alt="weather icon" id="current-weather-icon" />
-            </div>
-            <div id="current-info">
-              <span id="current-day"></span>
-              <h2 id="current-temp"></h2>
-              <h3 id="description"></h3>
+          <div id="time">
+            <span id="current-time"></span>
+            <span id="current-day"></span>
+            <div id="todays-weather">
+              <div id="mobile-temp">
+                <img src="" alt="weather icon" id="mobile-weather-icon" />
+              </div>
+              <div id="mobile-info">
+                <h2 id="current-mobile-temp"></h2>
+                <h3 id="mobile-description"></h3>
+              </div>
             </div>
           </div>
         </section>
@@ -157,8 +160,39 @@
           </ul>
         </section>
       </section>
-
-      <section id="time"></section>
+      <section id="today">
+        <div id="todays-section">
+          <div id="todays-temp">
+            <img src="" alt="weather icon" id="current-weather-icon" />
+          </div>
+          <div id="current-info">
+            <h2 id="current-temp"></h2>
+            <h3 id="description"></h3>
+          </div>
+        </div>
+        <div id="extra-info">
+          <div>
+            <img src="" alt="cloud icon" id="cloud-icon" />
+            <span id="cloudiness"></span>
+          </div>
+          <div>
+            <img src="" alt="maximum temperature icon" id="max-temp-icon" />
+            <span id="max-temp"></span>
+          </div>
+          <div>
+            <img src="" alt="minimum temperature icon" id="min-temp-icon" />
+            <span id="min-temp"></span>
+          </div>
+          <div>
+            <img src="" alt="sunrise icon" id="sunrise-icon" />
+            <span id="sunrise"></span>
+          </div>
+          <div>
+            <img src="" alt="sunset icon" id="sunset-icon" />
+            <span id="sunset"></span>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </body>
