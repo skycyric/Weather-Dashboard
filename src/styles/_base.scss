@@ -38,7 +38,7 @@ $dark-bg2: rgb(48, 48, 48);
 }
 
 @mixin desktop-version {
-  @media (min-width: 1600px) {
+  @media (min-width: 1200px) {
     @content
   }
 }

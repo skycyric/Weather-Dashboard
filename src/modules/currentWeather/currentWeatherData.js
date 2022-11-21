@@ -17,6 +17,8 @@ const fetchWeatherData = async () => {
       const clouds = data.clouds.all;
       const maxTemp = data.main.temp_max;
       const minTemp = data.main.temp_min;
+      const sunrise = data.sys.sunrise;
+      const sunset = data.sys.sunset;
 
       return {
         description,
@@ -33,6 +35,8 @@ const fetchWeatherData = async () => {
         clouds,
         maxTemp,
         minTemp,
+        sunrise,
+        sunset,
       };
     });
   console.log(response);
