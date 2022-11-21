@@ -1,4 +1,4 @@
-# Weather Dashboard
+# Weather Dashboard <img src="https://user-images.githubusercontent.com/79658534/203111893-81501d81-10ef-4a15-811b-75ec774a9ed2.png" width="50px">
 
 ## Built with:
 
