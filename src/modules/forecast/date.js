@@ -9,8 +9,12 @@ const createDate = () => {
   date.textContent = currentDate;
 };
 
-export const convertUnixTime = (num) => {
-  const newTime = moment.unix(num).format('LT');
+export const convertUnixTime = (num, timezone) => {
+  const unixTime = moment.unix(num);
+  const currCityTime = moment(timezone * 1000);
+  const newTime = moment(unixTime + currCityTime)
+    .utc()
+    .format('LT');
 
   return newTime;
 };

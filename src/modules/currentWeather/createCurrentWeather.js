@@ -17,6 +17,7 @@ const createCurrentWeather = async () => {
     minTemp,
     sunrise,
     sunset,
+    timezone,
   } = await fetchWeatherData();
 
   let weatherIcon;
@@ -40,10 +41,10 @@ const createCurrentWeather = async () => {
   minimumTemp.textContent = `Min: ${convertTemperature(minTemp, 'celsius')}`;
 
   const sunriseTime = document.getElementById('sunrise');
-  sunriseTime.textContent = `Sunrise: ${convertUnixTime(sunrise)}`;
+  sunriseTime.textContent = `Sunrise: ${convertUnixTime(sunrise, timezone)}`;
 
   const sunsetTime = document.getElementById('sunset');
-  sunsetTime.textContent = `Sunset: ${convertUnixTime(sunset)}`;
+  sunsetTime.textContent = `Sunset: ${convertUnixTime(sunset, timezone)}`;
 
   const location = document.getElementById('location');
   location.textContent = `${name}, ${country}`;
