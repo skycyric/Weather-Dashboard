@@ -78,14 +78,21 @@ npm start
 ### Libraries:
 
 - Weather chart: [Chart.js](https://www.chartjs.org/)
-- [Moment.js](https://momentjs.com/)
-- [cities.json](https://github.com/lutangar/cities.json)
+- Date and Time: [Moment.js](https://momentjs.com/)
+- Search autocomplete: [cities.json](https://github.com/lutangar/cities.json)
 
 ### API:
 
-- [OpenWeatherMap](https://openweathermap.org/api)
+- [OpenWeatherMap](https://openweathermap.org/api) :
+  - [Current Weather Data](https://openweathermap.org/current)
+  - [5-Day / 3 Hour Forecast](https://openweathermap.org/forecast5)
+  - [Air Pollution API](https://openweathermap.org/api/air-pollution)
+  - [Geocoding API](https://openweathermap.org/api/geocoding-api)
 
 ### Useful Information:
 
 - [Wind Speed](https://www.weather.gov/pqr/wind)
 - [Atmospheric pressure](https://www.maximum-inc.com/what-is-atmospheric-pressure-and-how-is-it-measured/)
+- [Air Pollution/quality](https://openweathermap.org/api/air-pollution)
+- [Unix Time](https://en.wikipedia.org/wiki/Unix_time) : sunrise and sunset time
+- [Metric Conversion](https://www.metric-conversions.org/temperature/celsius-to-fahrenheit.htm) : Celsius / Fahrenheit

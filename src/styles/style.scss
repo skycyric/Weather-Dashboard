@@ -439,5 +439,15 @@ main {
         color: $secondary-color;
       }
     }
+
+    #extra-info {
+
+      div {
+
+        img {
+          width: 30px;
+        }
+      }
+    }
    }
   }

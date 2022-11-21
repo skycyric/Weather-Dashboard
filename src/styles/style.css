@@ -28,7 +28,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   body {
     overflow-y: hidden;
   }
@@ -48,7 +48,7 @@ body #error {
   overflow: hidden;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .slider-wrapper {
     margin-top: 20px;
   }
@@ -102,7 +102,7 @@ body #error {
   -ms-overflow-style: none;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .slider-wrapper .slides-container {
     padding-bottom: 0;
     height: 200px;
@@ -270,7 +270,7 @@ header {
   padding: 20px 15px 0 15px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   header {
     padding: 25px 0 50px 0;
     width: 90vw;
@@ -297,7 +297,7 @@ header nav {
   padding: 8px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   header nav {
     padding: 3px;
     height: 35px;
@@ -319,7 +319,7 @@ header nav #autocomplete {
   border-radius: 25px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   header nav #autocomplete {
     max-width: 715px;
   }
@@ -366,7 +366,7 @@ header nav #todays-date {
   margin: 0 auto;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   header nav #todays-date {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -406,7 +406,7 @@ header nav #temp-conversion {
   cursor: pointer;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   header nav #temp-conversion {
     margin-left: auto;
     margin-right: 10px;
@@ -487,7 +487,7 @@ main {
   height: 100%;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -505,7 +505,7 @@ main {
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section {
     max-width: 1150px;
   }
@@ -518,7 +518,7 @@ main #main-section #current-section {
   padding: 55px 0;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -556,7 +556,7 @@ main #main-section #current-section #location-container {
   margin: 15px 0;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section #location-container {
     min-width: 715px;
     max-width: 715px;
@@ -579,7 +579,7 @@ main #main-section #current-section #location-container #location-info {
   background: rgba(255, 255, 255, 0.8);
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section #location-container #location-info {
     height: 100%;
     -ms-flex-pack: distribute;
@@ -607,7 +607,7 @@ main #main-section #current-section #location-container #location-info #location
   margin-right: 5px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section #location-container #location-info #location-image #location-icon {
     width: 25px;
   }
@@ -619,7 +619,7 @@ main #main-section #current-section #location-container #location-info #location
   color: #29b5e1;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section #location-container #location-info #location-image #location {
     font-size: 16px;
   }
@@ -633,7 +633,7 @@ main #main-section #current-section #location-container #location-info #lon {
   color: #838282;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section #location-container #location-info #lat,
   main #main-section #current-section #location-container #location-info #lon {
     font-size: 16px;
@@ -666,7 +666,7 @@ main #main-section #current-section #time #current-time {
   color: #29b5e1;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section #time #current-time {
     display: block;
   }
@@ -679,7 +679,7 @@ main #main-section #current-section #time #current-day {
   color: #29b5e1;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section #time #current-day {
     font-size: 20px;
   }
@@ -689,13 +689,13 @@ main #main-section #current-section #time #todays-weather {
   display: block;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #current-section #time #todays-weather {
     display: none;
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #daily-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -731,7 +731,7 @@ main #main-section #daily-container #daily-info {
           column-gap: 4px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #daily-container #daily-info {
     height: 355px;
     -webkit-column-gap: 8px;
@@ -761,7 +761,7 @@ main #main-section #daily-container #daily-info div {
   color: #29b5e1;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #daily-container #daily-info div {
     padding-bottom: 5px;
   }
@@ -772,7 +772,7 @@ main #main-section #daily-container #daily-info div .daily-icon {
   margin-bottom: 15px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #daily-container #daily-info div .daily-icon {
     margin-bottom: 5px;
   }
@@ -782,7 +782,7 @@ main #main-section #daily-container #daily-info div #air-icon {
   width: 50px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #daily-container #daily-info div #air-icon {
     padding-top: 10px;
   }
@@ -799,7 +799,7 @@ main #main-section #daily-container #daily-info div h3 {
   margin-bottom: 5px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #daily-container #daily-info div h3 {
     font-size: 16px;
   }
@@ -813,7 +813,7 @@ main #main-section #daily-container #chart {
   position: relative;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #main-section #daily-container #chart {
     min-width: 715px;
   }
@@ -837,7 +837,7 @@ main #today {
   padding: 20px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #today {
     display: block;
   }
@@ -895,5 +895,9 @@ main #today #current-info #description {
   font-size: 20px;
   font-weight: 700;
   color: #29b5e1;
+}
+
+main #today #extra-info div img {
+  width: 30px;
 }
 /*# sourceMappingURL=style.css.map */

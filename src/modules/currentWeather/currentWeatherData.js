@@ -6,7 +6,6 @@ const fetchWeatherData = async () => {
   const response = await fetch(`${weatherURL}lat=${lat}&lon=${lon}${appID}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       const { description } = data.weather[0];
       const windSpeed = data.wind.speed;
       const windDeg = data.wind.deg;
@@ -17,6 +16,9 @@ const fetchWeatherData = async () => {
       const clouds = data.clouds.all;
       const maxTemp = data.main.temp_max;
       const minTemp = data.main.temp_min;
+      const sunrise = data.sys.sunrise;
+      const sunset = data.sys.sunset;
+      const timezone = data.timezone;
 
       return {
         description,
@@ -33,9 +35,11 @@ const fetchWeatherData = async () => {
         clouds,
         maxTemp,
         minTemp,
+        sunrise,
+        sunset,
+        timezone,
       };
     });
-  console.log(response);
   return response;
 };
 

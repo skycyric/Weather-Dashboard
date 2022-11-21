@@ -30,6 +30,7 @@ search.addEventListener('keypress', (e) => {
     removeError();
     setNewData();
     loadContents();
+    search.value = '';
   } else {
     autoComplete();
   }
@@ -42,6 +43,7 @@ searchIcon.addEventListener('click', () => {
   removeError();
   setNewData();
   loadContents();
+  search.value = '';
 });
 
 const fetchCityData = async () => {
@@ -60,7 +62,6 @@ const fetchCityData = async () => {
       errorMsg.style.display = 'block';
       mainSection.style.display = 'none';
     });
-  search.value = '';
   return response;
 };
 

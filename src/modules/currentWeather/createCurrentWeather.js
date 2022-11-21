@@ -1,18 +1,50 @@
 import fetchWeatherData from './currentWeatherData';
 import convertTemperature from '../tempConversion';
 import currentDay from '../forecast/date';
+import { convertUnixTime } from '../forecast/date';
 
 const createCurrentWeather = async () => {
-  const { description, temperature, icon, name, country, lat, lon } =
-    await fetchWeatherData();
+  const {
+    description,
+    temperature,
+    icon,
+    name,
+    country,
+    lat,
+    lon,
+    clouds,
+    maxTemp,
+    minTemp,
+    sunrise,
+    sunset,
+    timezone,
+  } = await fetchWeatherData();
 
   let weatherIcon;
+  let cloudIcon;
 
   if (document.body.className === '') {
     weatherIcon = `light/${icon}.png`;
+    cloudIcon = 'light/04d.png';
   } else {
     weatherIcon = `dark/${icon}.png`;
+    cloudIcon = 'dark/04d.png';
   }
+
+  const cloudiness = document.getElementById('cloudiness');
+  cloudiness.textContent = `Cloudiness: ${clouds}%`;
+
+  const maximumTemp = document.getElementById('max-temp');
+  maximumTemp.textContent = `Max: ${convertTemperature(maxTemp, 'celsius')}`;
+
+  const minimumTemp = document.getElementById('min-temp');
+  minimumTemp.textContent = `Min: ${convertTemperature(minTemp, 'celsius')}`;
+
+  const sunriseTime = document.getElementById('sunrise');
+  sunriseTime.textContent = `Sunrise: ${convertUnixTime(sunrise, timezone)}`;
+
+  const sunsetTime = document.getElementById('sunset');
+  sunsetTime.textContent = `Sunset: ${convertUnixTime(sunset, timezone)}`;
 
   const location = document.getElementById('location');
   location.textContent = `${name}, ${country}`;
@@ -41,6 +73,9 @@ const createCurrentWeather = async () => {
 
   const currentIcon = document.getElementById('current-weather-icon');
   currentIcon.src = weatherIcon;
+
+  const cloudinessIcon = document.getElementById('cloud-icon');
+  cloudinessIcon.src = cloudIcon;
 
   const mobileWeatherIcon = document.getElementById('mobile-weather-icon');
   mobileWeatherIcon.src = weatherIcon;
