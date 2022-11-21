@@ -3,7 +3,6 @@ import getNext24HoursChart from './forecast/chart';
 import createForecast from './forecast/5DayForecast';
 import createDailyInfo from './currentWeather/createDailyInfo';
 import setCarousel from './carousel';
-import { createTime } from './forecast/date';
 
 const cells = [...document.querySelectorAll('.slide')];
 const toggleBtn = document.querySelector('button');
@@ -32,7 +31,6 @@ const loadContents = () => {
   getNext24HoursChart(xValues);
   createForecast();
   createDailyInfo();
-  setInterval(createTime, 1000);
 };
 
 export default loadContents;

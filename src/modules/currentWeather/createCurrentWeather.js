@@ -1,6 +1,7 @@
 import fetchWeatherData from './currentWeatherData';
 import convertTemperature from '../tempConversion';
 import currentDay from '../forecast/date';
+import { convertUnixTime } from '../forecast/date';
 
 const createCurrentWeather = async () => {
   const {
@@ -39,10 +40,10 @@ const createCurrentWeather = async () => {
   minimumTemp.textContent = `Min: ${convertTemperature(minTemp, 'celsius')}`;
 
   const sunriseTime = document.getElementById('sunrise');
-  sunriseTime.textContent = `Sunrise: ${sunrise}`;
+  sunriseTime.textContent = `Sunrise: ${convertUnixTime(sunrise)}`;
 
   const sunsetTime = document.getElementById('sunset');
-  sunsetTime.textContent = `Sunset: ${sunset}`;
+  sunsetTime.textContent = `Sunset: ${convertUnixTime(sunset)}`;
 
   const location = document.getElementById('location');
   location.textContent = `${name}, ${country}`;

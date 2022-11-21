@@ -4,6 +4,4 @@ const weatherURL = 'https://api.openweathermap.org/data/2.5/weather?';
 const airPollutionURL = 'http://api.openweathermap.org/data/2.5/air_pollution?';
 const forecastURL = 'http://api.openweathermap.org/data/2.5/forecast?';
 
-export {
-  appID, cityURL, weatherURL, airPollutionURL, forecastURL,
-};
+export { appID, cityURL, weatherURL, airPollutionURL, forecastURL };
