@@ -57,6 +57,12 @@ body #error {
   font-weight: 700;
 }
 
+@media (min-width: 1550px) {
+  body #error {
+    font-size: 20px;
+  }
+}
+
 .slider-wrapper {
   margin-top: 40px;
   position: relative;
@@ -609,7 +615,6 @@ main #main-section #current-section {
     padding: 0;
     height: 160px;
     gap: 50px;
-    padding: 55px 0;
   }
 }
 

@@ -9,7 +9,7 @@ let city = JSON.parse(localStorage.getItem('city')) || 'London';
 
 const removeError = () => {
   if (mainSection.style.display === 'none') {
-    mainSection.style.display = 'block';
+    mainSection.style.display = 'flex';
     errorMsg.style.display = 'none';
     console.clear();
   }
@@ -61,6 +61,7 @@ const fetchCityData = async () => {
     .catch(() => {
       errorMsg.style.display = 'block';
       mainSection.style.display = 'none';
+      document.body.style.justifyContent = 'flex-start';
     });
   return response;
 };
