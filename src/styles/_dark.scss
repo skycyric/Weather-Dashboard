@@ -117,4 +117,34 @@
       }
     }
   }
-}
+
+  #today {   
+    background: $dark-bg2;
+
+    #todays-section {
+
+    #current-info {
+      color: $main-color;
+
+      #current-temp {
+        color: $main-color;
+      }
+
+      #description {
+        color: $main-color;
+      }
+    }
+  }
+
+    #extra-info {
+
+      div {
+        background: $dark-bg;
+
+        span {
+          color: $main-color;
+        }
+      }
+    }
+   }
+ }

@@ -266,6 +266,30 @@ body #error {
   color: #b4b4b4;
 }
 
+.dark #today {
+  background: #303030;
+}
+
+.dark #today #todays-section #current-info {
+  color: #60d2f0;
+}
+
+.dark #today #todays-section #current-info #current-temp {
+  color: #60d2f0;
+}
+
+.dark #today #todays-section #current-info #description {
+  color: #60d2f0;
+}
+
+.dark #today #extra-info div {
+  background: #1d1d1d;
+}
+
+.dark #today #extra-info div span {
+  color: #60d2f0;
+}
+
 header {
   padding: 20px 15px 0 15px;
 }
@@ -273,7 +297,7 @@ header {
 @media (min-width: 1550px) {
   header {
     padding: 25px 0 50px 0;
-    width: 90vw;
+    width: 85vw;
     max-width: 1900px;
   }
 }
@@ -498,7 +522,7 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 90vw;
+    width: 85vw;
     max-width: 1900px;
     padding: 30px 0;
     gap: 25px;
@@ -507,7 +531,24 @@ main {
 
 @media (min-width: 1550px) {
   main #main-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 1150px;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
 }
 
