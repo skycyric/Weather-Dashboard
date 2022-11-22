@@ -15,9 +15,15 @@ const removeElements = () => {
 };
 
 const changeCurrentTemp = async () => {
-  const { temperature } = await fetchWeatherData();
+  const { temperature, maxTemp, minTemp } = await fetchWeatherData();
   const currentTemp = document.getElementById('current-temp');
   currentTemp.textContent = convertTemperature(temperature, temp);
+
+  const maximumTemp = document.getElementById('max-temp');
+  maximumTemp.textContent = `Max: ${convertTemperature(maxTemp, temp)}`;
+
+  const minimumTemp = document.getElementById('min-temp');
+  minimumTemp.textContent = `Min: ${convertTemperature(minTemp, temp)}`;
 };
 
 const changeChartTemp = async () => {
