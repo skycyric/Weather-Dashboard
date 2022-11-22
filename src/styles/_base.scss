@@ -57,6 +57,10 @@ body {
     height: 100vh;
   }
 
+  @include tablet {
+    @include center;
+  }
+
   background: linear-gradient(0deg, $secondary-color 0%, rgb(255, 255, 255) 100%);
   background-repeat: no-repeat;
   font-family: $font2;

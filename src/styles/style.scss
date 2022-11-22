@@ -9,6 +9,10 @@ header {
     max-width: 1900px;
   }
 
+  @include tablet {
+    width: 85vw;
+  }
+
   padding: 20px 15px 0 15px;
 
   nav {
@@ -120,7 +124,7 @@ header {
 
   #results {
     @include tablet {
-      width: 30%;
+      width: 40%;
       height: 300px;
       font-size: $medium;
       top: 8%;
@@ -162,6 +166,10 @@ main {
     padding: 30px 0;
     gap: 25px;
     flex-direction: row;
+  }
+
+  @include tablet {
+    width: 85vw;
   }
 
   background: transparent;
