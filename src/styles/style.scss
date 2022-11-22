@@ -5,8 +5,12 @@
 header {
   @include desktop-version {
     padding: 25px 0 50px 0;
-    width: 90vw;
+    width: 85vw;
     max-width: 1900px;
+  }
+
+  @include tablet {
+    width: 85vw;
   }
 
   padding: 20px 15px 0 15px;
@@ -14,7 +18,6 @@ header {
   nav {
     @include space-between;
     @include desktop-version {
-      padding: 3px;
       height: 35px;
     }
 
@@ -22,7 +25,7 @@ header {
     width: 100%;
     background: $secondary-color;
     border-radius: 30px;
-    padding: 8px;
+    padding: 3px;
 
     #autocomplete {
       @include space-between;
@@ -121,11 +124,10 @@ header {
 
   #results {
     @include tablet {
-      width: 350px;
+      width: 40%;
       height: 300px;
       font-size: $medium;
-      top: 10%;
-      left: 8%;
+      top: 8%;
     }
 
     display: none;
@@ -137,7 +139,7 @@ header {
     color: $secondary-color;
     overflow: auto;
     position: absolute;
-    box-shadow: 0 0 10px rgb(126, 126, 126);
+    box-shadow: 0 0 10px rgb(204, 204, 204);
     z-index: 1;
     padding: 20px 10px;
 
@@ -159,19 +161,31 @@ main {
   @include desktop-version {
     @include space-between;
 
-    width: 90vw;
+    width: 85vw;
     max-width: 1900px;
     padding: 30px 0;
     gap: 25px;
+    flex-direction: row;
+  }
+
+  @include tablet {
+    width: 85vw;
   }
 
   background: transparent;
   padding: 0 15px;
   height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
 
   #main-section {
     @include desktop-version {
+      @include space-between;
+
       max-width: 1150px;
+      height: 100%;
+      flex-direction: column;
+      align-items: unset;
     }
 
     #current-section {
@@ -185,7 +199,7 @@ main {
       gap: 10px;
       border-radius: 25px;
       margin-bottom: 15px;
-      padding: 55px 0;
+      padding: 10px 0;
 
       #location-container {
         @include space-between;
@@ -193,6 +207,7 @@ main {
           min-width: 715px;
           max-width: 715px;
           height: 100%;
+          margin: 55px 0;
         }
     
         flex-direction: column;
@@ -200,7 +215,7 @@ main {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right;
-        margin: 15px 0;
+        margin: 10px 0;
     
         #location-info {
           @include desktop-version {
@@ -264,11 +279,12 @@ main {
 
         #current-time {
           @include desktop-version {
-            display: block;
+            font-size: 4rem;
+            padding: 0;
           }
 
-          display: none;
-          font-size: 4rem;
+          font-size: 3rem;
+          padding: 20px 0;
           font-weight: 700;
           font-family: $font1;
           color: $secondary-color;
@@ -378,6 +394,7 @@ main {
       }
 
       position: relative;
+      width: 100%;
 
       #myChart {
         width: auto;
@@ -392,29 +409,38 @@ main {
 
   #today {
     @include desktop-version {
-      display: block;
+      @include space-between;
+
+      gap: 20px;
+      padding: 50px 15px 0 15px;
+      background: rgba(255, 255, 255, 0.5);
     }
 
-    display: none;
     width: 100%;
-    float: right;
     height: 100%;
+    flex-direction: column;
+    padding: 25px 10px;
+    margin-top: 25px;
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
 
     #todays-section {
         @include center;
+        @include desktop-version {
+          margin-bottom: 0;
+        }
 
         flex-direction: column;
         width: 100%;
-        height: 300px;
+        margin-bottom: 40px;
       }
 
     #todays-temp {
 
       #current-weather-icon {
+        @include desktop-version {
           width: 250px;
+        }
+          width: 200px;
        }
       }
 
@@ -427,25 +453,77 @@ main {
       color: $secondary-color;
 
       #current-temp {
+        @include desktop-version {
+          font-size: 50px;
+        }
+
         font-family: $font1;
-        font-size: 50px;
+        font-size: 30px;
         margin: 10px 0;
         color: $secondary-color;
       }
 
       #description {
-        font-size: 20px;
+        @include desktop-version {
+          font-size: 20px;
+        }
+
+        font-size: $medium;
         font-weight: 700;
         color: $secondary-color;
       }
     }
 
     #extra-info {
+      @include center;
+      @include desktop-version {
+        gap: 15px;
+      }
+
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      height: 100%;
 
       div {
+        @include center;
+        @include desktop-version {
+          height: 50px;
+        }
+
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 42px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 0 15px;
 
         img {
-          width: 30px;
+          @include desktop-version {
+            width: 30px;
+          }
+
+          width: 25px;
+        }
+
+        #max-temp-icon, #min-temp-icon {
+          @include desktop-version {
+            width: 25px;
+          }
+
+          width: 20px;
+        }
+
+        span {
+          @include desktop-version {
+            font-size: $normal;
+          }
+
+          color: $secondary-color;
+          font-weight: 700;
+          margin: 0 auto;
+          font-size: $small;
         }
       }
     }

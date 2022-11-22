@@ -61,24 +61,16 @@ const createCurrentWeather = async () => {
   const currentTemp = document.getElementById('current-temp');
   currentTemp.textContent = convertTemperature(temperature, 'celsius');
 
-  const mobileTemp = document.getElementById('current-mobile-temp');
-  mobileTemp.textContent = convertTemperature(temperature, 'celsius');
-
   const currentDescription = document.getElementById('description');
-  const mobileDescription = document.getElementById('mobile-description');
   const capitalLetter = description.charAt(0).toUpperCase();
   const restOfString = description.slice(1);
   currentDescription.textContent = `${capitalLetter}${restOfString}`;
-  mobileDescription.textContent = `${capitalLetter}${restOfString}`;
 
   const currentIcon = document.getElementById('current-weather-icon');
   currentIcon.src = weatherIcon;
 
   const cloudinessIcon = document.getElementById('cloud-icon');
   cloudinessIcon.src = cloudIcon;
-
-  const mobileWeatherIcon = document.getElementById('mobile-weather-icon');
-  mobileWeatherIcon.src = weatherIcon;
 };
 
 export default createCurrentWeather;

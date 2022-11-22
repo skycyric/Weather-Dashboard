@@ -9,28 +9,43 @@
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: -webkit-gradient(linear, left bottom, left top, from(#29b5e1), to(white));
   background: linear-gradient(0deg, #29b5e1 0%, white 100%);
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
-  font-family: "Montserrat", sans-serif;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow-y: hidden;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -42,13 +57,19 @@ body #error {
   font-weight: 700;
 }
 
+@media (min-width: 1550px) {
+  body #error {
+    font-size: 20px;
+  }
+}
+
 .slider-wrapper {
   margin-top: 40px;
   position: relative;
   overflow: hidden;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   .slider-wrapper {
     margin-top: 20px;
   }
@@ -102,7 +123,7 @@ body #error {
   -ms-overflow-style: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   .slider-wrapper .slides-container {
     padding-bottom: 0;
     height: 200px;
@@ -266,15 +287,45 @@ body #error {
   color: #b4b4b4;
 }
 
+.dark #today {
+  background: #303030;
+}
+
+.dark #today #todays-section #current-info {
+  color: #60d2f0;
+}
+
+.dark #today #todays-section #current-info #current-temp {
+  color: #60d2f0;
+}
+
+.dark #today #todays-section #current-info #description {
+  color: #60d2f0;
+}
+
+.dark #today #extra-info div {
+  background: #1d1d1d;
+}
+
+.dark #today #extra-info div span {
+  color: #60d2f0;
+}
+
 header {
   padding: 20px 15px 0 15px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   header {
     padding: 25px 0 50px 0;
-    width: 90vw;
+    width: 85vw;
     max-width: 1900px;
+  }
+}
+
+@media (min-width: 600px) {
+  header {
+    width: 85vw;
   }
 }
 
@@ -294,12 +345,11 @@ header nav {
   width: 100%;
   background: #29b5e1;
   border-radius: 30px;
-  padding: 8px;
+  padding: 3px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   header nav {
-    padding: 3px;
     height: 35px;
   }
 }
@@ -319,7 +369,7 @@ header nav #autocomplete {
   border-radius: 25px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   header nav #autocomplete {
     max-width: 715px;
   }
@@ -366,7 +416,7 @@ header nav #todays-date {
   margin: 0 auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   header nav #todays-date {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -406,7 +456,7 @@ header nav #temp-conversion {
   cursor: pointer;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   header nav #temp-conversion {
     margin-left: auto;
     margin-right: 10px;
@@ -453,19 +503,18 @@ header #results {
   color: #29b5e1;
   overflow: auto;
   position: absolute;
-  -webkit-box-shadow: 0 0 10px #7e7e7e;
-          box-shadow: 0 0 10px #7e7e7e;
+  -webkit-box-shadow: 0 0 10px #cccccc;
+          box-shadow: 0 0 10px #cccccc;
   z-index: 1;
   padding: 20px 10px;
 }
 
 @media (min-width: 600px) {
   header #results {
-    width: 350px;
+    width: 40%;
     height: 300px;
     font-size: 18px;
-    top: 10%;
-    left: 8%;
+    top: 8%;
   }
 }
 
@@ -485,9 +534,16 @@ main {
   background: transparent;
   padding: 0 15px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -498,16 +554,43 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 90vw;
+    width: 85vw;
     max-width: 1900px;
     padding: 30px 0;
     gap: 25px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
+  main {
+    width: 85vw;
+  }
+}
+
+@media (min-width: 1550px) {
   main #main-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 1150px;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
 }
 
@@ -515,10 +598,10 @@ main #main-section #current-section {
   gap: 10px;
   border-radius: 25px;
   margin-bottom: 15px;
-  padding: 55px 0;
+  padding: 10px 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -553,14 +636,15 @@ main #main-section #current-section #location-container {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section #location-container {
     min-width: 715px;
     max-width: 715px;
     height: 100%;
+    margin: 55px 0;
   }
 }
 
@@ -579,7 +663,7 @@ main #main-section #current-section #location-container #location-info {
   background: rgba(255, 255, 255, 0.8);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section #location-container #location-info {
     height: 100%;
     -ms-flex-pack: distribute;
@@ -607,7 +691,7 @@ main #main-section #current-section #location-container #location-info #location
   margin-right: 5px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section #location-container #location-info #location-image #location-icon {
     width: 25px;
   }
@@ -619,7 +703,7 @@ main #main-section #current-section #location-container #location-info #location
   color: #29b5e1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section #location-container #location-info #location-image #location {
     font-size: 16px;
   }
@@ -633,7 +717,7 @@ main #main-section #current-section #location-container #location-info #lon {
   color: #838282;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section #location-container #location-info #lat,
   main #main-section #current-section #location-container #location-info #lon {
     font-size: 16px;
@@ -659,16 +743,17 @@ main #main-section #current-section #time {
 }
 
 main #main-section #current-section #time #current-time {
-  display: none;
-  font-size: 4rem;
+  font-size: 3rem;
+  padding: 20px 0;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
   color: #29b5e1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section #time #current-time {
-    display: block;
+    font-size: 4rem;
+    padding: 0;
   }
 }
 
@@ -679,7 +764,7 @@ main #main-section #current-section #time #current-day {
   color: #29b5e1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section #time #current-day {
     font-size: 20px;
   }
@@ -689,13 +774,13 @@ main #main-section #current-section #time #todays-weather {
   display: block;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #current-section #time #todays-weather {
     display: none;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #daily-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -731,7 +816,7 @@ main #main-section #daily-container #daily-info {
           column-gap: 4px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #daily-container #daily-info {
     height: 355px;
     -webkit-column-gap: 8px;
@@ -761,7 +846,7 @@ main #main-section #daily-container #daily-info div {
   color: #29b5e1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #daily-container #daily-info div {
     padding-bottom: 5px;
   }
@@ -772,7 +857,7 @@ main #main-section #daily-container #daily-info div .daily-icon {
   margin-bottom: 15px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #daily-container #daily-info div .daily-icon {
     margin-bottom: 5px;
   }
@@ -782,7 +867,7 @@ main #main-section #daily-container #daily-info div #air-icon {
   width: 50px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #daily-container #daily-info div #air-icon {
     padding-top: 10px;
   }
@@ -799,7 +884,7 @@ main #main-section #daily-container #daily-info div h3 {
   margin-bottom: 5px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #daily-container #daily-info div h3 {
     font-size: 16px;
   }
@@ -811,9 +896,10 @@ main #main-section #daily-container #daily-info div h3 span {
 
 main #main-section #daily-container #chart {
   position: relative;
+  width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #main-section #daily-container #chart {
     min-width: 715px;
   }
@@ -828,18 +914,31 @@ main #main-section #daily-container #chart #myChart {
 }
 
 main #today {
-  display: none;
   width: 100%;
-  float: right;
   height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px 10px;
+  margin-top: 25px;
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
   main #today {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+    padding: 50px 15px 0 15px;
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -858,11 +957,23 @@ main #today #todays-section {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 300px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1550px) {
+  main #today #todays-section {
+    margin-bottom: 0;
+  }
 }
 
 main #today #todays-temp #current-weather-icon {
-  width: 250px;
+  width: 200px;
+}
+
+@media (min-width: 1550px) {
+  main #today #todays-temp #current-weather-icon {
+    width: 250px;
+  }
 }
 
 main #today #current-info {
@@ -886,18 +997,111 @@ main #today #current-info {
 
 main #today #current-info #current-temp {
   font-family: "Open Sans", sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   margin: 10px 0;
   color: #29b5e1;
 }
 
+@media (min-width: 1550px) {
+  main #today #current-info #current-temp {
+    font-size: 50px;
+  }
+}
+
 main #today #current-info #description {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #29b5e1;
 }
 
+@media (min-width: 1550px) {
+  main #today #current-info #description {
+    font-size: 20px;
+  }
+}
+
+main #today #extra-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1550px) {
+  main #today #extra-info {
+    gap: 15px;
+  }
+}
+
+main #today #extra-info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0 15px;
+}
+
+@media (min-width: 1550px) {
+  main #today #extra-info div {
+    height: 50px;
+  }
+}
+
 main #today #extra-info div img {
-  width: 30px;
+  width: 25px;
+}
+
+@media (min-width: 1550px) {
+  main #today #extra-info div img {
+    width: 30px;
+  }
+}
+
+main #today #extra-info div #max-temp-icon, main #today #extra-info div #min-temp-icon {
+  width: 20px;
+}
+
+@media (min-width: 1550px) {
+  main #today #extra-info div #max-temp-icon, main #today #extra-info div #min-temp-icon {
+    width: 25px;
+  }
+}
+
+main #today #extra-info div span {
+  color: #29b5e1;
+  font-weight: 700;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+@media (min-width: 1550px) {
+  main #today #extra-info div span {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
