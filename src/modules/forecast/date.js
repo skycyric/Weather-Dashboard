@@ -21,9 +21,8 @@ export const convertUnixTime = (num, timezone) => {
 
 const createTime = async () => {
   const { timezone } = await fetchWeatherData();
-  let d = new Date(new Date().getTime() + timezone * 1000);
-  let currTime = d.toISOString();
-  let formattedTime = moment(currTime).utc().format('LT');
+  const date = new Date(new Date().getTime() + timezone * 1000);
+  const formattedTime = moment(date.toISOString()).utc().format('LT');
   const time = document.getElementById('current-time');
   time.textContent = formattedTime;
 };
