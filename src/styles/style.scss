@@ -6,7 +6,7 @@ header {
   @include desktop-version {
     padding: 25px 0 50px 0;
     width: 85vw;
-    max-width: 1900px;
+    max-width: 1700px;
   }
 
   @include tablet {
@@ -162,7 +162,7 @@ main {
     @include space-between;
 
     width: 85vw;
-    max-width: 1900px;
+    max-width: 1700px;
     padding: 30px 0;
     gap: 25px;
     flex-direction: row;
