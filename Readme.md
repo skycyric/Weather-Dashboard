@@ -8,6 +8,9 @@
 
 #### Live version: https://virag-ky-weather-dashboard.netlify.app/
 
+<div><table><tr><td width="50%"><img src="https://user-images.githubusercontent.com/79658534/203655327-6debaa68-3244-4b90-ba1a-2a8f6a1f4afb.png"></td><td width="50%"><img src="https://user-images.githubusercontent.com/79658534/203655398-108d338f-ecba-4783-9c33-946247704434.png"></td></tr></table></div>
+
+
 ## Built with:
 
 - HTML
