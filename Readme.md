@@ -1,5 +1,13 @@
 # Weather Dashboard <img src="https://user-images.githubusercontent.com/79658534/203111893-81501d81-10ef-4a15-811b-75ec774a9ed2.png" width="50px">
 
+> A weather dashboard project created with JavaScript, SCSS and HTML.
+
+> The user can search for a certain city, convert temperatures between Celsius (°C) and Fahrenheit (°F) with the conversion button, and toggle between dark and light mode.
+
+> The app displays the current city, latitude, longitude, current time, current day and date, current temperature, wind speed, humidity, air quality, atmospheric pressure, time of sunrise and sunset, cloudiness, maximum and minimum temperature, a 5-day / 3 hours forecast and a chart showing the temperature for the next 24 hours.
+
+#### Live version: https://virag-ky-weather-dashboard.netlify.app/
+
 ## Built with:
 
 - HTML
@@ -44,6 +52,11 @@ npm install
 
 ```
 npm run build
+```
+
+### Run tests
+```
+npm test
 ```
 
 ### Open in the browser with Webpack dev server
