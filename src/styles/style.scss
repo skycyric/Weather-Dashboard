@@ -177,6 +177,7 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column-reverse;
+  -webkit-box-direction:normal;
 
   #main-section {
     @include desktop-version {
@@ -329,7 +330,7 @@ main {
       }
 
       width: 100%;
-      height: 390px;
+      height: 370px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -440,7 +441,7 @@ main {
         @include desktop-version {
           width: 250px;
         }
-          width: 200px;
+          width: 180px;
        }
       }
 
