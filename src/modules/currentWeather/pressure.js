@@ -19,7 +19,7 @@ const getPressure = (inHg) => {
   return description;
 };
 
-const convertPressureToInchOfMercury = (pressure) => pressure * 0.02953;
+export const convertPressureToInchOfMercury = (pressure) => pressure * 0.02953;
 
 const createPressureInfo = async () => {
   const { pressure } = await fetchWeatherData();
