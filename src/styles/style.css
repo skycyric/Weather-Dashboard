@@ -503,6 +503,7 @@ header #results {
   color: #29b5e1;
   overflow: auto;
   position: absolute;
+  top: 9%;
   -webkit-box-shadow: 0 0 10px #cccccc;
           box-shadow: 0 0 10px #cccccc;
   z-index: 1;
@@ -514,7 +515,6 @@ header #results {
     width: 40%;
     height: 300px;
     font-size: 18px;
-    top: 8%;
   }
 }
 

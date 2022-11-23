@@ -127,7 +127,6 @@ header {
       width: 40%;
       height: 300px;
       font-size: $medium;
-      top: 8%;
     }
 
     display: none;
@@ -139,6 +138,7 @@ header {
     color: $secondary-color;
     overflow: auto;
     position: absolute;
+    top: 9%;
     box-shadow: 0 0 10px rgb(204, 204, 204);
     z-index: 1;
     padding: 20px 10px;
