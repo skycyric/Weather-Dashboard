@@ -13,11 +13,20 @@ header {
     width: 85vw;
   }
 
+  @include laptop {
+    width: 100%;
+    padding: 25px 15px 50px 15px;
+  }
+
   padding: 20px 15px 0 15px;
 
   nav {
     @include space-between;
     @include desktop-version {
+      height: 35px;
+    }
+
+    @include laptop {
       height: 35px;
     }
 
@@ -29,6 +38,11 @@ header {
 
     #autocomplete {
       @include space-between;
+
+      @include laptop {
+        max-width: 515px;
+      }
+
       @include desktop-version {
         max-width: 715px;
       }
@@ -65,6 +79,10 @@ header {
         display: flex;
       }
 
+      @include laptop {
+        display: flex;
+      }
+
       display: none;
       justify-content: unset;
       height: 100%;
@@ -89,6 +107,11 @@ header {
     #temp-conversion {
       @include center;
       @include desktop-version {
+        margin-left: auto;
+        margin-right: 10px;
+      }
+
+      @include laptop {
         margin-left: auto;
         margin-right: 10px;
       }
@@ -168,8 +191,17 @@ main {
     flex-direction: row;
   }
 
+
   @include tablet {
     width: 85vw;
+  }
+
+  @include laptop {
+    @include space-between;
+
+    flex-direction: row;
+    width: 100vw;
+    gap: 25px;
   }
 
   background: transparent;
@@ -189,8 +221,24 @@ main {
       align-items: unset;
     }
 
+    @include laptop {
+      @include space-between;
+
+      flex-direction: column;
+      height: 100%;
+      width: 75%;
+      align-items: unset;
+    }
+
     #current-section {
       @include desktop-version {
+        @include space-between;
+        padding: 0;
+        height: 160px;
+        gap: 50px;
+      }
+
+      @include laptop {
         @include space-between;
         padding: 0;
         height: 160px;
@@ -204,6 +252,14 @@ main {
 
       #location-container {
         @include space-between;
+
+        @include laptop {
+          min-width: 515px;
+          max-width: 515px;
+          height: 100%;
+          margin: 55px 0;
+        }
+
         @include desktop-version {
           min-width: 715px;
           max-width: 715px;
@@ -220,6 +276,11 @@ main {
     
         #location-info {
           @include desktop-version {
+            height: 100%;
+            justify-content: space-around;
+          }
+
+          @include laptop {
             height: 100%;
             justify-content: space-around;
           }
@@ -322,8 +383,23 @@ main {
       gap: 25px;
     }
 
+    @include laptop {
+      @include space-between;
+
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      justify-content: flex-end;
+      gap: 25px;
+    }
+
     #daily-info {
       @include desktop-version {
+        height: 355px;
+        column-gap: 8px;
+        row-gap: 8px;
+      }
+
+      @include laptop {
         height: 355px;
         column-gap: 8px;
         row-gap: 8px;
@@ -390,6 +466,10 @@ main {
     }
 
     #chart {
+      @include laptop {
+        min-width: 515px;
+      }
+
       @include desktop-version {
         min-width: 715px;
       }
@@ -410,6 +490,14 @@ main {
 
   #today {
     @include desktop-version {
+      @include space-between;
+
+      gap: 20px;
+      padding: 50px 15px 0 15px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    @include laptop {
       @include space-between;
 
       gap: 20px;
