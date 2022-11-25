@@ -30,7 +30,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    overflow-y: hidden;
     height: 100vh;
   }
 }
@@ -46,7 +45,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    overflow-y: hidden;
     height: 100vh;
   }
 }
@@ -647,8 +645,9 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100vw;
+    width: 100%;
     gap: 25px;
+    padding: 0 15px 30px 15px;
   }
 }
 
@@ -690,7 +689,6 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100%;
     width: 75%;
     -webkit-box-align: unset;
         -ms-flex-align: unset;
@@ -1117,6 +1115,7 @@ main #today {
     gap: 20px;
     padding: 50px 15px 0 15px;
     background: rgba(255, 255, 255, 0.5);
+    height: 100%;
   }
 }
 
@@ -1134,6 +1133,7 @@ main #today {
     gap: 20px;
     padding: 50px 15px 0 15px;
     background: rgba(255, 255, 255, 0.5);
+    height: 100%;
   }
 }
 
