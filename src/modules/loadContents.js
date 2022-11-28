@@ -9,6 +9,8 @@ const toggleBtn = document.querySelector('button');
 const toggleIcon = document.getElementById('toggle-icon');
 toggleIcon.src = '../icons/moon.png';
 
+let temp;
+
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   if (document.body.className === '') {
@@ -25,11 +27,16 @@ toggleBtn.addEventListener('click', () => {
 });
 
 const loadContents = () => {
+  if (document.getElementById('temp-conversion').textContent === '°C') {
+    temp = 'fahrenheit';
+  } else {
+    temp = 'celsius';
+  }
   const xValues = [];
   setCarousel();
-  createCurrentWeather();
-  getNext24HoursChart(xValues);
-  createForecast();
+  createCurrentWeather(temp);
+  getNext24HoursChart(xValues, temp);
+  createForecast(temp);
   createDailyInfo();
 };
 

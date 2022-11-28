@@ -1,7 +1,7 @@
 import fetchForecast from './forecastData';
 import convertTemperature from '../changeTemperature';
 
-const createForecast = async () => {
+const createForecast = async (temp) => {
   const { descriptionArray, iconArray, temperatureArray, dateArray } =
     await fetchForecast();
   const cells = [...document.querySelectorAll('.slide')];
@@ -21,10 +21,7 @@ const createForecast = async () => {
 
     const temperature = document.createElement('span');
     temperature.setAttribute('class', 'cell-temp');
-    temperature.textContent = convertTemperature(
-      temperatureArray[i],
-      'celsius'
-    );
+    temperature.textContent = convertTemperature(temperatureArray[i], temp);
 
     const weatherDescription = document.createElement('span');
     weatherDescription.setAttribute('class', 'cell-description');

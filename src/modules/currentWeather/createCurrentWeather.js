@@ -3,7 +3,7 @@ import convertTemperature from '../tempConversion';
 import currentDay from '../forecast/date';
 import { convertUnixTime } from '../forecast/date';
 
-const createCurrentWeather = async () => {
+const createCurrentWeather = async (temp) => {
   const {
     description,
     temperature,
@@ -35,10 +35,10 @@ const createCurrentWeather = async () => {
   cloudiness.textContent = `Cloudiness: ${clouds}%`;
 
   const maximumTemp = document.getElementById('max-temp');
-  maximumTemp.textContent = `Max: ${convertTemperature(maxTemp, 'celsius')}`;
+  maximumTemp.textContent = `Max: ${convertTemperature(maxTemp, temp)}`;
 
   const minimumTemp = document.getElementById('min-temp');
-  minimumTemp.textContent = `Min: ${convertTemperature(minTemp, 'celsius')}`;
+  minimumTemp.textContent = `Min: ${convertTemperature(minTemp, temp)}`;
 
   const sunriseTime = document.getElementById('sunrise');
   sunriseTime.textContent = `Sunrise: ${convertUnixTime(sunrise, timezone)}`;
@@ -59,7 +59,7 @@ const createCurrentWeather = async () => {
   day.textContent = currentDay;
 
   const currentTemp = document.getElementById('current-temp');
-  currentTemp.textContent = convertTemperature(temperature, 'celsius');
+  currentTemp.textContent = convertTemperature(temperature, temp);
 
   const currentDescription = document.getElementById('description');
   const capitalLetter = description.charAt(0).toUpperCase();
