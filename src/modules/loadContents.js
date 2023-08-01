@@ -84,6 +84,5 @@ const loadContents = () => {
     });
   });
 })();
-loadContents();
 
 export default loadContents;
