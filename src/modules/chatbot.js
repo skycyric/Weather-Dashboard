@@ -81,6 +81,15 @@ export default function initializeChatBot() {
             $chatInput = $("#chat-input__text");
             $submitBtn = $("#chat-submit");
 
+            // Load the sound
+            var greetingSound = new Audio('../sounds/volumn.mp3');
+
+            // Add an event listener to the chatbot button
+            $chatCircle.on('click', function () {
+                // Play the sound when the chatbot is opened
+                greetingSound.play();
+            });
+
             //1. call toggle 
             $chatCircle.on("click", hideCircle);
             $chatBoxClose.on("click", chatBoxCl);
