@@ -158,30 +158,32 @@
       </div>
     </section>
     <!-- Chatbot -->
-    <div class="floating-chat">
-      <i class="fa fa-comments" aria-hidden="true"></i>
-      <div class="chat">
-        <div class="header">
-          <span class="title">
-            任小渝
-          </span>
-          <button>
-            <i class="fa fa-times" aria-hidden="true"></i>
-          </button>
+    <div id="center-text">
+      <h2>ChatBox UI</h2>
+      <p>Message send and scroll to bottom enabled </p>
+    </div>
+    <div id="body">
+      <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+        <i class="material-icons">speaker_phone</i>
+      </div>
+      <div class="chat-box">
+        <div class="chat-box-header">
+          ChatBot
+          <span class="chat-box-toggle"><i class="material-icons">close</i></span>
         </div>
-        <ul class="messages">
-          <div id="chatLoader">
-            <div class="loader-icon">
-              <i class="fas fa-spinner fa-spin"></i>
-            </div>
+        <div class="chat-box-body">
+          <div class="chat-box-overlay">
           </div>
-          <li class="other">
-            有什麼天氣問題，問我就對了！
-          </li>
-        </ul>
-        <div class="footer">
-          <div class="text-box" contenteditable="true" disabled="true"></div>
-          <button id="sendMessage">send</button>
+          <div class="chat-logs">
+          </div>
+          <!--chat-log -->
+        </div>
+        <div class="chat-input">
+          <form>
+            <input type="text" id="chat-input" placeholder="Send a message..." />
+            <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+          </form>
         </div>
       </div>
     </div>
