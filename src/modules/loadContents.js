@@ -9,9 +9,7 @@ const cells = [...document.querySelectorAll('.slide')];
 const toggleBtn = document.querySelector('button');
 const toggleIcon = document.getElementById('toggle-icon');
 toggleIcon.src = '../icons/moon.png';
-var audioElement = document.getElementById('volumn'); // 假設音頻元素的ID是'Volumn'
-var volumeButton = document.querySelector('.chat-box-volume');
-var closeButton = document.querySelector('.chat-box-toggle');
+
 
 let temp;
 
@@ -30,28 +28,7 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
-// 音量控制的事件監聽器
-volumeButton.addEventListener('click', function () {
-  console.log('volumeButton was clicked');
-  let volumeIcon = volumeButton.querySelector('i');
-  if (audioElement.muted) {
-    console.log('audioElement was muted, unmute');
-    audioElement.muted = false;
-    volumeIcon.textContent = 'volume_up';
-  } else {
-    console.log('audioElement was unmuted, mute');
-    audioElement.muted = true;
-    volumeIcon.textContent = 'volume_off';
-  }
-});
 
-
-// 關閉按鈕的事件監聽器
-closeButton.addEventListener('click', function () {
-  console.log('closeButton was clicked, pause and reset');
-  audioElement.pause();
-  audioElement.currentTime = 0;
-});
 
 document.getElementById('volumeIcon_welcom').addEventListener('click', function () {
   if (this.textContent === 'volume_up') {

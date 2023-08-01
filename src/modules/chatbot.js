@@ -101,6 +101,27 @@ export default function initializeChatBot() {
             $chatBoxClose.on("click", chatBoxCl);
             $chatInput.on("click", chatOpenMessage);
 
+            // Add the volume control
+            let volumeButton = document.querySelector('#volumeButton');
+            let volumeIcon = volumeButton.querySelector('i');
+
+            volumeButton.addEventListener('click', function () {
+                if (greetingSound.muted) {
+                    greetingSound.muted = false;
+                    volumeIcon.textContent = 'volume_up';
+                } else {
+                    greetingSound.muted = true;
+                    volumeIcon.textContent = 'volume_off';
+                }
+            });
+
+            // Add the close button
+            let closeButton = document.querySelector('#closeButton');
+
+            closeButton.addEventListener('click', function () {
+                greetingSound.pause();
+                greetingSound.currentTime = 0;
+            });
             //2. call wait message from CRM-human
             console.log($submitBtn);
             $submitBtn.on("click", chatSbmBtn);
