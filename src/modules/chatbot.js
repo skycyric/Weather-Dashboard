@@ -1,4 +1,9 @@
 export default function initializeChatBot() {
+    let know = {
+        "hello": "hi",
+        "how are you?": "good",
+        "ok": ":)"
+    };
     var botController = (function () {
 
 

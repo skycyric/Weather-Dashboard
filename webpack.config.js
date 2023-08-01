@@ -22,6 +22,10 @@ module.exports = {
           from: 'dark',
           to: 'dark',
         },
+        {
+          from: 'sounds',
+          to: 'sounds',
+        },
       ],
     }),
     new Dotenv({
