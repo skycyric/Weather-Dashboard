@@ -38,20 +38,11 @@ const loadContents = () => {
   getNext24HoursChart(xValues, temp);
   createForecast(temp);
   createDailyInfo();
-
+  // Chatbot
   var botController = (function () {
-
-
   })();
-
   var uiController = (function () {
-
-
   })();
-
-
-
-
   var controller = (function (botCntr, uiCntr) {
     var $chatCircle,
       $chatBox,
@@ -109,9 +100,6 @@ const loadContents = () => {
     }
     /* var input = uiCntr.getInput();*/
     /* $chatSubmitBtn.on("click", hideCircle);*/
-
-
-
     function init() {
       $chatCircle = $("#chat-circle");
       $chatBox = $(".chat-box");
@@ -170,8 +158,9 @@ const loadContents = () => {
       document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
     }
   }
+
 };
-// Chatbot
+
 
 
 export default loadContents;
