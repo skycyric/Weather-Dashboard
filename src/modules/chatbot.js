@@ -107,51 +107,31 @@ const initializeChatBot = () => {
             var greetingSound = new Audio('../sounds/volumn.mp3');
 
             // Add an event listener to the chatbot button
-            const $chatCircle = $("#chat-circle");
             $chatCircle.on('click', function () {
                 // Play the sound when the chatbot is opened
                 console.log("Chat Circle clicked!");
                 greetingSound.play();
             });
-            if ($chatBoxWelcome.is(':visible')) {
-                // Add volume control
-                const volumeIconChat = document.getElementById('volumeIcon_chat');
-                volumeIconChat.addEventListener('click', function () {
-                    if (greetingSound.muted) {
-                        greetingSound.muted = false;
-                        this.textContent = 'volume_up';
-                    } else {
-                        greetingSound.muted = true;
-                        this.textContent = 'volume_off';
-                    }
-                });
 
-                // Add close sound button
-                let closeButton = document.querySelector('.chat-box-toggle');
-                closeButton.addEventListener('click', function () {
-                    greetingSound.pause();
-                    greetingSound.currentTime = 0;
-                });
-            } else {
-                // Add volume control
-                const volumeIconChat = document.getElementById('volumeIcon_chat');
-                volumeIconChat.addEventListener('click', function () {
-                    if (greetingSound.muted) {
-                        greetingSound.muted = false;
-                        this.textContent = 'volume_up';
-                    } else {
-                        greetingSound.muted = true;
-                        this.textContent = 'volume_off';
-                    }
-                });
+            // Add volume control
+            const volumeIconChat = document.getElementById('volumeIcon_chat');
+            volumeIconChat.addEventListener('click', function () {
+                if (greetingSound.muted) {
+                    greetingSound.muted = false;
+                    this.textContent = 'volume_up';
+                } else {
+                    greetingSound.muted = true;
+                    this.textContent = 'volume_off';
+                }
+            });
 
-                // Add close sound button
-                let closeButton = document.querySelector('.chat-box-toggle');
-                closeButton.addEventListener('click', function () {
-                    greetingSound.pause();
-                    greetingSound.currentTime = 0;
-                });
-            }
+            // Add close sound button
+            let closeButton = document.querySelector('.chat-box-toggle');
+            closeButton.addEventListener('click', function () {
+                greetingSound.pause();
+                greetingSound.currentTime = 0;
+            });
+
             //1. call toggle 
             $chatCircle.on("click", hideCircle);
             $chatBoxClose.on("click", chatBoxCl);
