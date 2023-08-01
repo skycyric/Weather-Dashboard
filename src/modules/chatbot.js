@@ -87,6 +87,7 @@ export default function initializeChatBot() {
             // Add an event listener to the chatbot button
             $chatCircle.on('click', function () {
                 // Play the sound when the chatbot is opened
+                console.log("Chat Circle clicked!");
                 greetingSound.play();
             });
 
@@ -96,7 +97,7 @@ export default function initializeChatBot() {
             $chatInput.on("click", chatOpenMessage);
 
             //2. call wait message from CRM-human
-
+            console.log($submitBtn);
             $submitBtn.on("click", chatSbmBtn);
             $chatInput.on("keypress", chatSbmBtn);
 
