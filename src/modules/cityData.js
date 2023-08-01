@@ -5,7 +5,7 @@ import loadContents from './loadContents';
 const searchIcon = document.getElementById('search-icon');
 const errorMsg = document.getElementById('error');
 const mainSection = document.querySelector('main');
-let city = JSON.parse(localStorage.getItem('city')) || 'London';
+let city = JSON.parse(localStorage.getItem('city')) || 'Taipei';
 
 const removeError = () => {
   if (mainSection.style.display === 'none') {
