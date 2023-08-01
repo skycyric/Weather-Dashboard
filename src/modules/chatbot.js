@@ -1,17 +1,8 @@
 export default function initializeChatBot() {
     var botController = (function () {
-
-
     })();
-
     var uiController = (function () {
-
-
     })();
-
-
-
-
     var controller = (function (botCntr, uiCntr) {
         var $chatCircle,
             $chatBox,
