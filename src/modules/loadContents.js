@@ -27,32 +27,21 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
-function toggleVolume(event) {
-  if (event.target.textContent === 'volume_up') {
-    event.target.textContent = 'volume_off';
+document.getElementById('volumeIcon_welcom').addEventListener('click', function () {
+  if (this.textContent === 'volume_up') {
+    this.textContent = 'volume_off';
   } else {
-    event.target.textContent = 'volume_up';
+    this.textContent = 'volume_up';
   }
-}
+});
 
-document.getElementById('volumeIcon_welcome').addEventListener('click', toggleVolume);
-document.getElementById('volumeIcon_chat').addEventListener('click', toggleVolume);
-
-// document.getElementById('volumeIcon_welcom').addEventListener('click', function () {
-//   if (this.textContent === 'volume_up') {
-//     this.textContent = 'volume_off';
-//   } else {
-//     this.textContent = 'volume_up';
-//   }
-// });
-
-// document.getElementById('volumeIcon_chat').addEventListener('click', function () {
-//   if (this.textContent === 'volume_up') {
-//     this.textContent = 'volume_off';
-//   } else {
-//     this.textContent = 'volume_up';
-//   }
-// });
+document.getElementById('volumeIcon_chat').addEventListener('click', function () {
+  if (this.textContent === 'volume_up') {
+    this.textContent = 'volume_off';
+  } else {
+    this.textContent = 'volume_up';
+  }
+});
 
 const loadContents = () => {
   if (document.getElementById('temp-conversion').textContent === '°C') {
