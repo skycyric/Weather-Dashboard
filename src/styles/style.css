@@ -1479,7 +1479,6 @@ main #today #extra-info div span {
 
 .floating-chat .chat .messages li.other:before {
   right: -45px;
-  background-image: url('~icons/robot.jpg');
 }
 
 .floating-chat .chat .messages li.other:after {
@@ -1498,7 +1497,6 @@ main #today #extra-info div span {
 
 .floating-chat .chat .messages li.self:before {
   left: -45px;
-  background-image: url('~icons/human.jpg');
 }
 
 .floating-chat .chat .messages li.self:after {
