@@ -32,11 +32,14 @@ toggleBtn.addEventListener('click', () => {
 
 // 音量控制的事件監聽器
 volumeButton.addEventListener('click', function () {
+  console.log('volumeButton was clicked');
   let volumeIcon = volumeButton.querySelector('i');
   if (audioElement.paused) {
+    console.log('audioElement was paused, start playing');
     audioElement.play();
     volumeIcon.textContent = 'volume_up';
   } else {
+    console.log('audioElement was playing, pause');
     audioElement.pause();
     volumeIcon.textContent = 'volume_off';
   }
@@ -44,6 +47,7 @@ volumeButton.addEventListener('click', function () {
 
 // 關閉按鈕的事件監聽器
 closeButton.addEventListener('click', function () {
+  console.log('closeButton was clicked, pause and reset');
   audioElement.pause();
   audioElement.currentTime = 0;
 });
