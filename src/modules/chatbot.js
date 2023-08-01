@@ -1,22 +1,14 @@
-export default function initializeChatBot() {
+const initializeChatBot = () => {
     let know = {
         "hello": "hi",
         "how are you?": "good",
         "ok": ":)"
     };
     var botController = (function () {
-
-
     })();
 
     var uiController = (function () {
-
-
     })();
-
-
-
-
     var controller = (function (botCntr, uiCntr) {
         var $chatCircle,
             $chatBox,
@@ -74,8 +66,6 @@ export default function initializeChatBot() {
         }
         /* var input = uiCntr.getInput();*/
         /* $chatSubmitBtn.on("click", hideCircle);*/
-
-
 
         function init() {
             $chatCircle = $("#chat-circle");
@@ -166,3 +156,5 @@ export default function initializeChatBot() {
     }
 
 }
+
+export default initializeChatBot;
