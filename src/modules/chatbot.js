@@ -4,6 +4,33 @@ export default function initializeChatBot() {
         "how are you?": "good",
         "ok": ":)"
     };
+    // 獲得參考至 audio 元素和音量控制元素
+    const audioElement = document.getElementById('volumn');
+    const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
+    const volumeIconChat = document.getElementById('volumeIcon_chat');
+
+    volumeIconWelcome.addEventListener('click', function () {
+        if (audioElement.muted) {
+            // 如果當前已靜音，則取消靜音並更新圖標
+            audioElement.muted = false;
+            this.textContent = 'volume_up';
+        } else {
+            // 如果當前未靜音，則靜音並更新圖標
+            audioElement.muted = true;
+            this.textContent = 'volume_off';
+        }
+    });
+
+    volumeIconChat.addEventListener('click', function () {
+        if (audioElement.muted) {
+            audioElement.muted = false;
+            this.textContent = 'volume_up';
+        } else {
+            audioElement.muted = true;
+            this.textContent = 'volume_off';
+        }
+    });
+
     var botController = (function () {
 
 

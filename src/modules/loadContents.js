@@ -28,24 +28,6 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
-
-
-document.getElementById('volumeIcon_welcom').addEventListener('click', function () {
-  if (this.textContent === 'volume_up') {
-    this.textContent = 'volume_off';
-  } else {
-    this.textContent = 'volume_up';
-  }
-});
-
-document.getElementById('volumeIcon_chat').addEventListener('click', function () {
-  if (this.textContent === 'volume_up') {
-    this.textContent = 'volume_off';
-  } else {
-    this.textContent = 'volume_up';
-  }
-});
-
 const loadContents = () => {
   if (document.getElementById('temp-conversion').textContent === '°C') {
     temp = 'fahrenheit';
