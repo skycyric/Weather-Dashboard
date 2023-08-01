@@ -1308,3 +1308,57 @@ main #today #extra-info div span {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Chatbot */
+#icon-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+#chatbot {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 80%;
+  max-width: 300px;
+  height: 60%;
+  max-height: 500px;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 10px;
+}
+
+#chat-messages {
+  height: 80%;
+  overflow: auto;
+}
+
+#chat-input {
+  height: 20%;
+}
+
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #chatbot {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #chatbot {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) {
+  #chatbot {
+    bottom: 30px;
+    right: 30px;
+  }
+}
