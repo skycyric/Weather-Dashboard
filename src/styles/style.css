@@ -1738,17 +1738,3 @@ body {
 .loader-icon i {
   font-size: 3rem;
 }
-
-h2,
-h4 {
-  text-align: center;
-  margin: 15px 0 4px;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 36px
-}
-
-h4 {
-  margin: 20px 0 4px;
-  font-weight: 400;
-}
