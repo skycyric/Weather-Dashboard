@@ -1546,7 +1546,6 @@ main #today #extra-info div span {
   height: auto;
   border-bottom: 1px solid rgba(181, 181, 181, 0.42);
   overflow: hidden;
-  border-radius: 10px solid;
 }
 
 .chat-box-body:after {
