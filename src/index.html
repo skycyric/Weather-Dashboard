@@ -7,14 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather Dashboard</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" />
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body class="" style="display: none">
@@ -166,30 +158,28 @@
       </div>
     </section>
     <!-- Chatbot -->
-    <div class="floating-chat">
-      <i class="fa fa-comments" aria-hidden="true"></i>
-      <div class="chat">
-        <div class="header">
-          <span class="title">
-            任小渝
-          </span>
-          <button>
-            <i class="fa fa-times" aria-hidden="true"></i>
-          </button>
+    <div id="body">
+      <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+        <i class="material-icons">speaker_phone</i>
+      </div>
+      <div class="chat-box">
+        <div class="chat-box-header">
+          ChatBot
+          <span class="chat-box-toggle"><i class="material-icons">close</i></span>
         </div>
-        <ul class="messages">
-          <div id="chatLoader">
-            <div class="loader-icon">
-              <i class="fas fa-spinner fa-spin"></i>
-            </div>
+        <div class="chat-box-body">
+          <div class="chat-box-overlay">
           </div>
-          <li class="other">
-            請問有什麼地方需要我幫忙嗎？
-          </li>
-        </ul>
-        <div class="footer">
-          <div class="text-box" contenteditable="true" disabled="true"></div>
-          <button id="sendMessage">send</button>
+          <div class="chat-logs">
+          </div>
+          <!--chat-log -->
+        </div>
+        <div class="chat-input">
+          <form>
+            <input type="text" id="chat-input" placeholder="Send a message..." />
+            <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+          </form>
         </div>
       </div>
     </div>
