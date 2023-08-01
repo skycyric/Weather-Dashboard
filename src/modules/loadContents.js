@@ -40,4 +40,12 @@ const loadContents = () => {
   createDailyInfo();
 };
 
+document.getElementById('icon-container').addEventListener('click', () => {
+  const chatbot = document.getElementById('chatbot');
+  if (chatbot.style.display === 'none') {
+    chatbot.style.display = 'block';
+  } else {
+    chatbot.style.display = 'none';
+  }
+});
 export default loadContents;
