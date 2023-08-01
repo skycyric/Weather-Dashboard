@@ -83,7 +83,6 @@ export default function initializeChatBot() {
 
             // Load the sound
             var greetingSound = new Audio('../sounds/volumn.mp3');
-
             // Add an event listener to the chatbot button
             $chatCircle.on('click', function () {
                 // Play the sound when the chatbot is opened
