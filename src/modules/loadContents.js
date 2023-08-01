@@ -158,9 +158,6 @@ const loadContents = () => {
       document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
     }
   }
-
 };
-
-
 
 export default loadContents;
