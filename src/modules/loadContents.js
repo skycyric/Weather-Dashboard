@@ -40,7 +40,7 @@ const loadContents = () => {
   getNext24HoursChart(xValues, temp);
   createForecast(temp);
   createDailyInfo();
-  initializeChatBot();
+  initializeChatBot(temp);
 };
 
 export default loadContents;
