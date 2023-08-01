@@ -10,11 +10,6 @@ module.exports = {
     static: './dist',
   },
   devtool: 'source-map',
-  resolve: {
-    alias: {
-      icons: path.resolve(__dirname, 'src/icons'),
-    },
-  },
   plugins: [
     new CopyPlugin({
       patterns: [
