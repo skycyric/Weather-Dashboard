@@ -22,6 +22,10 @@ module.exports = {
           from: 'dark',
           to: 'dark',
         },
+        {
+          from: 'sounds',
+          to: 'sounds',
+        },
       ],
     }),
     new Dotenv({
@@ -46,6 +50,18 @@ module.exports = {
         test: /\.png$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.mp3$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'sounds/',
+            },
+          },
+        ],
+      }
     ],
   },
 };

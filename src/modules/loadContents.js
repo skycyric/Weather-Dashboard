@@ -8,6 +8,7 @@ import initializeChatBot from './chatbot';
 const cells = [...document.querySelectorAll('.slide')];
 const toggleBtn = document.querySelector('button');
 const toggleIcon = document.getElementById('toggle-icon');
+var Sound = new Audio(SoundPath);
 toggleIcon.src = '../icons/moon.png';
 
 let temp;

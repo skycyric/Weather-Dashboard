@@ -1,3 +1,4 @@
+import greetingSoundPath from '../sounds/volumn.mp3';
 export default function initializeChatBot() {
     var botController = (function () {
 
@@ -82,7 +83,7 @@ export default function initializeChatBot() {
             $submitBtn = $("#chat-submit");
 
             // Load the sound
-            var greetingSound = new Audio('../sounds/volumn.mp3');
+            var greetingSound = new Audio(greetingSoundPath);
             // Add an event listener to the chatbot button
             $chatCircle.on('click', function () {
                 // Play the sound when the chatbot is opened
