@@ -3,7 +3,7 @@ import getNext24HoursChart from './forecast/chart';
 import createForecast from './forecast/5DayForecast';
 import createDailyInfo from './currentWeather/createDailyInfo';
 import setCarousel from './carousel';
-import initializeChatBot from './chatbot';
+import initializeChatBot from './chatBot';
 
 const cells = [...document.querySelectorAll('.slide')];
 const toggleBtn = document.querySelector('button');
