@@ -9,7 +9,7 @@ const cells = [...document.querySelectorAll('.slide')];
 const toggleBtn = document.querySelector('button');
 const toggleIcon = document.getElementById('toggle-icon');
 toggleIcon.src = '../icons/moon.png';
-var audioElement = document.getElementById('AudioElementId'); // 假設音頻元素的ID是'yourAudioElementId'
+var audioElement = document.getElementById('volumn'); // 假設音頻元素的ID是'Volumn'
 var volumeButton = document.querySelector('.chat-box-volume');
 var closeButton = document.querySelector('.chat-box-toggle');
 
