@@ -33,15 +33,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/virag-ky/Weather-Dashboard.git"
+    "url": "git+https://github.com/skycyric/Weather-Dashboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/virag-ky/Weather-Dashboard/issues"
+    "url": "https://github.com/skycyric/Weather-Dashboard/issues"
   },
-  "homepage": "https://github.com/virag-ky/Weather-Dashboard#readme",
+  "homepage": "https://github.com/skycyric/Weather-Dashboard",
   "dependencies": {
     "cities.json": "^1.1.14",
     "env-create": "^1.1.4",
