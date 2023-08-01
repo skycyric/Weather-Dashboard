@@ -1,4 +1,3 @@
-import greetingSoundPath from '../sounds/volumn.mp3';
 export default function initializeChatBot() {
     var botController = (function () {
 
