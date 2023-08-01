@@ -80,7 +80,7 @@ const loadContents = () => {
       evt.preventDefault();
 
       //1. get input message data
-      msg = $chatSubmitBtn.val();
+      msg = $submitBtn.val();
 
       //2.if there is no string button send shoudn't work
       if (msg.trim() == '') {
@@ -116,7 +116,7 @@ const loadContents = () => {
 
       //2. call wait message from CRM-human
 
-      $submitBtn.on("click", chatSbmBtn);
+      $submitBtn.on("click", submitMsg);
       $chatInput.on("keypress", chatSbmBtn);
 
 
