@@ -4,33 +4,6 @@ export default function initializeChatBot() {
         "how are you?": "good",
         "ok": ":)"
     };
-    // 獲得參考至 audio 元素和音量控制元素
-    const audioElement = document.getElementById('volumn');
-    const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
-    const volumeIconChat = document.getElementById('volumeIcon_chat');
-
-    volumeIconWelcome.addEventListener('click', function () {
-        if (audioElement.muted) {
-            // 如果當前已靜音，則取消靜音並更新圖標
-            audioElement.muted = false;
-            this.textContent = 'volume_up';
-        } else {
-            // 如果當前未靜音，則靜音並更新圖標
-            audioElement.muted = true;
-            this.textContent = 'volume_off';
-        }
-    });
-
-    volumeIconChat.addEventListener('click', function () {
-        if (audioElement.muted) {
-            audioElement.muted = false;
-            this.textContent = 'volume_up';
-        } else {
-            audioElement.muted = true;
-            this.textContent = 'volume_off';
-        }
-    });
-
     var botController = (function () {
 
 
@@ -123,32 +96,30 @@ export default function initializeChatBot() {
                 greetingSound.play();
             });
 
+            // Add volume control
+            const volumeIconChat = document.getElementById('volumeIcon_chat');
+            volumeIconChat.addEventListener('click', function () {
+                if (greetingSound.muted) {
+                    greetingSound.muted = false;
+                    this.textContent = 'volume_up';
+                } else {
+                    greetingSound.muted = true;
+                    this.textContent = 'volume_off';
+                }
+            });
+
+            // Add close sound button
+            let closeButton = document.querySelector('.chat-box-toggle');
+            closeButton.addEventListener('click', function () {
+                greetingSound.pause();
+                greetingSound.currentTime = 0;
+            });
+
             //1. call toggle 
             $chatCircle.on("click", hideCircle);
             $chatBoxClose.on("click", chatBoxCl);
             $chatInput.on("click", chatOpenMessage);
 
-            // Add the volume control
-            let volumeButton = document.querySelector('#volumeButton');
-            let volumeIcon = volumeButton.querySelector('i');
-
-            volumeButton.addEventListener('click', function () {
-                if (greetingSound.muted) {
-                    greetingSound.muted = false;
-                    volumeIcon.textContent = 'volume_up';
-                } else {
-                    greetingSound.muted = true;
-                    volumeIcon.textContent = 'volume_off';
-                }
-            });
-
-            // Add the close button
-            let closeButton = document.querySelector('#closeButton');
-
-            closeButton.addEventListener('click', function () {
-                greetingSound.pause();
-                greetingSound.currentTime = 0;
-            });
             //2. call wait message from CRM-human
             console.log($submitBtn);
             $submitBtn.on("click", chatSbmBtn);
