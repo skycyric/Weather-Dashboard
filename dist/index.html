@@ -1,202 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Dashboard</title>
-    <link
-      rel="icon"
-      href="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
-    />
-  <script defer src="main.js"></script></head>
-  <body class="" style="display: none">
-    <header class="animate-bottom">
-      <nav>
-        <div id="autocomplete">
-          <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="Search city..."
-          />
-          <div id="results"></div>
-          <img src="../icons/search2.png" alt="search icon" id="search-icon" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script defer src="main.js"></script></head>
+
+<body class="" style="display: none">
+  <header class="animate-bottom">
+    <nav>
+      <div id="autocomplete">
+        <input type="search" name="search" id="search" placeholder="Search city..." />
+        <div id="results"></div>
+        <img src="../icons/search2.png" alt="search icon" id="search-icon" />
+      </div>
+      <div id="todays-date">
+        <img src="../icons/calendar.png" alt="calendar icon" id="calendar-icon" />
+        <span id="current-date"></span>
+      </div>
+      <span id="temp-conversion"></span>
+      <button id="toggle-btn">
+        <img id="toggle-icon" alt="toggle icon" src="" />
+      </button>
+    </nav>
+  </header>
+  <p id="error">Please, enter a correct city or a starting letter...</p>
+  <main>
+    <section class="animate-bottom" id="main-section">
+      <section id="current-section">
+        <div id="location-container">
+          <div id="location-info">
+            <div id="location-image">
+              <img src="../icons/location.png" alt="location icon" id="location-icon" />
+              <span id="location"></span>
+            </div>
+            <span id="lat"></span>
+            <span id="lon"></span>
+          </div>
         </div>
-        <div id="todays-date">
-          <img
-            src="../icons/calendar.png"
-            alt="calendar icon"
-            id="calendar-icon"
-          />
-          <span id="current-date"></span>
+        <div id="time">
+          <span id="current-time"></span>
+          <span id="current-day"></span>
         </div>
-        <span id="temp-conversion"></span>
-        <button id="toggle-btn">
-          <img id="toggle-icon" alt="toggle icon" src="" />
-        </button>
-      </nav>
-    </header>
-    <p id="error">Please, enter a correct city or a starting letter...</p>
-    <main>
-      <section class="animate-bottom" id="main-section">
-        <section id="current-section">
-          <div id="location-container">
-            <div id="location-info">
-              <div id="location-image">
-                <img
-                  src="../icons/location.png"
-                  alt="location icon"
-                  id="location-icon"
-                />
-                <span id="location"></span>
+      </section>
+      <section id="daily-container">
+        <section id="daily-info">
+          <div id="wind">
+            <img src="../icons/wind.png" alt="wind icon" class="daily-icon" />
+            <h3>Wind: <span id="wind-description"></span></h3>
+            <span id="deg"></span>
+            <span id="speed"></span>
+          </div>
+          <div id="daily-pressure">
+            <img src="../icons/pressure.png" alt="pressure icon" class="daily-icon" />
+            <h3>Pressure: <span id="pressure-description"></span></h3>
+            <span id="pressure"></span>
+          </div>
+          <div id="air-quality">
+            <img src="../icons/air-quality.png" alt="air pollution icon" class="daily-icon" id="air-icon" />
+            <h3>Air Quality: <span id="quality"></span></h3>
+            <span id="carbon-monoxide"></span>
+            <span id="nitrogen-monoxide"></span>
+            <span id="nitrogen-dioxide"></span>
+          </div>
+          <div id="daily-humidity">
+            <img src="../icons/humidity.png" alt="humidity icon" class="daily-icon" />
+            <h3>Humidity: <span id="humidity"></span></h3>
+          </div>
+        </section>
+        <section id="chart">
+          <canvas id="myChart"></canvas>
+        </section>
+      </section>
+      <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+
+        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+
+        <ul class="slides-container" id="slides-container">
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+        </ul>
+      </section>
+    </section>
+    <section id="today">
+      <div id="todays-section">
+        <div id="todays-temp">
+          <img src="" alt="weather icon" id="current-weather-icon" />
+        </div>
+        <div id="current-info">
+          <h2 id="current-temp"></h2>
+          <h3 id="description"></h3>
+        </div>
+      </div>
+      <div id="extra-info">
+        <div>
+          <img src="" alt="cloud icon" id="cloud-icon" />
+          <span id="cloudiness"></span>
+        </div>
+        <div>
+          <img src="../icons/max-temp.png" alt="maximum temperature icon" id="max-temp-icon" />
+          <span id="max-temp"></span>
+        </div>
+        <div>
+          <img src="../icons/min-temp.png" alt="minimum temperature icon" id="min-temp-icon" />
+          <span id="min-temp"></span>
+        </div>
+        <div>
+          <img src="../icons/sunrise.png" alt="sunrise icon" id="sunrise-icon" />
+          <span id="sunrise"></span>
+        </div>
+        <div>
+          <img src="../icons/sunset.png" alt="sunset icon" id="sunset-icon" />
+          <span id="sunset"></span>
+        </div>
+      </div>
+    </section>
+    <!-- Chatbot -->
+    <div id="body">
+      <!--button-->
+      <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+        <!--<i class="material-icons">android</i>-->
+        <img class="chat-circle_robot" src="https://cdn.iconscout.com/icon/free/png-256/robot-86-404724.png">
+      </div>
+      <!--chat-bot-->
+      <div class="chat-box">
+        <div class="chat-box-body">
+          <!--welcome message-->
+          <div class="chat-box-welcome__header">
+            <div class="chat-box__header-text">
+              <p3 class="chat-box-welcome__company-name">任小渝</p3>
+              <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+              <span class="chat-box-volume"><i class="material-icons" id="volumeIcon_welcom">volume_up</i></span>
+            </div>
+            <div id="chat-box-welcome__ava">
+              <!--<i class="material-icons">android</i>-->
+              <img class="chat-box-welcome_robot" src="https://cdn.iconscout.com/icon/free/png-256/robot-86-404724.png">
+            </div>
+            <div class="chat-box-welcome__welcome-text">
+              <p>您好！我是TVBS氣象中心助理任小渝，很高興為您服務！</p>
+            </div>
+            <!--<div id="chat">
+                  </div>-->
+          </div>
+          <!--chat-bot after welcome was toggled-->
+          <div id="chat-box__wraper">
+            <div class="chat-box-header">
+              氣象中心助理-任小渝
+              <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+              <span class="chat-box-volume"><i class="material-icons" id="volumeIcon_chat">volume_up</i></span>
+            </div>
+            <div class="chat-box-overlay">
+            </div>
+            <div class="chat-logs">
+              <div id="cm-msg-0" class="chat-msg bot">
+                <span class="msg-avatar">
+                  <!--<i class="material-icons">android</i>-->
+                  <img class="chat-box-overlay_robot"
+                    src="https://cdn.iconscout.com/icon/free/png-256/robot-86-404724.png">
+                </span>
+                <div class="cm-msg-text">
+                  您好！我是TVBS氣象中心助理任小渝，很高興為您服務！
+                </div>
               </div>
-              <span id="lat"></span>
-              <span id="lon"></span>
+              <!--<div class="text-center"><p>loader 1</p><div class="loader1"></div></div>-->
+              <div class="spin-container">
+                <div class="spiner">
+                  <div aria-hidden="true"></div>
+                  <div aria-hidden="true"></div>
+                  <div aria-hidden="true"></div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="time">
-            <span id="current-time"></span>
-            <span id="current-day"></span>
-          </div>
-        </section>
-        <section id="daily-container">
-          <section id="daily-info">
-            <div id="wind">
-              <img src="../icons/wind.png" alt="wind icon" class="daily-icon" />
-              <h3>Wind: <span id="wind-description"></span></h3>
-              <span id="deg"></span>
-              <span id="speed"></span>
-            </div>
-            <div id="daily-pressure">
-              <img
-                src="../icons/pressure.png"
-                alt="pressure icon"
-                class="daily-icon"
-              />
-              <h3>Pressure: <span id="pressure-description"></span></h3>
-              <span id="pressure"></span>
-            </div>
-            <div id="air-quality">
-              <img
-                src="../icons/air-quality.png"
-                alt="air pollution icon"
-                class="daily-icon"
-                id="air-icon"
-              />
-              <h3>Air Quality: <span id="quality"></span></h3>
-              <span id="carbon-monoxide"></span>
-              <span id="nitrogen-monoxide"></span>
-              <span id="nitrogen-dioxide"></span>
-            </div>
-            <div id="daily-humidity">
-              <img
-                src="../icons/humidity.png"
-                alt="humidity icon"
-                class="daily-icon"
-              />
-              <h3>Humidity: <span id="humidity"></span></h3>
-            </div>
-          </section>
-          <section id="chart">
-            <canvas id="myChart"></canvas>
-          </section>
-        </section>
-        <section class="slider-wrapper">
-          <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-
-          <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-
-          <ul class="slides-container" id="slides-container">
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-          </ul>
-        </section>
-      </section>
-      <section id="today">
-        <div id="todays-section">
-          <div id="todays-temp">
-            <img src="" alt="weather icon" id="current-weather-icon" />
-          </div>
-          <div id="current-info">
-            <h2 id="current-temp"></h2>
-            <h3 id="description"></h3>
+            <!--chat-log-->
           </div>
         </div>
-        <div id="extra-info">
-          <div>
-            <img src="" alt="cloud icon" id="cloud-icon" />
-            <span id="cloudiness"></span>
-          </div>
-          <div>
-            <img
-              src="../icons/max-temp.png"
-              alt="maximum temperature icon"
-              id="max-temp-icon"
-            />
-            <span id="max-temp"></span>
-          </div>
-          <div>
-            <img
-              src="../icons/min-temp.png"
-              alt="minimum temperature icon"
-              id="min-temp-icon"
-            />
-            <span id="min-temp"></span>
-          </div>
-          <div>
-            <img
-              src="../icons/sunrise.png"
-              alt="sunrise icon"
-              id="sunrise-icon"
-            />
-            <span id="sunrise"></span>
-          </div>
-          <div>
-            <img src="../icons/sunset.png" alt="sunset icon" id="sunset-icon" />
-            <span id="sunset"></span>
-          </div>
+        <div class="chat-input-box" id="chatLog">
+          <form class="chat-input__form">
+            <input type="text" class="chat-input__text" id="chat-input__text" placeholder="Send a message..." />
+            <button type="submit" class="chat-submit" id="chat-submit">
+              <i class="material-icons">send</i>
+            </button>
+            <p6 class="chat-box__sign">TVBS</p6>
+          </form>
         </div>
-      </section>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-  </body>
+      </div>
+    </div>
+    <!-- end live-chat -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--jquery ui-->
+    <!--<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>-->
+    <!--     <script src="app.js"></script> -->
+  </main>
+  <audio id="volumn" src="../sounds/volumn.mp3"></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</body>
+
 </html>
