@@ -138,7 +138,7 @@ const initializeChatBot = () => {
             });
 
             // Add close sound button
-            let closeButton = document.querySelector('.chat-box-toggle');
+            let closeButton = document.querySelectorAll('.chat-box-toggle');
             closeButton.addEventListener('click', function () {
                 greetingSound.pause();
                 greetingSound.currentTime = 0;
