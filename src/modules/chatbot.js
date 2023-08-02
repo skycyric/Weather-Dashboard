@@ -13,23 +13,28 @@ const initializeChatBot = () => {
         if (audioElement.muted) {
             // 如果當前已靜音，則取消靜音並更新圖標
             audioElement.muted = false;
-            this.textContent = 'volume_up';
+            volumeIconWelcome.textContent = 'volume_up';
+            volumeIconChat.textContent = 'volume_up';
         } else {
             // 如果當前未靜音，則靜音並更新圖標
             audioElement.muted = true;
-            this.textContent = 'volume_off';
+            volumeIconWelcome.textContent = 'volume_off';
+            volumeIconChat.textContent = 'volume_off';
         }
     });
 
     volumeIconChat.addEventListener('click', function () {
         if (audioElement.muted) {
             audioElement.muted = false;
-            this.textContent = 'volume_up';
+            volumeIconWelcome.textContent = 'volume_up';
+            volumeIconChat.textContent = 'volume_up';
         } else {
             audioElement.muted = true;
-            this.textContent = 'volume_off';
+            volumeIconWelcome.textContent = 'volume_off';
+            volumeIconChat.textContent = 'volume_off';
         }
     });
+
 
     var botController = (function () {
     })();
