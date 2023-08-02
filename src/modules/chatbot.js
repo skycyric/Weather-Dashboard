@@ -114,6 +114,18 @@ const initializeChatBot = () => {
             });
 
             // Add volume control
+
+            const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
+            volumeIconWelcome.addEventListener('click', function () {
+                if (greetingSound.muted) {
+                    greetingSound.muted = false;
+                    this.textContent = 'volume_up';
+                } else {
+                    greetingSound.muted = true;
+                    this.textContent = 'volume_off';
+                }
+            });
+
             const volumeIconChat = document.getElementById('volumeIcon_chat');
             volumeIconChat.addEventListener('click', function () {
                 if (greetingSound.muted) {
