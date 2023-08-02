@@ -13,28 +13,23 @@ const initializeChatBot = () => {
         if (audioElement.muted) {
             // 如果當前已靜音，則取消靜音並更新圖標
             audioElement.muted = false;
-            volumeIconWelcome.textContent = 'volume_up';
-            volumeIconChat.textContent = 'volume_up';
+            this.textContent = 'volume_up';
         } else {
             // 如果當前未靜音，則靜音並更新圖標
             audioElement.muted = true;
-            volumeIconWelcome.textContent = 'volume_off';
-            volumeIconChat.textContent = 'volume_off';
+            this.textContent = 'volume_off';
         }
     });
 
     volumeIconChat.addEventListener('click', function () {
         if (audioElement.muted) {
             audioElement.muted = false;
-            volumeIconWelcome.textContent = 'volume_up';
-            volumeIconChat.textContent = 'volume_up';
+            this.textContent = 'volume_up';
         } else {
             audioElement.muted = true;
-            volumeIconWelcome.textContent = 'volume_off';
-            volumeIconChat.textContent = 'volume_off';
+            this.textContent = 'volume_off';
         }
     });
-
 
     var botController = (function () {
     })();
@@ -118,24 +113,24 @@ const initializeChatBot = () => {
                 greetingSound.play();
             });
 
-            // // Add volume control
-            // const volumeIconChat = document.getElementById('volumeIcon_chat');
-            // volumeIconChat.addEventListener('click', function () {
-            //     if (greetingSound.muted) {
-            //         greetingSound.muted = false;
-            //         this.textContent = 'volume_up';
-            //     } else {
-            //         greetingSound.muted = true;
-            //         this.textContent = 'volume_off';
-            //     }
-            // });
+            // Add volume control
+            const volumeIconChat = document.getElementById('volumeIcon_chat');
+            volumeIconChat.addEventListener('click', function () {
+                if (greetingSound.muted) {
+                    greetingSound.muted = false;
+                    this.textContent = 'volume_up';
+                } else {
+                    greetingSound.muted = true;
+                    this.textContent = 'volume_off';
+                }
+            });
 
-            // // Add close sound button
-            // let closeButton = document.querySelector('.chat-box-toggle');
-            // closeButton.addEventListener('click', function () {
-            //     greetingSound.pause();
-            //     greetingSound.currentTime = 0;
-            // });
+            // Add close sound button
+            let closeButton = document.querySelector('.chat-box-toggle');
+            closeButton.addEventListener('click', function () {
+                greetingSound.pause();
+                greetingSound.currentTime = 0;
+            });
 
             //1. call toggle 
             $chatCircle.on("click", hideCircle);
