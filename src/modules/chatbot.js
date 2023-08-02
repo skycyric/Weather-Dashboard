@@ -8,26 +8,32 @@ const initializeChatBot = () => {
     const audioElement = document.getElementById('volumn');
     const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
     const volumeIconChat = document.getElementById('volumeIcon_chat');
-    let greetingSound = new Audio('../sounds/volumn.mp3');
 
-    function toggleMute() {
+    volumeIconWelcome.addEventListener('click', function () {
         if (audioElement.muted) {
             // 如果當前已靜音，則取消靜音並更新圖標
             audioElement.muted = false;
-            greetingSound.muted = false;
             volumeIconWelcome.textContent = 'volume_up';
             volumeIconChat.textContent = 'volume_up';
         } else {
             // 如果當前未靜音，則靜音並更新圖標
             audioElement.muted = true;
-            greetingSound.muted = true;
             volumeIconWelcome.textContent = 'volume_off';
             volumeIconChat.textContent = 'volume_off';
         }
-    }
+    });
 
-    volumeIconWelcome.addEventListener('click', toggleMute);
-    volumeIconChat.addEventListener('click', toggleMute);
+    volumeIconChat.addEventListener('click', function () {
+        if (audioElement.muted) {
+            audioElement.muted = false;
+            volumeIconWelcome.textContent = 'volume_up';
+            volumeIconChat.textContent = 'volume_up';
+        } else {
+            audioElement.muted = true;
+            volumeIconWelcome.textContent = 'volume_off';
+            volumeIconChat.textContent = 'volume_off';
+        }
+    });
 
 
     var botController = (function () {
@@ -44,19 +50,6 @@ const initializeChatBot = () => {
             $submitBtn,
             $chatInput,
             $msg;
-
-        $chatCircle.on('click', function () {
-            // Play the sound when the chatbot is opened
-            console.log("Chat Circle clicked!");
-            greetingSound.play();
-        });
-
-        // Add close sound button
-        let closeButton = document.querySelector('.chat-box-toggle');
-        closeButton.addEventListener('click', function () {
-            greetingSound.pause();
-            greetingSound.currentTime = 0;
-        });
 
         /*toggle*/
         function hideCircle(evt) {
@@ -115,12 +108,34 @@ const initializeChatBot = () => {
             $chatInput = $("#chat-input__text");
             $submitBtn = $("#chat-submit");
 
-            // Add close sound button
-            let closeButton = document.querySelector('.chat-box-toggle');
-            closeButton.addEventListener('click', function () {
-                greetingSound.pause();
-                greetingSound.currentTime = 0;
+            // Load the sound
+            var greetingSound = new Audio('../sounds/volumn.mp3');
+
+            // Add an event listener to the chatbot button
+            $chatCircle.on('click', function () {
+                // Play the sound when the chatbot is opened
+                console.log("Chat Circle clicked!");
+                greetingSound.play();
             });
+
+            // // Add volume control
+            // const volumeIconChat = document.getElementById('volumeIcon_chat');
+            // volumeIconChat.addEventListener('click', function () {
+            //     if (greetingSound.muted) {
+            //         greetingSound.muted = false;
+            //         this.textContent = 'volume_up';
+            //     } else {
+            //         greetingSound.muted = true;
+            //         this.textContent = 'volume_off';
+            //     }
+            // });
+
+            // // Add close sound button
+            // let closeButton = document.querySelector('.chat-box-toggle');
+            // closeButton.addEventListener('click', function () {
+            //     greetingSound.pause();
+            //     greetingSound.currentTime = 0;
+            // });
 
             //1. call toggle 
             $chatCircle.on("click", hideCircle);
