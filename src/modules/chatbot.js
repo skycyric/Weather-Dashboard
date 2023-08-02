@@ -8,6 +8,8 @@ const initializeChatBot = () => {
     const audioElement = document.getElementById('volumn');
     const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
     const volumeIconChat = document.getElementById('volumeIcon_chat');
+    const closeButtonWelcome = document.getElementById('welcom_close');
+    const closeButtonChat = document.getElementById('chat_close');
 
     volumeIconWelcome.addEventListener('click', function () {
         if (audioElement.muted) {
@@ -138,8 +140,12 @@ const initializeChatBot = () => {
             });
 
             // Add close sound button
-            let closeButton = document.querySelectorAll('.chat-box-toggle');
-            closeButton.addEventListener('click', function () {
+            closeButtonWelcome.addEventListener('click', function () {
+                greetingSound.pause();
+                greetingSound.currentTime = 0;
+            });
+
+            closeButtonChat.addEventListener('click', function () {
                 greetingSound.pause();
                 greetingSound.currentTime = 0;
             });
