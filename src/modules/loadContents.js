@@ -54,27 +54,6 @@ switchButton.addEventListener('click', function () {
   switchButton.textContent = names[index];
 });
 
-const handleButtonClick = (sound, text) => {
-  const chatCircle = document.getElementById('chat-circle');
-  const clickEvent = new Event('click');
-  chatCircle.dispatchEvent(clickEvent);
-
-  if (window['audio']) {
-    if (!window['audio'].paused) {
-      window['audio'].pause();  // 暫停當前音訊
-      window['audio'].currentTime = 0;
-    }
-    window['audio'].src = sound;
-    window['audio'].play().catch(function (error) {
-      console.log('Failed to play audio: ' + error);
-    });
-  }
-
-  const chatbotText = document.querySelector('.chat-box-welcome__welcome-text');
-  if (chatbotText) {
-    chatbotText.textContent = text;
-  }
-}
 
 const setupEventHandlers = () => {
   window['audio'] = document.getElementById('volumn');
@@ -90,7 +69,15 @@ const setupEventHandlers = () => {
 
   const windButton = document.getElementById('wind');
   windButton.addEventListener('click', function () {
-    handleButtonClick(sounds['wind'], '關於您所在地的風力大小...');
+    const chatCircle = document.getElementById('chat-circle');
+    const clickEvent = new Event('click');
+    chatCircle.dispatchEvent(clickEvent);
+    window['currentSound'] = sounds['wind'];
+    window['audio'].src = window['currentSound'];
+    audio.play();
+
+    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
+    chatbotText.textContent = '關於您所在地的風力大小...';
   });
 
   const pressureButton = document.getElementById('daily-pressure');
