@@ -105,49 +105,47 @@ const initializeChatBot = () => {
             $chatInput = $("#chat-input__text");
             $submitBtn = $("#chat-submit");
 
-            // Load the sound
-            var greetingSound = new Audio('../sounds/volumn.mp3');
-
             // Add an event listener to the chatbot button
             $chatCircle.on('click', function () {
                 // Play the sound when the chatbot is opened
                 console.log("Chat Circle clicked!");
-                greetingSound.play();
+                window['audio'].src = '../sounds/welcom.mp3';
+                window['audio'].play();
             });
 
             // Add volume control
 
             const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
             volumeIconWelcome.addEventListener('click', function () {
-                if (greetingSound.muted) {
-                    greetingSound.muted = false;
+                if (window['audio'].muted) {
+                    window['audio'].muted = false;
                     this.textContent = 'volume_up';
                 } else {
-                    greetingSound.muted = true;
+                    window['audio'].muted = true;
                     this.textContent = 'volume_off';
                 }
             });
 
             const volumeIconChat = document.getElementById('volumeIcon_chat');
             volumeIconChat.addEventListener('click', function () {
-                if (greetingSound.muted) {
-                    greetingSound.muted = false;
+                if (window['audio'].muted) {
+                    window['audio'].muted = false;
                     this.textContent = 'volume_up';
                 } else {
-                    greetingSound.muted = true;
+                    window['audio'].muted = true;
                     this.textContent = 'volume_off';
                 }
             });
 
             // Add close sound button
             closeButtonWelcome.addEventListener('click', function () {
-                greetingSound.pause();
-                greetingSound.currentTime = 0;
+                window['audio'].pause();
+                window['audio'].currentTime = 0;
             });
 
             closeButtonChat.addEventListener('click', function () {
-                greetingSound.pause();
-                greetingSound.currentTime = 0;
+                window['audio'].pause();
+                window['audio'].currentTime = 0;
             });
 
             //1. call toggle 
