@@ -56,6 +56,7 @@ switchButton.addEventListener('click', function () {
 
 const setupEventHandlers = () => {
   window['audio'] = document.getElementById('volumn');
+  window['currentSound'] = ''
   // 在這裡創建一個全域的音頻物件
   var audio = new Audio();
   let sounds = {
@@ -72,6 +73,7 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    window['currentSound'] = sounds['wind'];
     audio.src = sounds['wind'];
     audio.play();
 

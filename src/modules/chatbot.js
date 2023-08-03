@@ -109,7 +109,11 @@ const initializeChatBot = () => {
             $chatCircle.on('click', function () {
                 // Play the sound when the chatbot is opened
                 console.log("Chat Circle clicked!");
-                window['audio'].src = '../sounds/welcom.mp3';
+                if (window['currentSound']) {
+                    window['audio'].src = window['currentSound'];  // Use current sound
+                } else {
+                    window['audio'].src = '../sounds/welcom.mp3';
+                }
                 window['audio'].play();
             });
 
