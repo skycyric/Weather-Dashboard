@@ -31,7 +31,7 @@ toggleBtn.addEventListener('click', () => {
 let switchButton = document.getElementById('image-switch-button');
 let robotImages = document.querySelectorAll('.chat-circle_robot, .chat-box-welcome_robot, .chat-box-overlay_robot');
 
-let imageSources = ["../icons/cloud.png", "../icons/human.png", "../icons/soundwave.png"];
+let imageSources = ["../icons/cloud.png", "../icons/human.png", "../icons/soundwave.gif"];
 let names = ["雲寶寶", "科幻風", "聲波"];
 let index = 0;
 
