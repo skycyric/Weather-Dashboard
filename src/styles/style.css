@@ -1484,11 +1484,11 @@ main #today #extra-info div span {
   position: absolute;
   top: 98px;
   left: 124px;
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   border-radius: 50%;
   color: white;
-  padding: 22px;
+  padding: 5px;
 }
 
 
@@ -1497,7 +1497,8 @@ main #today #extra-info div span {
 }*/
 
 .chat-box-welcome_robot {
-  height: 75px;
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 12px;
 }
