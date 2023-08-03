@@ -123,6 +123,8 @@ const initializeChatBot = () => {
                     window['audio'].src = '../sounds/welcom.mp3';
                     window['audio'].play();
                 }
+                const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p')
+                chatbotText.textContent = '您好！我是TVBS氣象中心助理任小渝，很高興為您服務！'
             });
 
             // Add volume control
