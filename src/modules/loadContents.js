@@ -54,60 +54,56 @@ switchButton.addEventListener('click', function () {
   switchButton.textContent = names[index];
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+const setupEventHandlers = () => {
   window['audio'] = document.getElementById('volumn');
-  window.onload = function () {
-    // 在這裡創建一個全域的音頻物件
-    var audio = new Audio();
-    let sounds = {
-      'welcom': '../sounds/welcom.mp3',
-      'wind': '../sounds/wind.mp3',
-      'pressure': '../sounds/pressure.mp3',
-      'airQuality': '../sounds/air-quality.mp3',
-      'humidity': '../sounds/humidity.mp3',
-    };
+  // 在這裡創建一個全域的音頻物件
+  var audio = new Audio();
+  let sounds = {
+    'welcom': '../sounds/welcom.mp3',
+    'wind': '../sounds/wind.mp3',
+    'pressure': '../sounds/pressure.mp3',
+    'airQuality': '../sounds/air-quality.mp3',
+    'humidity': '../sounds/humidity.mp3',
+  };
 
-    const windButton = document.getElementById('wind');
-    windButton.addEventListener('click', function () {
-      // 更新音頻的來源並播放
-      console.log('Wind button clicked');
-      audio.src = sounds['wind'];
-      audio.play();
+  const windButton = document.getElementById('wind');
+  windButton.addEventListener('click', function () {
+    // 更新音頻的來源並播放
+    console.log('Wind button clicked');
+    audio.src = sounds['wind'];
+    audio.play();
 
-      const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-      chatbotText.textContent = '關於您所在地的風力大小...';
-    });
+    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
+    chatbotText.textContent = '關於您所在地的風力大小...';
+  });
 
-    const pressureButton = document.getElementById('daily-pressure');
-    pressureButton.addEventListener('click', function () {
-      audio.src = sounds['pressure'];
-      audio.play();
+  const pressureButton = document.getElementById('daily-pressure');
+  pressureButton.addEventListener('click', function () {
+    audio.src = sounds['pressure'];
+    audio.play();
 
-      const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-      chatbotText.textContent = '關於您所在地的氣壓...';
-    });
+    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
+    chatbotText.textContent = '關於您所在地的氣壓...';
+  });
 
-    const airQualityButton = document.getElementById('air-quality');
-    airQualityButton.addEventListener('click', function () {
-      audio.src = sounds['airQuality'];
-      audio.play();
+  const airQualityButton = document.getElementById('air-quality');
+  airQualityButton.addEventListener('click', function () {
+    audio.src = sounds['airQuality'];
+    audio.play();
 
-      const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-      chatbotText.textContent = '關於您所在地的空氣品質...';
-    });
+    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
+    chatbotText.textContent = '關於您所在地的空氣品質...';
+  });
 
-    const dailyHumidityButton = document.getElementById('daily-humidity');
-    dailyHumidityButton.addEventListener('click', function () {
-      audio.src = sounds['humidity'];
-      audio.play();
+  const dailyHumidityButton = document.getElementById('daily-humidity');
+  dailyHumidityButton.addEventListener('click', function () {
+    audio.src = sounds['humidity'];
+    audio.play();
 
-      const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-      chatbotText.textContent = '關於您所在地的濕度...';
-    });
-  }
-});
-
-
+    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
+    chatbotText.textContent = '關於您所在地的濕度...';
+  });
+}
 
 
 const loadContents = () => {
@@ -123,6 +119,7 @@ const loadContents = () => {
   createForecast(temp);
   createDailyInfo();
   initializeChatBot();
+  setupEventHandlers();
 };
 
 export default loadContents;
