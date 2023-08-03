@@ -73,6 +73,8 @@ const setupEventHandlers = () => {
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['wind'];
+    window['audio'].pause();
+    window['audio'].currentTime = 0;
     window['audio'].src = window['currentSound'];
     audio.play();
 
@@ -86,6 +88,8 @@ const setupEventHandlers = () => {
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['pressure'];
+    window['audio'].pause();
+    window['audio'].currentTime = 0;
     window['audio'].src = window['currentSound'];
     audio.play();
 
@@ -99,6 +103,8 @@ const setupEventHandlers = () => {
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['airQuality'];
+    window['audio'].pause();
+    window['audio'].currentTime = 0;
     window['audio'].src = window['currentSound'];
     audio.play();
 
@@ -112,6 +118,8 @@ const setupEventHandlers = () => {
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['humidity'];
+    window['audio'].pause();
+    window['audio'].currentTime = 0;
     window['audio'].src = window['currentSound'];
     audio.play();
 
