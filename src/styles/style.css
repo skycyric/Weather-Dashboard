@@ -1036,6 +1036,10 @@ main #main-section #daily-container #daily-info div {
   color: #29b5e1;
 }
 
+#daily-info div {
+  cursor: pointer;
+}
+
 @media (min-width: 1550px) {
   main #main-section #daily-container #daily-info div {
     padding-bottom: 5px;
