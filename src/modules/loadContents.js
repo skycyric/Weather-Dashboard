@@ -57,7 +57,6 @@ switchButton.addEventListener('click', function () {
 const setupEventHandlers = () => {
   window['audio'] = document.getElementById('volumn');
   window['currentSound'] = ''
-
   let sounds = {
     'welcom': '../sounds/welcom.mp3',
     'wind': '../sounds/wind.mp3',
@@ -75,7 +74,7 @@ const setupEventHandlers = () => {
     window['audio'].src = window['currentSound'];
     audio.play();
 
-    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
+    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text');
     chatbotText.textContent = '關於您所在地的風力大小...';
   });
 
