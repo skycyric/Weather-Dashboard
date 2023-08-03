@@ -28,6 +28,21 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
+let switchButton = document.getElementById('image-switch-button');
+let robotImages = document.querySelectorAll('.chat-circle_robot, .chat-box-welcome_robot, .chat-box-overlay_robot');
+
+let imageSources = ["../icons/cloud.png", "../icons/sun.png", "../icons/moon.png"];
+let index = 0;
+
+// 添加事件監聽器
+switchButton.addEventListener('click', function () {
+  index = (index + 1) % imageSources.length; // 更新索引
+  robotImages.forEach(function (robotImage) {
+    // 切換圖片源
+    robotImage.src = imageSources[index];
+  });
+});
+
 const loadContents = () => {
   if (document.getElementById('temp-conversion').textContent === '°C') {
     temp = 'fahrenheit';
