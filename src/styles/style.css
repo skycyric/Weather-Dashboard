@@ -1499,8 +1499,8 @@ main #today #extra-info div span {
 }*/
 
 .chat-box-welcome_robot {
-  height: 100%;
-  width: 100%;
+  width: calc(100% - 2 * 5px);
+  height: calc(100% - 2 * 5px);
 }
 
 .chat-box-welcome__welcome-text {
