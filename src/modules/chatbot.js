@@ -121,9 +121,9 @@ const initializeChatBot = () => {
                 console.log("Chat Circle clicked!");
                 if (!window['currentSound']) {
                     window['currentText'] = '您好！我是TVBS氣象中心助理任小渝，很高興為您服務！';
-                    window['welcomText'].textContent = window['currentText'];
                     window['audio'].play();
                 }
+                window['welcomText'].textContent = window['currentText'];
             });
 
             // Add volume control
