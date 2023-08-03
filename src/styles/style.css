@@ -471,6 +471,11 @@ header nav #todays-date {
   margin: 0 auto;
 }
 
+header nav #image-switch-button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 @media (min-width: 1550px) {
   header nav #todays-date {
     display: -webkit-box;
