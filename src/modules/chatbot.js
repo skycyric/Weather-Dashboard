@@ -5,30 +5,29 @@ const initializeChatBot = () => {
         "ok": ":)"
     };
     // 獲得參考至 audio 元素和音量控制元素
-    const audioElement = window['audio'];
     const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
     const volumeIconChat = document.getElementById('volumeIcon_chat');
     const closeButtonWelcome = document.getElementById('welcom_close');
     const closeButtonChat = document.getElementById('chat_close');
 
     volumeIconWelcome.addEventListener('click', function () {
-        if (audioElement.muted) {
+        if (indow['audio'].muted) {
             // 如果當前已靜音，則取消靜音並更新圖標
-            audioElement.muted = false;
+            indow['audio'].muted = false;
             this.textContent = 'volume_up';
         } else {
             // 如果當前未靜音，則靜音並更新圖標
-            audioElement.muted = true;
+            indow['audio'].muted = true;
             this.textContent = 'volume_off';
         }
     });
 
     volumeIconChat.addEventListener('click', function () {
-        if (audioElement.muted) {
-            audioElement.muted = false;
+        if (indow['audio'].muted) {
+            indow['audio'].muted = false;
             this.textContent = 'volume_up';
         } else {
-            audioElement.muted = true;
+            indow['audio'].muted = true;
             this.textContent = 'volume_off';
         }
     });
@@ -104,7 +103,7 @@ const initializeChatBot = () => {
             $chatWraper.hide('scale');
 
             // Reset currentSound on closing chatbot
-            audioElement.src = '../sounds/welcom.mp3';
+            window['audio'].src = '../sounds/welcom.mp3';
             window['currentSound'] = '';
         }
 
@@ -123,8 +122,8 @@ const initializeChatBot = () => {
                 const chatCircleText = document.querySelector('.chat-circle__text');
                 if (!window['currentSound']) {
                     chatCircleText.textContent = '您好！我是TVBS氣象中心助理任小渝，很高興為您服務!';
-                    audioElement.src = '../sounds/welcom.mp3';
-                    audioElement.play();
+                    window['audio'].src = '../sounds/welcom.mp3';
+                    window['audio'].play();
                 }
             });
 
@@ -132,35 +131,35 @@ const initializeChatBot = () => {
 
             const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
             volumeIconWelcome.addEventListener('click', function () {
-                if (audioElement.muted) {
-                    audioElement.muted = false;
+                if (window['audio'].muted) {
+                    window['audio'].muted = false;
                     this.textContent = 'volume_up';
                 } else {
-                    audioElement.muted = true;
+                    window['audio'].muted = true;
                     this.textContent = 'volume_off';
                 }
             });
 
             const volumeIconChat = document.getElementById('volumeIcon_chat');
             volumeIconChat.addEventListener('click', function () {
-                if (audioElement.muted) {
-                    audioElement.muted = false;
+                if (window['audio'].muted) {
+                    window['audio'].muted = false;
                     this.textContent = 'volume_up';
                 } else {
-                    audioElement.muted = true;
+                    window['audio'].muted = true;
                     this.textContent = 'volume_off';
                 }
             });
 
             // Add close sound button
             closeButtonWelcome.addEventListener('click', function () {
-                audioElement.pause();
-                audioElement.currentTime = 0;
+                window['audio'].pause();
+                window['audio'].currentTime = 0;
             });
 
             closeButtonChat.addEventListener('click', function () {
-                audioElement.pause();
-                audioElement.currentTime = 0;
+                window['audio'].pause();
+                window['audio'].currentTime = 0;
             });
 
             //1. call toggle 
