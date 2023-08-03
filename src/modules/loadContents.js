@@ -69,7 +69,9 @@ const setupEventHandlers = () => {
   const windButton = document.getElementById('wind');
   windButton.addEventListener('click', function () {
     // 更新音頻的來源並播放
-    console.log('Wind button clicked');
+    const chatCircle = document.getElementById('chat-circle');
+    const clickEvent = new Event('click');
+    chatCircle.dispatchEvent(clickEvent);
     audio.src = sounds['wind'];
     audio.play();
 
