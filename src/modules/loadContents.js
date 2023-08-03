@@ -74,7 +74,7 @@ const setupEventHandlers = () => {
     window['audio'].src = window['currentSound'];
     audio.play();
 
-    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text');
+    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
     chatbotText.textContent = '關於您所在地的風力大小...';
   });
 
