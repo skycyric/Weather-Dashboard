@@ -120,12 +120,20 @@ const initializeChatBot = () => {
             $chatCircle.on('click', function () {
                 console.log("Chat Circle clicked!");
                 if (window['currentSound'] == '') {
-                    window['audio'].src = '../sounds/welcom.mp3';
-                    window['audio'].play();
+                    if (window['audio']) {
+                        window['audio'].pause();  // 暫停當前音訊
+                        window['audio'].currentTime = 0;
+                        window['audio'].src = '../sounds/welcom.mp3';
+                        window['audio'].play();
+                    }
+
+                    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
+                    if (chatbotText) {
+                        chatbotText.textContent = '您好！我是TVBS氣象中心助理任小渝，很高興為您服務！';
+                    }
                 }
-                const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p')
-                chatbotText.textContent = '您好！我是TVBS氣象中心助理任小渝，很高興為您服務！'
             });
+
 
             // Add volume control
 
