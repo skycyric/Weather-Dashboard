@@ -96,6 +96,17 @@ const initializeChatBot = () => {
         /* var input = uiCntr.getInput();*/
         /* $chatSubmitBtn.on("click", hideCircle);*/
 
+        function chatBoxCl(evt) {
+            evt.preventDefault();
+            $chatCircle.show('scale');
+            $chatBox.hide('scale');
+            $chatBoxWelcome.hide('scale');
+            $chatWraper.hide('scale');
+
+            // Reset currentSound on closing chatbot
+            window['currentSound'] = '';
+        }
+
         function init() {
             $chatCircle = $("#chat-circle");
             $chatBox = $(".chat-box");
