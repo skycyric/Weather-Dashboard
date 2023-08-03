@@ -1486,9 +1486,11 @@ main #today #extra-info div span {
   left: 124px;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   color: white;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -1499,8 +1501,6 @@ main #today #extra-info div span {
 .chat-box-welcome_robot {
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: 12px;
 }
 
 .chat-box-welcome__welcome-text {
