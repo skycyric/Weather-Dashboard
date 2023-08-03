@@ -151,6 +151,13 @@ body #error {
   height: 0;
 }
 
+#ai-switch {
+  width: 100%;
+  /* 使圖像填滿按鈕，但不超出按鈕的邊界 */
+  height: auto;
+  /* 維持圖像的寬高比 */
+}
+
 .slider-wrapper .slides-container .slide {
   display: -webkit-box;
   display: -ms-flexbox;
