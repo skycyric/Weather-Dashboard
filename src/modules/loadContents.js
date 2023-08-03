@@ -29,17 +29,19 @@ toggleBtn.addEventListener('click', () => {
 });
 
 let switchButton = document.getElementById('image-switch-button');
-let switchButtonIcon = document.getElementById('ai-switch');
 let robotImages = document.querySelectorAll('.chat-circle_robot, .chat-box-welcome_robot, .chat-box-overlay_robot');
 
 let imageSources = ["../icons/cloud.png", "../icons/human.png", "../icons/soundwave.png"];
+let names = ["雲寶寶", "科幻風", "聲波"];
 let index = 0;
 
-// 初始化所有的 robotImages 和按鈕圖標的圖片源
+// 初始化所有的 robotImages 的圖片源
 robotImages.forEach(function (robotImage) {
   robotImage.src = imageSources[index];
 });
-switchButtonIcon.src = imageSources[index];
+
+// 初始化按鈕文字
+switchButton.textContent = names[index];
 
 // 添加事件監聽器
 switchButton.addEventListener('click', function () {
@@ -48,8 +50,8 @@ switchButton.addEventListener('click', function () {
     // 切換圖片源
     robotImage.src = imageSources[index];
   });
-  // 切換按鈕圖標的圖片源
-  switchButtonIcon.src = imageSources[index];
+  // 切換按鈕文字
+  switchButton.textContent = names[index];
 });
 
 const loadContents = () => {
