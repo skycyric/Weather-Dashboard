@@ -119,9 +119,7 @@ const initializeChatBot = () => {
 
             $chatCircle.on('click', function () {
                 console.log("Chat Circle clicked!");
-                const chatCircleText = document.querySelector('.chat-circle__text');
                 if (!window['currentSound']) {
-                    chatCircleText.textContent = '您好！我是TVBS氣象中心助理任小渝，很高興為您服務!';
                     window['audio'].src = '../sounds/welcom.mp3';
                     window['audio'].play();
                 }
