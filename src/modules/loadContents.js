@@ -56,7 +56,9 @@ switchButton.addEventListener('click', function () {
 
 const setupEventHandlers = () => {
   window['audio'] = document.getElementById('volumn');
-  window['currentSound'] = ''
+  window['currentSound'] = '';
+  window['welcomText'] = document.querySelector('.chat-box-welcome__welcome-text p');
+  window['currentText'] = '';
   let sounds = {
     'welcom': '../sounds/welcom.mp3',
     'wind': '../sounds/wind.mp3',
@@ -74,8 +76,8 @@ const setupEventHandlers = () => {
     window['audio'].src = window['currentSound'];
     audio.play();
 
-    const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的風力大小...';
+    window['currentText'] = '關於您所在地的風力大小...';
+    window['welcomText'].textContent = window['currentText'];
   });
 
   const pressureButton = document.getElementById('daily-pressure');
