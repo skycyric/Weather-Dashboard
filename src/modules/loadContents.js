@@ -67,7 +67,6 @@ const setupEventHandlers = () => {
 
   const windButton = document.getElementById('wind');
   windButton.addEventListener('click', function () {
-    // 更新音頻的來源並播放
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
@@ -81,7 +80,11 @@ const setupEventHandlers = () => {
 
   const pressureButton = document.getElementById('daily-pressure');
   pressureButton.addEventListener('click', function () {
-    audio.src = sounds['pressure'];
+    const chatCircle = document.getElementById('chat-circle');
+    const clickEvent = new Event('click');
+    chatCircle.dispatchEvent(clickEvent);
+    window['currentSound'] = sounds['pressure'];
+    window['audio'].src = window['currentSound'];
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
@@ -90,7 +93,11 @@ const setupEventHandlers = () => {
 
   const airQualityButton = document.getElementById('air-quality');
   airQualityButton.addEventListener('click', function () {
-    audio.src = sounds['airQuality'];
+    const chatCircle = document.getElementById('chat-circle');
+    const clickEvent = new Event('click');
+    chatCircle.dispatchEvent(clickEvent);
+    window['currentSound'] = sounds['airQuality'];
+    window['audio'].src = window['currentSound'];
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
@@ -99,7 +106,11 @@ const setupEventHandlers = () => {
 
   const dailyHumidityButton = document.getElementById('daily-humidity');
   dailyHumidityButton.addEventListener('click', function () {
-    audio.src = sounds['humidity'];
+    const chatCircle = document.getElementById('chat-circle');
+    const clickEvent = new Event('click');
+    chatCircle.dispatchEvent(clickEvent);
+    window['currentSound'] = sounds['humidity'];
+    window['audio'].src = window['currentSound'];
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');

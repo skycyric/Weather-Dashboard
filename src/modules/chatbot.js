@@ -117,6 +117,15 @@ const initializeChatBot = () => {
             $chatInput = $("#chat-input__text");
             $submitBtn = $("#chat-submit");
 
+
+            $chatCircle.on('click', function () {
+                console.log("Chat Circle clicked!");
+                if (!window['currentSound']) {
+                    window['audio'].src = '../sounds/welcom.mp3';
+                    window['audio'].play();
+                }
+            });
+
             // Add volume control
 
             const volumeIconWelcome = document.getElementById('volumeIcon_welcom');
