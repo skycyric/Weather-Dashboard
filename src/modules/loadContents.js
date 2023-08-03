@@ -69,6 +69,7 @@ const setupEventHandlers = () => {
   const windButton = document.getElementById('wind');
   windButton.addEventListener('click', function () {
     // 更新音頻的來源並播放
+    document.querySelector('#chatbox-welcome').style.display = 'block';
     console.log('Wind button clicked');
     audio.src = sounds['wind'];
     audio.play();
@@ -79,6 +80,7 @@ const setupEventHandlers = () => {
 
   const pressureButton = document.getElementById('daily-pressure');
   pressureButton.addEventListener('click', function () {
+    document.querySelector('#chatbox-welcome').style.display = 'block';
     audio.src = sounds['pressure'];
     audio.play();
 
@@ -88,6 +90,7 @@ const setupEventHandlers = () => {
 
   const airQualityButton = document.getElementById('air-quality');
   airQualityButton.addEventListener('click', function () {
+    document.querySelector('#chatbox-welcome').style.display = 'block';
     audio.src = sounds['airQuality'];
     audio.play();
 
@@ -97,6 +100,7 @@ const setupEventHandlers = () => {
 
   const dailyHumidityButton = document.getElementById('daily-humidity');
   dailyHumidityButton.addEventListener('click', function () {
+    document.querySelector('#chatbox-welcome').style.display = 'block';
     audio.src = sounds['humidity'];
     audio.play();
 
