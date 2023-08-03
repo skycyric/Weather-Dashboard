@@ -74,11 +74,7 @@ const setupEventHandlers = () => {
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['wind'];
     window['audio'].src = window['currentSound'];
-    window['audio'].pause();
-    window['audio'].currentTime = 0;
-    audio.play().catch((error) => {
-      console.log(error);
-    });
+    audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
     chatbotText.textContent = '關於您所在地的風力大小...';
@@ -90,8 +86,6 @@ const setupEventHandlers = () => {
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['pressure'];
-    window['audio'].pause();
-    window['audio'].currentTime = 0;
     window['audio'].src = window['currentSound'];
     audio.play();
 
@@ -105,8 +99,6 @@ const setupEventHandlers = () => {
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['airQuality'];
-    window['audio'].pause();
-    window['audio'].currentTime = 0;
     window['audio'].src = window['currentSound'];
     audio.play();
 
@@ -120,8 +112,6 @@ const setupEventHandlers = () => {
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['humidity'];
-    window['audio'].pause();
-    window['audio'].currentTime = 0;
     window['audio'].src = window['currentSound'];
     audio.play();
 
