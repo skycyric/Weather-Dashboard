@@ -69,6 +69,7 @@ window.onload = function () {
   const windButton = document.getElementById('wind');
   windButton.addEventListener('click', function () {
     // 更新音頻的來源並播放
+    console.log('Wind button clicked');
     audio.src = sounds['wind'];
     audio.play();
 
