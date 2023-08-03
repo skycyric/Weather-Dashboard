@@ -104,6 +104,7 @@ const initializeChatBot = () => {
             $chatWraper.hide('scale');
 
             // Reset currentSound on closing chatbot
+            window['audio'].src = '../sounds/welcom.mp3';
             window['currentSound'] = '';
         }
 
@@ -115,18 +116,6 @@ const initializeChatBot = () => {
             $chatWraper = $("#chat-box__wraper");
             $chatInput = $("#chat-input__text");
             $submitBtn = $("#chat-submit");
-
-            // Add an event listener to the chatbot button
-            $chatCircle.on('click', function () {
-                // Play the sound when the chatbot is opened
-                console.log("Chat Circle clicked!");
-                if (window['currentSound']) {
-                    window['audio'].src = window['currentSound'];  // Use current sound
-                } else {
-                    window['audio'].src = '../sounds/welcom.mp3';
-                }
-                window['audio'].play();
-            });
 
             // Add volume control
 

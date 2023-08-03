@@ -57,8 +57,6 @@ switchButton.addEventListener('click', function () {
 const setupEventHandlers = () => {
   window['audio'] = document.getElementById('volumn');
   window['currentSound'] = ''
-  // 在這裡創建一個全域的音頻物件
-  var audio = new Audio();
   let sounds = {
     'welcom': '../sounds/welcom.mp3',
     'wind': '../sounds/wind.mp3',
@@ -74,7 +72,7 @@ const setupEventHandlers = () => {
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
     window['currentSound'] = sounds['wind'];
-    audio.src = sounds['wind'];
+    window['audio'].src = window['currentSound'];
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
