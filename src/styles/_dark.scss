@@ -14,7 +14,7 @@
           color: #fff;
 
           &::placeholder {
-           @include grey-font;
+            @include grey-font;
           }
         }
       }
@@ -27,6 +27,11 @@
       }
 
       #temp-conversion {
+        background: $dark-bg2;
+        color: $main-color;
+      }
+
+      #image-switch-button {
         background: $dark-bg2;
         color: $main-color;
       }
@@ -58,15 +63,16 @@
           #location-info {
             background: rgba(77, 77, 77, 0.5);
             box-shadow: none;
-    
+
             #location-image {
-    
+
               #location {
                 color: $main-color
               }
             }
-    
-            #lat, #lon {
+
+            #lat,
+            #lon {
               @include grey-font;
             }
           }
@@ -82,26 +88,26 @@
 
       #daily-container {
 
-      #daily-info {
+        #daily-info {
 
-        div {
-          background: $dark-bg2;
-          
-          h3 {
-            color: $main-color;
+          div {
+            background: $dark-bg2;
+
+            h3 {
+              color: $main-color;
+            }
+          }
+        }
+
+        #chart {
+
+          #myChart {
+            background: transparent;
+            box-shadow: 0 0 10px $dark-bg2;
           }
         }
       }
-
-      #chart {
-
-        #myChart {
-          background: transparent;
-          box-shadow: 0 0 10px $dark-bg2;
-        }
-      }
     }
-  }
 
     .slider-wrapper {
 
@@ -118,23 +124,23 @@
     }
   }
 
-  #today {   
+  #today {
     background: $dark-bg2;
 
     #todays-section {
 
-    #current-info {
-      color: $main-color;
-
-      #current-temp {
+      #current-info {
         color: $main-color;
-      }
 
-      #description {
-        color: $main-color;
+        #current-temp {
+          color: $main-color;
+        }
+
+        #description {
+          color: $main-color;
+        }
       }
     }
-  }
 
     #extra-info {
 
@@ -146,5 +152,5 @@
         }
       }
     }
-   }
- }
+  }
+}
