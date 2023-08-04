@@ -1015,11 +1015,6 @@ main #main-section #daily-container #daily-info {
   }
 }
 
-body #index div {
-  all: initial;
-  display: none;
-}
-
 main #main-section #daily-container #daily-info div {
   display: -webkit-box;
   display: -ms-flexbox;
