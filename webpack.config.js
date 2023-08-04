@@ -5,11 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'none',
-  entry: {
-    index: './src/index.js',
-    weather: './src/weather.js',
-    character: './src/character.js',
-  },
+  entry: './src/index.js',
   devServer: {
     static: './dist',
   },
@@ -40,7 +36,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: 'main.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
