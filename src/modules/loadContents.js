@@ -80,7 +80,7 @@ const setupEventHandlers = () => {
         chatBoxClose.click();
       }
       // 顯示chat-box-welcome
-      const chatBoxWelcome = document.querySelector('.chat-box-welcome__header');
+      const chatBoxWelcome = document.querySelector('.chat-box');
       if (chatBoxWelcome) {
         chatBoxWelcome.style.display = 'block'; // 或使用適當的樣式顯示
       }
