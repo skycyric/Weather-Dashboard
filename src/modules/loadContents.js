@@ -77,7 +77,7 @@ const setupEventHandlers = () => {
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的風力大小...';
+    chatbotText.textContent = '關於風力：這個禮拜的天氣會比較穩定，也不會有颱風，都是東北季風，東北季風也不是很強，所以說這個禮拜的天氣變動相當少。';
   });
 
   const pressureButton = document.getElementById('daily-pressure');
