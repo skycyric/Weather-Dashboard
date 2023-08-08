@@ -96,6 +96,17 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    const chatBoxWrapper = document.getElementById('chat-box__wraper');
+    const chatBoxWelcomeHeader = document.querySelector('.chat-box-welcome__header');
+
+    if (chatBoxWrapper && chatBoxWrapper.style.display === 'block') {
+      // 如果chat-box__wraper是block，則設置為none
+      chatBoxWrapper.style.display = 'none';
+      // 並將chat-box-welcome__header設置為block
+      if (chatBoxWelcomeHeader) {
+        chatBoxWelcomeHeader.style.display = 'block';
+      }
+    }
     window['currentSound'] = sounds['pressure'];
     window['audio'].src = window['currentSound'];
     audio.play();
@@ -109,6 +120,17 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    const chatBoxWrapper = document.getElementById('chat-box__wraper');
+    const chatBoxWelcomeHeader = document.querySelector('.chat-box-welcome__header');
+
+    if (chatBoxWrapper && chatBoxWrapper.style.display === 'block') {
+      // 如果chat-box__wraper是block，則設置為none
+      chatBoxWrapper.style.display = 'none';
+      // 並將chat-box-welcome__header設置為block
+      if (chatBoxWelcomeHeader) {
+        chatBoxWelcomeHeader.style.display = 'block';
+      }
+    }
     window['currentSound'] = sounds['airQuality'];
     window['audio'].src = window['currentSound'];
     audio.play();
@@ -122,6 +144,17 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    const chatBoxWrapper = document.getElementById('chat-box__wraper');
+    const chatBoxWelcomeHeader = document.querySelector('.chat-box-welcome__header');
+
+    if (chatBoxWrapper && chatBoxWrapper.style.display === 'block') {
+      // 如果chat-box__wraper是block，則設置為none
+      chatBoxWrapper.style.display = 'none';
+      // 並將chat-box-welcome__header設置為block
+      if (chatBoxWelcomeHeader) {
+        chatBoxWelcomeHeader.style.display = 'block';
+      }
+    }
     window['currentSound'] = sounds['humidity'];
     window['audio'].src = window['currentSound'];
     audio.play();
