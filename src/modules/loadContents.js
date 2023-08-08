@@ -72,17 +72,15 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
-    const chatLogs = document.querySelector('.chat-logs');
-    if (chatLogs) {
-      // 如果chat-logs開啟，則關閉
-      const chatBoxClose = document.getElementById('chat_close');
-      if (chatBoxClose) {
-        chatBoxClose.click();
-      }
-      // 顯示chat-box-welcome
-      const chatBoxWelcome = document.querySelector('.chat-box');
-      if (chatBoxWelcome) {
-        chatBoxWelcome.style.display = 'block'; // 或使用適當的樣式顯示
+    const chatBoxWrapper = document.getElementById('chat-box__wraper');
+    const chatBoxWelcomeHeader = document.querySelector('.chat-box-welcome__header');
+
+    if (chatBoxWrapper && chatBoxWrapper.style.display === 'block') {
+      // 如果chat-box__wraper是block，則設置為none
+      chatBoxWrapper.style.display = 'none';
+      // 並將chat-box-welcome__header設置為block
+      if (chatBoxWelcomeHeader) {
+        chatBoxWelcomeHeader.style.display = 'block';
       }
     }
     window['currentSound'] = sounds['wind'];
