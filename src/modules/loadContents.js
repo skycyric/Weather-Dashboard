@@ -72,6 +72,10 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    const chatBoxClose = document.querySelector('.chat-box-toggle');
+    if (chatBoxClose) {
+      chatBoxClose.click();
+    }
     window['currentSound'] = sounds['wind'];
     window['audio'].src = window['currentSound'];
     audio.play();
