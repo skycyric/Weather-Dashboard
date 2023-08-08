@@ -72,9 +72,18 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
-    const chatBoxClose = document.getElementById('chat_close');
-    if (chatBoxClose) {
-      chatBoxClose.click();
+    const chatLogs = document.querySelector('.chat-logs');
+    if (chatLogs) {
+      // 如果chat-logs開啟，則關閉
+      const chatBoxClose = document.getElementById('chat_close');
+      if (chatBoxClose) {
+        chatBoxClose.click();
+      }
+      // 顯示chat-box-welcome
+      const chatBoxWelcome = document.querySelector('.chat-box-welcome__header');
+      if (chatBoxWelcome) {
+        chatBoxWelcome.style.display = 'block'; // 或使用適當的樣式顯示
+      }
     }
     window['currentSound'] = sounds['wind'];
     window['audio'].src = window['currentSound'];
