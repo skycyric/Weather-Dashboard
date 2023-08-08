@@ -72,13 +72,9 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
-    const chatLogs = document.querySelector('.chat-box__wraper');
-    if (chatLogs) {
-      // 如果有開啟，則關閉
-      const chatBoxClose = document.querySelector('.chat-box__wraper');
-      if (chatBoxClose) {
-        chatBoxClose.click();
-      }
+    const chatBoxClose = document.querySelector('.chat-box__wraper');
+    if (chatBoxClose) {
+      chatBoxClose.click();
     }
     window['currentSound'] = sounds['wind'];
     window['audio'].src = window['currentSound'];
