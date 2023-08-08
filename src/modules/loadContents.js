@@ -77,7 +77,7 @@ const setupEventHandlers = () => {
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於風力：這個禮拜的天氣會比較穩定，也不會有颱風，都是東北季風，東北季風也不是很強，所以說這個禮拜的天氣變動相當少。';
+    chatbotText.textContent = '這是風力指數，關於您所在地的風力...';
   });
 
   const pressureButton = document.getElementById('daily-pressure');
@@ -90,7 +90,7 @@ const setupEventHandlers = () => {
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的氣壓...';
+    chatbotText.textContent = '這是氣壓指數，關於您所在地的氣壓...';
   });
 
   const airQualityButton = document.getElementById('air-quality');
@@ -103,7 +103,7 @@ const setupEventHandlers = () => {
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的空氣品質...';
+    chatbotText.textContent = '這是空氣品質指數，關於您所在地的空氣品質...';
   });
 
   const dailyHumidityButton = document.getElementById('daily-humidity');
@@ -116,7 +116,7 @@ const setupEventHandlers = () => {
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的濕度...';
+    chatbotText.textContent = '這是濕度指數，關於您所在地的濕度...';
   });
 }
 

@@ -129,7 +129,7 @@ const initializeChatBot = () => {
 
                     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
                     if (chatbotText) {
-                        chatbotText.textContent = '您好！我是TVBS氣象中心助理任小渝，很高興為您服務！';
+                        chatbotText.textContent = '各位觀眾大家好，今天又是一個晴朗而熱的天氣。';
                     }
                 }
             });
