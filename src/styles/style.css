@@ -1819,3 +1819,20 @@ main #today #extra-info div span {
     transform: scale(1);
   }
 }
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 71.6%;
+  /* 寬高比 16:9 的計算方法是 9/16=0.5625，但如果您的比例是不同的，就需要更改此值。在此例子中，我使用了您的715x515尺寸，其比例大概是71.6% */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
