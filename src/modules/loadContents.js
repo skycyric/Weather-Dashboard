@@ -72,12 +72,23 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    const chatBoxWrapper = document.getElementById('chat-box__wraper');
+    const chatBoxWelcomeHeader = document.querySelector('.chat-box-welcome__header');
+
+    if (chatBoxWrapper && chatBoxWrapper.style.display === 'block') {
+      // 如果chat-box__wraper是block，則設置為none
+      chatBoxWrapper.style.display = 'none';
+      // 並將chat-box-welcome__header設置為block
+      if (chatBoxWelcomeHeader) {
+        chatBoxWelcomeHeader.style.display = 'block';
+      }
+    }
     window['currentSound'] = sounds['wind'];
     window['audio'].src = window['currentSound'];
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的風力大小...';
+    chatbotText.textContent = '這是風力指數，關於您所在地的風力...';
   });
 
   const pressureButton = document.getElementById('daily-pressure');
@@ -85,12 +96,23 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    const chatBoxWrapper = document.getElementById('chat-box__wraper');
+    const chatBoxWelcomeHeader = document.querySelector('.chat-box-welcome__header');
+
+    if (chatBoxWrapper && chatBoxWrapper.style.display === 'block') {
+      // 如果chat-box__wraper是block，則設置為none
+      chatBoxWrapper.style.display = 'none';
+      // 並將chat-box-welcome__header設置為block
+      if (chatBoxWelcomeHeader) {
+        chatBoxWelcomeHeader.style.display = 'block';
+      }
+    }
     window['currentSound'] = sounds['pressure'];
     window['audio'].src = window['currentSound'];
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的氣壓...';
+    chatbotText.textContent = '這是氣壓指數，關於您所在地的氣壓...';
   });
 
   const airQualityButton = document.getElementById('air-quality');
@@ -98,12 +120,23 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    const chatBoxWrapper = document.getElementById('chat-box__wraper');
+    const chatBoxWelcomeHeader = document.querySelector('.chat-box-welcome__header');
+
+    if (chatBoxWrapper && chatBoxWrapper.style.display === 'block') {
+      // 如果chat-box__wraper是block，則設置為none
+      chatBoxWrapper.style.display = 'none';
+      // 並將chat-box-welcome__header設置為block
+      if (chatBoxWelcomeHeader) {
+        chatBoxWelcomeHeader.style.display = 'block';
+      }
+    }
     window['currentSound'] = sounds['airQuality'];
     window['audio'].src = window['currentSound'];
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的空氣品質...';
+    chatbotText.textContent = '這是空氣品質指數，關於您所在地的空氣品質...';
   });
 
   const dailyHumidityButton = document.getElementById('daily-humidity');
@@ -111,12 +144,23 @@ const setupEventHandlers = () => {
     const chatCircle = document.getElementById('chat-circle');
     const clickEvent = new Event('click');
     chatCircle.dispatchEvent(clickEvent);
+    const chatBoxWrapper = document.getElementById('chat-box__wraper');
+    const chatBoxWelcomeHeader = document.querySelector('.chat-box-welcome__header');
+
+    if (chatBoxWrapper && chatBoxWrapper.style.display === 'block') {
+      // 如果chat-box__wraper是block，則設置為none
+      chatBoxWrapper.style.display = 'none';
+      // 並將chat-box-welcome__header設置為block
+      if (chatBoxWelcomeHeader) {
+        chatBoxWelcomeHeader.style.display = 'block';
+      }
+    }
     window['currentSound'] = sounds['humidity'];
     window['audio'].src = window['currentSound'];
     audio.play();
 
     const chatbotText = document.querySelector('.chat-box-welcome__welcome-text p');
-    chatbotText.textContent = '關於您所在地的濕度...';
+    chatbotText.textContent = '這是濕度指數，關於您所在地的濕度...';
   });
 }
 
