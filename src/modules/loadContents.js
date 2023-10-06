@@ -32,7 +32,7 @@ let switchButton = document.getElementById('image-switch-button');
 let robotImages = document.querySelectorAll('.chat-circle_robot, .chat-box-welcome_robot, .chat-box-overlay_robot');
 
 let imageSources = ["../icons/cloud.png", "../icons/human.png", "../icons/soundwave.png"];
-let names = ["雲寶寶", "科幻風", "聲波"];
+let names = ["雲寶1", "雲寶2", "聲波"];
 let index = 0;
 
 // 初始化所有的 robotImages 的圖片源
